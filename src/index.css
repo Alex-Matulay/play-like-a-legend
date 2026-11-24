@@ -377,6 +377,10 @@ a.puzzle-row[href]:hover {
   margin-top: 12px;
 }
 
+.replay-main {
+  min-width: 190px;
+}
+
 .move-list {
   text-align: center;
   font-weight: 600;
@@ -398,4 +402,15 @@ a.puzzle-row[href]:hover {
     flex-direction: column;
     gap: 12px;
   }
+}
+
+.crest.portrait {
+  object-fit: cover;
+  background: #f4e8cf;
+  border: 2px solid var(--accent);
+  padding: 0;
+}
+
+.site-footer p {
+  margin: 0 0 6px;
 }

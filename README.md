@@ -6,7 +6,7 @@ style: Tal's sacrifices, Capablanca's endgames, Morphy's attacks, Petrosian's pr
 Users move the pieces on an interactive board. When they finish or give up, an animated replay
 walks through the full solution with arrows and an explanation.
 
-**Status:** MVP. The Tal pack has 5 starter puzzles, each machine-checked for a forced, unique mate. Other packs are placeholders.
+**Status:** MVP. The Tal pack has 60 puzzles: 5 original compositions plus 55 curated from the Lichess database. Every mate puzzle is machine-checked for a forced mate and a unique first move. Other packs are placeholders.
 
 ## Run it
 
@@ -37,20 +37,28 @@ On the last move any checkmate is accepted, as on Lichess.
 ## Content pipeline
 
 1. **Style-matched puzzles** from the Lichess puzzle database (CC0):
-   download `lichess_db_puzzle.csv.zst` from https://database.lichess.org/#puzzles, decompress it
-   to `data/lichess_db_puzzle.csv`, then run
-   `npm run import:lichess -- --gm tal --limit 150`.
-   This picks the best matches for the GM's theme profile (`src/data/packs.ts`), spread across three rating bands.
+   download `lichess_db_puzzle.csv.zst` from https://database.lichess.org/#puzzles into `data/`
+   (no need to unpack it; Node 23.8+ reads it directly), then run
+   `npm run import:lichess -- --gm tal --limit 900`.
+   The first theme in the GM's `themeProfile` (`src/data/packs.ts`) is required. The others raise the score.
+   Then `npm run curate -- --gm tal --count 55 --start 6` picks a varied set across the rating range,
+   drops any mate that fails the uniqueness check, drafts hints and explanations, and appends to the pack.
 2. **Real-game puzzles**: put the GM's games in `data/pgn/<gm>.pgn`, install Stockfish, then run
    `STOCKFISH_PATH=/path/to/stockfish npm run mine:pgn -- --pgn data/pgn/tal.pgn --player Tal --gm tal`.
    It finds moments where only one move wins and the GM found it.
 3. Candidates land in `data/candidates/`. Review them, write the hint and explanation, copy the keepers into
    `src/data/puzzles/<gm>.json`, then run `npm run verify`.
 
+## Portraits
+
+`scripts/engrave-portrait.sh in.jpg <crop> out.jpg` turns a photo into the sepia engraving style
+(needs ImageMagick). Use only public domain or CC0 photos and put the credit in `portraitCredit`.
+Tal and Petrosian are done. Capablanca and Morphy still show initials.
+
 ## Selling
 
-The first `FREE_PER_PACK` (10) puzzles per pack are free. Set `VITE_CHECKOUT_URL_TAL` (and so on) to a
-Lemon Squeezy checkout link to show an unlock button. Unlocking after payment needs a small backend
+Every puzzle is open until a pack can be bought. Once `VITE_CHECKOUT_URL_TAL` (and so on) is set to a
+Lemon Squeezy checkout link, only the first `FREE_PER_PACK` (10) stay free and an unlock button appears. Unlocking after payment needs a small backend
 (webhook plus accounts), which is planned for V1. Progress is currently stored in the browser.
 
 ## Licences

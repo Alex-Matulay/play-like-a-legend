@@ -5,8 +5,16 @@
     "type": "style",
     "source": null,
     "fen": "4r2k/pp4pp/7N/q7/2Q5/8/5PPP/6K1 w - - 0 1",
-    "solution": ["c4g8", "e8g8", "h6f7"],
-    "themes": ["sacrifice", "smotheredMate", "mateIn2"],
+    "solution": [
+      "c4g8",
+      "e8g8",
+      "h6f7"
+    ],
+    "themes": [
+      "sacrifice",
+      "smotheredMate",
+      "mateIn2"
+    ],
     "rating": 1300,
     "hint": "Your knight already guards g8. What happens if the queen lands there too?",
     "explanation": "1.Qg8+! The king cannot take because the knight on h6 guards g8, so the rook must capture. That leaves the king boxed in by its own pieces, and 2.Nf7# is a smothered mate. Giving up the queen to get a mate is the bargain Tal was always looking for."
@@ -17,8 +25,18 @@
     "type": "style",
     "source": null,
     "fen": "1q3rk1/5ppp/8/R2N4/8/3Q4/5PPP/6K1 w - - 0 1",
-    "solution": ["d5e7", "g8h8", "d3h7", "h8h7", "a5h5"],
-    "themes": ["sacrifice", "anastasiaMate", "mateIn3"],
+    "solution": [
+      "d5e7",
+      "g8h8",
+      "d3h7",
+      "h8h7",
+      "a5h5"
+    ],
+    "themes": [
+      "sacrifice",
+      "anastasiaMate",
+      "mateIn3"
+    ],
     "rating": 1450,
     "hint": "Start with a knight check that takes g8 and g6 away from the king.",
     "explanation": "1.Ne7+ drives the king to the corner, and the knight now covers g8 and g6. 2.Qxh7+!! Kxh7 rips the h-file open, and 3.Rh5# finishes it. The king's own g7 pawn closes the last door. This is Anastasia's mate."
@@ -29,8 +47,16 @@
     "type": "style",
     "source": null,
     "fen": "2kr4/pp1nq3/2n5/8/5B2/5Q2/4BPPP/6K1 w - - 0 1",
-    "solution": ["f3c6", "b7c6", "e2a6"],
-    "themes": ["sacrifice", "bodenMate", "mateIn2"],
+    "solution": [
+      "f3c6",
+      "b7c6",
+      "e2a6"
+    ],
+    "themes": [
+      "sacrifice",
+      "bodenMate",
+      "mateIn2"
+    ],
     "rating": 1500,
     "hint": "The b7 pawn is the only thing shielding the a6 to c8 diagonal. Can you make it move?",
     "explanation": "1.Qxc6+! The pawn has to take, because b8, c7 and d7 are covered or occupied. Once b7 is gone, 2.Ba6# is Boden's mate, with two bishops on crossing diagonals. Tal loved sacrifices that pull a defender away from the king."
@@ -41,8 +67,16 @@
     "type": "style",
     "source": null,
     "fen": "5r1k/ppq3pp/8/8/2B5/7R/4QPPP/6K1 w - - 0 1",
-    "solution": ["h3h7", "h8h7", "e2h5"],
-    "themes": ["sacrifice", "kingsideAttack", "mateIn2"],
+    "solution": [
+      "h3h7",
+      "h8h7",
+      "e2h5"
+    ],
+    "themes": [
+      "sacrifice",
+      "kingsideAttack",
+      "mateIn2"
+    ],
     "rating": 1550,
     "hint": "The bishop on c4 already controls g8. Open the h-file at any cost.",
     "explanation": "1.Rxh7+! The king cannot run to g8 because the c4 bishop covers it, so it must take. 2.Qh5# follows, with the queen covering g6, h6 and the whole h-file. Give up a rook to open a file next to the king. That is pure Tal."
@@ -53,10 +87,1566 @@
     "type": "style",
     "source": null,
     "fen": "4r2k/pp4pp/1q6/6N1/2Q5/B7/5PPP/6K1 w - - 0 1",
-    "solution": ["g5f7", "h8g8", "f7h6", "g8h8", "c4g8", "e8g8", "h6f7"],
-    "themes": ["sacrifice", "smotheredMate", "doubleCheck", "mateIn4"],
+    "solution": [
+      "g5f7",
+      "h8g8",
+      "f7h6",
+      "g8h8",
+      "c4g8",
+      "e8g8",
+      "h6f7"
+    ],
+    "themes": [
+      "sacrifice",
+      "smotheredMate",
+      "doubleCheck",
+      "mateIn4"
+    ],
     "rating": 1750,
     "hint": "Start with a knight check, then look for a double check.",
     "explanation": "1.Nf7+ Kg8 2.Nh6+ is a double check from the knight and the queen, so the king must move. The bishop on a3 covers f8, so 2...Kh8 is forced. 3.Qg8+!! Rxg8 4.Nf7# is the full smothered mate pattern known as Philidor's legacy. Four forcing moves, with the queen sacrifice saved for the moment it does the most damage."
+  },
+  {
+    "id": "tal-006",
+    "gm": "tal",
+    "type": "style",
+    "source": null,
+    "lichessId": "wZJts",
+    "fen": "r1b2knQ/pp2pp2/1qpp3p/8/2P1P3/2N5/PP1N1nPP/R1B2RK1 b - - 6 15",
+    "solution": [
+      "f2h3",
+      "g1h1",
+      "b6g1",
+      "f1g1",
+      "h3f2"
+    ],
+    "themes": [
+      "discoveredCheck",
+      "doubleCheck",
+      "kingsideAttack",
+      "mate",
+      "mateIn3",
+      "opening",
+      "sacrifice",
+      "smotheredMate"
+    ],
+    "rating": 1201,
+    "hint": "Start with a knight move and look for a double check one move later.",
+    "explanation": "1...Nh3+! 2.Kh1 Qg1+! 3.Rxg1 Nf2#. The queen sacrifice on g1 is the key: it forces the defence onto the one square where it collapses. The king is buried behind its own pieces, and the knight delivers a smothered mate. Tal would not even have stopped to count the material."
+  },
+  {
+    "id": "tal-007",
+    "gm": "tal",
+    "type": "style",
+    "source": null,
+    "lichessId": "AMsf4",
+    "fen": "1r3rk1/pb3Npp/1p6/2p2p2/4pq2/PQ6/1P3PPP/4RRK1 w - - 2 24",
+    "solution": [
+      "f7h6",
+      "g8h8",
+      "b3g8",
+      "f8g8",
+      "h6f7"
+    ],
+    "themes": [
+      "discoveredCheck",
+      "doubleCheck",
+      "kingsideAttack",
+      "mate",
+      "mateIn3",
+      "middlegame",
+      "sacrifice",
+      "smotheredMate"
+    ],
+    "rating": 1202,
+    "hint": "Start with a knight move and look for a double check one move later.",
+    "explanation": "1.Nh6+! Kh8 2.Qg8+! Rxg8 3.Nf7#. The queen sacrifice on g8 is the key: it forces the defence onto the one square where it collapses. The king is buried behind its own pieces, and the knight delivers a smothered mate. Tal would not even have stopped to count the material."
+  },
+  {
+    "id": "tal-008",
+    "gm": "tal",
+    "type": "style",
+    "source": null,
+    "lichessId": "StQRp",
+    "fen": "r4rk1/pp3Nbp/4Q2p/2pP4/7q/7P/PnP2PP1/2K3RR w - - 2 21",
+    "solution": [
+      "f7h6",
+      "g8h8",
+      "e6g8",
+      "f8g8",
+      "h6f7"
+    ],
+    "themes": [
+      "discoveredCheck",
+      "doubleCheck",
+      "kingsideAttack",
+      "mate",
+      "mateIn3",
+      "middlegame",
+      "sacrifice",
+      "smotheredMate"
+    ],
+    "rating": 1207,
+    "hint": "Start with a knight move and look for a double check one move later.",
+    "explanation": "1.Nxh6+! Kh8 2.Qg8+! Rxg8 3.Nf7#. The queen sacrifice on g8 is the key: it forces the defence onto the one square where it collapses. The king is buried behind its own pieces, and the knight delivers a smothered mate. Tal would not even have stopped to count the material."
+  },
+  {
+    "id": "tal-009",
+    "gm": "tal",
+    "type": "style",
+    "source": null,
+    "lichessId": "jAl35",
+    "fen": "r1bq2rk/1ppp1p2/p3pP1P/5nQ1/2PP4/8/PP3PP1/2KR1B1R w - - 1 20",
+    "solution": [
+      "g5g7",
+      "g8g7",
+      "h6g7",
+      "h8g8",
+      "h1h8"
+    ],
+    "themes": [
+      "advancedPawn",
+      "collinearMove",
+      "discoveredCheck",
+      "doubleCheck",
+      "exposedKing",
+      "kingsideAttack",
+      "mate",
+      "mateIn3",
+      "middlegame",
+      "sacrifice"
+    ],
+    "rating": 1251,
+    "hint": "Your queen is worth less than the attack. Where can it go to force the king's hand?",
+    "explanation": "1.Qg7+! Rxg7 2.hxg7+ Kg8 3.Rh8#. The queen sacrifice on g7 is the key: it forces the defence onto the one square where it collapses. The advanced pawn is the hidden hero. Once the queen is gone, it takes away the king's escape squares. Tal would not even have stopped to count the material."
+  },
+  {
+    "id": "tal-010",
+    "gm": "tal",
+    "type": "style",
+    "source": null,
+    "lichessId": "xSnBz",
+    "fen": "5rk1/5r1n/4pqN1/3p3p/1p1P1P1P/pP2P1Q1/P7/1K4R1 w - - 2 34",
+    "solution": [
+      "g6e7",
+      "g8h8",
+      "g3g8",
+      "f8g8",
+      "g1g8"
+    ],
+    "themes": [
+      "discoveredCheck",
+      "doubleCheck",
+      "exposedKing",
+      "kingsideAttack",
+      "mate",
+      "mateIn3",
+      "middlegame",
+      "sacrifice"
+    ],
+    "rating": 1333,
+    "hint": "Start with a knight move and look for a double check one move later.",
+    "explanation": "1.Ne7+! Kh8 2.Qg8+! Rxg8 3.Rxg8#. The queen sacrifice on g8 is the key: it forces the defence onto the one square where it collapses. Discovered and double checks leave the defender no time to regroup. Tal would not even have stopped to count the material."
+  },
+  {
+    "id": "tal-011",
+    "gm": "tal",
+    "type": "style",
+    "source": null,
+    "lichessId": "JvWIC",
+    "fen": "r2q1b1k/3n1b2/5p1P/4pN2/pp1pP1Q1/1N1P1P2/PP6/2K4R w - - 0 31",
+    "solution": [
+      "g4g7",
+      "f8g7",
+      "h6g7",
+      "h8g8",
+      "h1h8"
+    ],
+    "themes": [
+      "advancedPawn",
+      "doubleCheck",
+      "exposedKing",
+      "kingsideAttack",
+      "mate",
+      "mateIn3",
+      "middlegame",
+      "sacrifice"
+    ],
+    "rating": 1362,
+    "hint": "Your queen is worth less than the attack. Where can it go to force the king's hand?",
+    "explanation": "1.Qg7+! Bxg7 2.hxg7+ Kg8 3.Rh8#. The queen sacrifice on g7 is the key: it forces the defence onto the one square where it collapses. The advanced pawn is the hidden hero. Once the queen is gone, it takes away the king's escape squares. Tal would not even have stopped to count the material."
+  },
+  {
+    "id": "tal-012",
+    "gm": "tal",
+    "type": "style",
+    "source": null,
+    "lichessId": "3i1OU",
+    "fen": "5rk1/ppqb2p1/1np1p1N1/3p1nP1/3P4/2P5/PP4Bb/R1BQR2K b - - 1 23",
+    "solution": [
+      "f5g3",
+      "h1h2",
+      "g3f1",
+      "h2g1",
+      "c7h2"
+    ],
+    "themes": [
+      "discoveredCheck",
+      "doubleCheck",
+      "exposedKing",
+      "kingsideAttack",
+      "mate",
+      "mateIn3",
+      "middlegame",
+      "sacrifice"
+    ],
+    "rating": 1368,
+    "hint": "Start with a knight move and look for a double check one move later.",
+    "explanation": "1...Ng3+! 2.Kxh2 Nf1+ 3.Kg1 Qh2#. Discovered and double checks leave the defender no time to regroup."
+  },
+  {
+    "id": "tal-013",
+    "gm": "tal",
+    "type": "style",
+    "source": null,
+    "lichessId": "mKZS0",
+    "fen": "2r1r2k/1p3p2/pq1p3P/3PbNQ1/2P1P1P1/3B4/PPK4R/3n4 w - - 0 38",
+    "solution": [
+      "g5g7",
+      "e5g7",
+      "h6g7",
+      "h8g8",
+      "h2h8"
+    ],
+    "themes": [
+      "advancedPawn",
+      "discoveredCheck",
+      "doubleCheck",
+      "exposedKing",
+      "kingsideAttack",
+      "mate",
+      "mateIn3",
+      "middlegame",
+      "sacrifice"
+    ],
+    "rating": 1377,
+    "hint": "Your queen is worth less than the attack. Where can it go to force the king's hand?",
+    "explanation": "1.Qg7+! Bxg7 2.hxg7+ Kg8 3.Rh8#. The queen sacrifice on g7 is the key: it forces the defence onto the one square where it collapses. The advanced pawn is the hidden hero. Once the queen is gone, it takes away the king's escape squares. Tal would not even have stopped to count the material."
+  },
+  {
+    "id": "tal-014",
+    "gm": "tal",
+    "type": "style",
+    "source": null,
+    "lichessId": "xDdUI",
+    "fen": "2b3rk/3p1p2/4pP1P/p2p2Q1/1r4P1/1P6/P1P2q2/1K1R3R w - - 1 26",
+    "solution": [
+      "g5g7",
+      "g8g7",
+      "h6g7",
+      "h8g8",
+      "h1h8"
+    ],
+    "themes": [
+      "advancedPawn",
+      "collinearMove",
+      "discoveredCheck",
+      "doubleCheck",
+      "exposedKing",
+      "kingsideAttack",
+      "mate",
+      "mateIn3",
+      "middlegame",
+      "sacrifice"
+    ],
+    "rating": 1408,
+    "hint": "Your queen is worth less than the attack. Where can it go to force the king's hand?",
+    "explanation": "1.Qg7+! Rxg7 2.hxg7+ Kg8 3.Rh8#. The queen sacrifice on g7 is the key: it forces the defence onto the one square where it collapses. The advanced pawn is the hidden hero. Once the queen is gone, it takes away the king's escape squares. Tal would not even have stopped to count the material."
+  },
+  {
+    "id": "tal-015",
+    "gm": "tal",
+    "type": "style",
+    "source": null,
+    "lichessId": "6Rs26",
+    "fen": "4Rrk1/pp1Q2pp/1qn5/5PP1/2p5/5Nb1/PPP2nB1/R1B3K1 b - - 3 24",
+    "solution": [
+      "f2h3",
+      "g1h1",
+      "b6g1",
+      "f3g1",
+      "h3f2"
+    ],
+    "themes": [
+      "discoveredCheck",
+      "doubleCheck",
+      "exposedKing",
+      "kingsideAttack",
+      "mate",
+      "mateIn3",
+      "middlegame",
+      "sacrifice"
+    ],
+    "rating": 1433,
+    "hint": "Start with a knight move and look for a double check one move later.",
+    "explanation": "1...Nh3+! 2.Kh1 Qg1+! 3.Nxg1 Nf2#. The queen sacrifice on g1 is the key: it forces the defence onto the one square where it collapses. Discovered and double checks leave the defender no time to regroup. Tal would not even have stopped to count the material."
+  },
+  {
+    "id": "tal-016",
+    "gm": "tal",
+    "type": "style",
+    "source": null,
+    "lichessId": "lViWi",
+    "fen": "1rbq3k/3p3r/4pPQP/3p4/5b2/p1P5/PP3PP1/1K1R3R w - - 0 23",
+    "solution": [
+      "g6g7",
+      "h7g7",
+      "h6g7",
+      "h8g8",
+      "h1h8",
+      "g8f7",
+      "h8d8"
+    ],
+    "themes": [
+      "advancedPawn",
+      "crushing",
+      "discoveredCheck",
+      "doubleCheck",
+      "exposedKing",
+      "kingsideAttack",
+      "middlegame",
+      "sacrifice",
+      "skewer"
+    ],
+    "rating": 1448,
+    "hint": "Your queen is worth less than the attack. Where can it go to force the king's hand?",
+    "explanation": "1.Qg7+! Rxg7 2.hxg7+ Kg8 3.Rh8+ Kf7 4.Rxd8. The queen sacrifice on g7 is the key: it forces the defence onto the one square where it collapses. The last check skewers the king and wins the piece behind it, leaving a won position. Tal would not even have stopped to count the material."
+  },
+  {
+    "id": "tal-017",
+    "gm": "tal",
+    "type": "style",
+    "source": null,
+    "lichessId": "PBsbw",
+    "fen": "6nk/pp1q1r2/3br1QP/4p3/1pPp2N1/3P2P1/P1P2P1R/2K4R w - - 5 28",
+    "solution": [
+      "g6g7",
+      "f7g7",
+      "h6g7",
+      "h8g7",
+      "h2h7"
+    ],
+    "themes": [
+      "advancedPawn",
+      "advantage",
+      "attraction",
+      "doubleCheck",
+      "exposedKing",
+      "kingsideAttack",
+      "middlegame",
+      "sacrifice"
+    ],
+    "rating": 1496,
+    "hint": "Your queen is worth less than the attack. Where can it go to force the king's hand?",
+    "explanation": "1.Qg7+! Rxg7 2.hxg7+ Kxg7 3.Rh7+. The queen sacrifice on g7 is the key: it forces the defence onto the one square where it collapses. Discovered and double checks leave the defender no time to regroup. Tal would not even have stopped to count the material."
+  },
+  {
+    "id": "tal-018",
+    "gm": "tal",
+    "type": "style",
+    "source": null,
+    "lichessId": "yCruZ",
+    "fen": "r6k/p1pp2bB/bpn1p3/4P3/3P3N/2P1q1P1/PPQ4P/5R1K w - - 4 22",
+    "solution": [
+      "h4g6",
+      "h8h7",
+      "g6f8",
+      "h7h8",
+      "c2h7"
+    ],
+    "themes": [
+      "discoveredCheck",
+      "doubleCheck",
+      "exposedKing",
+      "kingsideAttack",
+      "mate",
+      "mateIn3",
+      "middlegame",
+      "sacrifice"
+    ],
+    "rating": 1496,
+    "hint": "Start with a knight move and look for a double check one move later.",
+    "explanation": "1.Ng6+! Kxh7 2.Nf8+ Kh8 3.Qh7#. Discovered and double checks leave the defender no time to regroup."
+  },
+  {
+    "id": "tal-019",
+    "gm": "tal",
+    "type": "style",
+    "source": null,
+    "lichessId": "RhDON",
+    "fen": "r3qn1k/1bp1nQ2/pp1pp1p1/4P3/P2P1Rp1/2NR4/1PP3PP/6K1 w - - 2 21",
+    "solution": [
+      "d3h3",
+      "g4h3",
+      "f4h4",
+      "f8h7",
+      "f7h7"
+    ],
+    "themes": [
+      "exposedKing",
+      "kingsideAttack",
+      "mate",
+      "mateIn3",
+      "middlegame",
+      "sacrifice"
+    ],
+    "rating": 1501,
+    "hint": "Your rook is worth less than the attack. Where can it go to force the king's hand?",
+    "explanation": "1.Rh3+! gxh3 2.Rh4+ Nh7 3.Qxh7#. The rook sacrifice on h3 is the key: it forces the defence onto the one square where it collapses. Every move is a check or a direct threat, so the defender never gets a free move. Tal would not even have stopped to count the material."
+  },
+  {
+    "id": "tal-020",
+    "gm": "tal",
+    "type": "style",
+    "source": null,
+    "lichessId": "4YCTD",
+    "fen": "r6k/p2RQ1p1/7p/1p6/3q2n1/8/PP4PP/R6K b - - 7 30",
+    "solution": [
+      "g4f2",
+      "h1g1",
+      "f2h3",
+      "g1h1",
+      "d4g1",
+      "a1g1",
+      "h3f2"
+    ],
+    "themes": [
+      "doubleCheck",
+      "endgame",
+      "mate",
+      "mateIn4",
+      "sacrifice",
+      "smotheredMate"
+    ],
+    "rating": 1508,
+    "hint": "Start with a knight move and look for a double check one move later.",
+    "explanation": "1...Nf2+! 2.Kg1 Nh3+ 3.Kh1 Qg1+! 4.Rxg1 Nf2#. The queen sacrifice on g1 is the key: it forces the defence onto the one square where it collapses. The king is buried behind its own pieces, and the knight delivers a smothered mate. Tal would not even have stopped to count the material."
+  },
+  {
+    "id": "tal-021",
+    "gm": "tal",
+    "type": "style",
+    "source": null,
+    "lichessId": "sYiNX",
+    "fen": "r3r1k1/pp3pbp/8/2p3B1/3q4/P1NP3n/1PP3PP/R1Q2R1K b - - 7 24",
+    "solution": [
+      "d4g1",
+      "f1g1",
+      "h3f2"
+    ],
+    "themes": [
+      "kingsideAttack",
+      "mate",
+      "mateIn2",
+      "middlegame",
+      "sacrifice",
+      "smotheredMate"
+    ],
+    "rating": 1512,
+    "hint": "Your queen is worth less than the attack. Where can it go to force the king's hand?",
+    "explanation": "1...Qg1+! 2.Rxg1 Nf2#. The queen sacrifice on g1 is the key: it forces the defence onto the one square where it collapses. The king is buried behind its own pieces, and the knight delivers a smothered mate. Tal would not even have stopped to count the material."
+  },
+  {
+    "id": "tal-022",
+    "gm": "tal",
+    "type": "style",
+    "source": null,
+    "lichessId": "jzIuR",
+    "fen": "6rk/1r3p2/p1n1qp1B/3pP2P/2pP4/P1P3R1/6P1/2Q3K1 w - - 1 33",
+    "solution": [
+      "h6g7",
+      "g8g7",
+      "c1h6",
+      "g7h7",
+      "h6f8"
+    ],
+    "themes": [
+      "clearance",
+      "exposedKing",
+      "kingsideAttack",
+      "mate",
+      "mateIn3",
+      "middlegame",
+      "sacrifice"
+    ],
+    "rating": 1525,
+    "hint": "Your bishop is worth less than the attack. Where can it go to force the king's hand?",
+    "explanation": "1.Bg7+! Rxg7 2.Qh6+ Rh7 3.Qf8#. The bishop sacrifice on g7 is the key: it forces the defence onto the one square where it collapses. Every move is a check or a direct threat, so the defender never gets a free move. Tal would not even have stopped to count the material."
+  },
+  {
+    "id": "tal-023",
+    "gm": "tal",
+    "type": "style",
+    "source": null,
+    "lichessId": "KGbfo",
+    "fen": "1r3r1k/p1QBq3/1p1p1pR1/7p/3p4/2P1P3/PP4PP/6K1 w - - 0 34",
+    "solution": [
+      "g6h6",
+      "h8g7",
+      "h6h7",
+      "g7h7",
+      "d7f5",
+      "h7g7",
+      "c7e7"
+    ],
+    "themes": [
+      "advantage",
+      "attraction",
+      "discoveredAttack",
+      "endgame",
+      "exposedKing",
+      "kingsideAttack",
+      "pin",
+      "sacrifice"
+    ],
+    "rating": 1525,
+    "hint": "Begin with a forcing rook check. The real blow comes afterwards.",
+    "explanation": "1.Rh6+! Kg7 2.Rh7+! Kxh7 3.Bf5+ Kg7 4.Qxe7+. The rook sacrifice on h7 is the key: it forces the defence onto the one square where it collapses. The attack wins decisive material. Tal would not even have stopped to count the material."
+  },
+  {
+    "id": "tal-024",
+    "gm": "tal",
+    "type": "style",
+    "source": null,
+    "lichessId": "AmYp4",
+    "fen": "r4rk1/6p1/pp2p3/3P2q1/P2P3b/2PQ1p1p/1P3P1B/R5RK b - - 1 29",
+    "solution": [
+      "g5g2",
+      "g1g2",
+      "f3g2",
+      "h1g1",
+      "h4f2"
+    ],
+    "themes": [
+      "advancedPawn",
+      "collinearMove",
+      "exposedKing",
+      "kingsideAttack",
+      "mate",
+      "mateIn3",
+      "middlegame",
+      "sacrifice"
+    ],
+    "rating": 1526,
+    "hint": "Your queen is worth less than the attack. Where can it go to force the king's hand?",
+    "explanation": "1...Qg2+! 2.Rxg2 fxg2+ 3.Kg1 Bxf2#. The queen sacrifice on g2 is the key: it forces the defence onto the one square where it collapses. The advanced pawn is the hidden hero. Once the queen is gone, it takes away the king's escape squares. Tal would not even have stopped to count the material."
+  },
+  {
+    "id": "tal-025",
+    "gm": "tal",
+    "type": "style",
+    "source": null,
+    "lichessId": "m0Cjz",
+    "fen": "7k/ppp2Qp1/7p/8/8/2Nq3P/PP4P1/K3n2R b - - 7 26",
+    "solution": [
+      "e1c2",
+      "a1b1",
+      "c2a3",
+      "b1a1",
+      "d3b1",
+      "c3b1",
+      "a3c2"
+    ],
+    "themes": [
+      "doubleCheck",
+      "endgame",
+      "mate",
+      "mateIn4",
+      "sacrifice",
+      "smotheredMate"
+    ],
+    "rating": 1527,
+    "hint": "Start with a knight move and look for a double check one move later.",
+    "explanation": "1...Nc2+! 2.Kb1 Na3+ 3.Ka1 Qb1+! 4.Nxb1 Nc2#. The queen sacrifice on b1 is the key: it forces the defence onto the one square where it collapses. The king is buried behind its own pieces, and the knight delivers a smothered mate. Tal would not even have stopped to count the material."
+  },
+  {
+    "id": "tal-026",
+    "gm": "tal",
+    "type": "style",
+    "source": null,
+    "lichessId": "eAEpm",
+    "fen": "r5k1/4b1n1/p2pprP1/8/Pp2q3/1N6/1PPQ1P2/2KR3R w - - 0 26",
+    "solution": [
+      "h1h8",
+      "g8h8",
+      "d2h6",
+      "h8g8",
+      "h6h7",
+      "g8f8",
+      "h7h8"
+    ],
+    "themes": [
+      "attraction",
+      "exposedKing",
+      "kingsideAttack",
+      "mate",
+      "mateIn4",
+      "middlegame",
+      "sacrifice"
+    ],
+    "rating": 1531,
+    "hint": "Your rook is worth less than the attack. Where can it go to force the king's hand?",
+    "explanation": "1.Rh8+! Kxh8 2.Qh6+ Kg8 3.Qh7+ Kf8 4.Qh8#. The rook sacrifice on h8 is the key: it forces the defence onto the one square where it collapses. Every move is a check or a direct threat, so the defender never gets a free move. Tal would not even have stopped to count the material."
+  },
+  {
+    "id": "tal-027",
+    "gm": "tal",
+    "type": "style",
+    "source": null,
+    "lichessId": "AfXui",
+    "fen": "6rk/pp1q1p1n/2ppn1r1/4pN1Q/4P3/P2P2P1/RPP2PK1/5R2 w - - 7 30",
+    "solution": [
+      "h5h7",
+      "h8h7",
+      "f1h1",
+      "g6h6",
+      "h1h6"
+    ],
+    "themes": [
+      "attraction",
+      "exposedKing",
+      "kingsideAttack",
+      "mate",
+      "mateIn3",
+      "middlegame",
+      "sacrifice"
+    ],
+    "rating": 1536,
+    "hint": "Your queen is worth less than the attack. Where can it go to force the king's hand?",
+    "explanation": "1.Qxh7+! Kxh7 2.Rh1+ Rh6 3.Rxh6#. The queen sacrifice on h7 is the key: it forces the defence onto the one square where it collapses. Every move is a check or a direct threat, so the defender never gets a free move. Tal would not even have stopped to count the material."
+  },
+  {
+    "id": "tal-028",
+    "gm": "tal",
+    "type": "style",
+    "source": null,
+    "lichessId": "YyNz9",
+    "fen": "r6k/4rQp1/pq1b2Pp/2p1p3/1p1p4/1P2P3/PBPP1P2/R3K2R w KQ - 4 23",
+    "solution": [
+      "h1h6",
+      "g7h6",
+      "g6g7",
+      "h8h7",
+      "g7g8q"
+    ],
+    "themes": [
+      "advancedPawn",
+      "discoveredCheck",
+      "doubleCheck",
+      "kingsideAttack",
+      "mate",
+      "mateIn3",
+      "middlegame",
+      "promotion",
+      "sacrifice"
+    ],
+    "rating": 1537,
+    "hint": "Your rook is worth less than the attack. Where can it go to force the king's hand?",
+    "explanation": "1.Rxh6+! gxh6 2.g7+ Kh7 3.g8=Q#. The rook sacrifice on h6 is the key: it forces the defence onto the one square where it collapses. The pawn crashes through and promotes, which ends the game. Tal would not even have stopped to count the material."
+  },
+  {
+    "id": "tal-029",
+    "gm": "tal",
+    "type": "style",
+    "source": null,
+    "lichessId": "hm92Z",
+    "fen": "1r3r1k/p3bpp1/2p2n1B/3p4/3P2qQ/1PP4R/P5PP/6K1 w - - 0 28",
+    "solution": [
+      "h6g7",
+      "h8g7",
+      "h4h6",
+      "g7g8",
+      "h6h8"
+    ],
+    "themes": [
+      "attraction",
+      "discoveredCheck",
+      "doubleCheck",
+      "kingsideAttack",
+      "mate",
+      "mateIn3",
+      "middlegame",
+      "sacrifice"
+    ],
+    "rating": 1537,
+    "hint": "Your bishop is worth less than the attack. Where can it go to force the king's hand?",
+    "explanation": "1.Bxg7+! Kxg7 2.Qh6+ Kg8 3.Qh8#. The bishop sacrifice on g7 is the key: it forces the defence onto the one square where it collapses. Discovered and double checks leave the defender no time to regroup. Tal would not even have stopped to count the material."
+  },
+  {
+    "id": "tal-030",
+    "gm": "tal",
+    "type": "style",
+    "source": null,
+    "lichessId": "ulBVu",
+    "fen": "5b1r/3k1pp1/bqn1p3/p2p3p/8/1P1n1NP1/PBQPP1BP/2R1R2K b - - 3 17",
+    "solution": [
+      "d3f2",
+      "h1g1",
+      "f2h3",
+      "g1h1",
+      "b6g1",
+      "f3g1",
+      "h3f2"
+    ],
+    "themes": [
+      "doubleCheck",
+      "kingsideAttack",
+      "mate",
+      "mateIn4",
+      "middlegame",
+      "sacrifice",
+      "smotheredMate"
+    ],
+    "rating": 1540,
+    "hint": "Start with a knight move and look for a double check one move later.",
+    "explanation": "1...Nf2+! 2.Kg1 Nh3+ 3.Kh1 Qg1+! 4.Nxg1 Nf2#. The queen sacrifice on g1 is the key: it forces the defence onto the one square where it collapses. The king is buried behind its own pieces, and the knight delivers a smothered mate. Tal would not even have stopped to count the material."
+  },
+  {
+    "id": "tal-031",
+    "gm": "tal",
+    "type": "style",
+    "source": null,
+    "lichessId": "7bT0a",
+    "fen": "r1b2rk1/4pp1p/1qpp2p1/p7/P1B1PP2/2Q4n/1PP3PP/1RB2R1K b - - 4 16",
+    "solution": [
+      "b6g1",
+      "f1g1",
+      "h3f2"
+    ],
+    "themes": [
+      "kingsideAttack",
+      "mate",
+      "mateIn2",
+      "middlegame",
+      "sacrifice",
+      "smotheredMate"
+    ],
+    "rating": 1605,
+    "hint": "Your queen is worth less than the attack. Where can it go to force the king's hand?",
+    "explanation": "1...Qg1+! 2.Rxg1 Nf2#. The queen sacrifice on g1 is the key: it forces the defence onto the one square where it collapses. The king is buried behind its own pieces, and the knight delivers a smothered mate. Tal would not even have stopped to count the material."
+  },
+  {
+    "id": "tal-032",
+    "gm": "tal",
+    "type": "style",
+    "source": null,
+    "lichessId": "rlKlg",
+    "fen": "r4r1k/pp1qbp2/5n2/6Q1/6P1/2Pp1P2/P1P2KP1/R4R2 w - - 0 21",
+    "solution": [
+      "f1h1",
+      "f6h7",
+      "h1h7",
+      "h8h7",
+      "a1h1"
+    ],
+    "themes": [
+      "attraction",
+      "exposedKing",
+      "kingsideAttack",
+      "mate",
+      "mateIn3",
+      "middlegame",
+      "sacrifice"
+    ],
+    "rating": 1605,
+    "hint": "Begin with a forcing rook check. The real blow comes afterwards.",
+    "explanation": "1.Rh1+! Nh7 2.Rxh7+! Kxh7 3.Rh1#. The rook sacrifice on h7 is the key: it forces the defence onto the one square where it collapses. Every move is a check or a direct threat, so the defender never gets a free move. Tal would not even have stopped to count the material."
+  },
+  {
+    "id": "tal-033",
+    "gm": "tal",
+    "type": "style",
+    "source": null,
+    "lichessId": "DH8a1",
+    "fen": "rn3r1k/pp4pp/2p1Q3/3p2N1/3P1P2/2P5/2q2P1P/1N3RK1 w - - 5 21",
+    "solution": [
+      "g5f7",
+      "h8g8",
+      "f7h6",
+      "g8h8",
+      "e6g8",
+      "f8g8",
+      "h6f7"
+    ],
+    "themes": [
+      "discoveredCheck",
+      "doubleCheck",
+      "kingsideAttack",
+      "mate",
+      "mateIn4",
+      "middlegame",
+      "sacrifice",
+      "smotheredMate"
+    ],
+    "rating": 1607,
+    "hint": "Start with a knight move and look for a double check one move later.",
+    "explanation": "1.Nf7+! Kg8 2.Nh6+ Kh8 3.Qg8+! Rxg8 4.Nf7#. The queen sacrifice on g8 is the key: it forces the defence onto the one square where it collapses. The king is buried behind its own pieces, and the knight delivers a smothered mate. Tal would not even have stopped to count the material."
+  },
+  {
+    "id": "tal-034",
+    "gm": "tal",
+    "type": "style",
+    "source": null,
+    "lichessId": "AqWQY",
+    "fen": "2rq3k/3brQp1/pp2p1Pp/4P3/3p1R2/7R/P1P3P1/6K1 w - - 2 29",
+    "solution": [
+      "h3h6",
+      "g7h6",
+      "g6g7",
+      "h8h7",
+      "g7g8q"
+    ],
+    "themes": [
+      "advancedPawn",
+      "doubleCheck",
+      "kingsideAttack",
+      "mate",
+      "mateIn3",
+      "middlegame",
+      "promotion",
+      "sacrifice"
+    ],
+    "rating": 1607,
+    "hint": "Your rook is worth less than the attack. Where can it go to force the king's hand?",
+    "explanation": "1.Rxh6+! gxh6 2.g7+ Kh7 3.g8=Q#. The rook sacrifice on h6 is the key: it forces the defence onto the one square where it collapses. The pawn crashes through and promotes, which ends the game. Tal would not even have stopped to count the material."
+  },
+  {
+    "id": "tal-035",
+    "gm": "tal",
+    "type": "style",
+    "source": null,
+    "lichessId": "U91gi",
+    "fen": "r5rk/2p2p1b/p4q1Q/1p1pbp2/1P2n1R1/P1PB1R2/7P/2B4K w - - 0 35",
+    "solution": [
+      "h6h7",
+      "h8h7",
+      "f3h3",
+      "f6h6",
+      "h3h6"
+    ],
+    "themes": [
+      "attraction",
+      "exposedKing",
+      "kingsideAttack",
+      "mate",
+      "mateIn3",
+      "middlegame",
+      "operaMate",
+      "sacrifice"
+    ],
+    "rating": 1607,
+    "hint": "Your queen is worth less than the attack. Where can it go to force the king's hand?",
+    "explanation": "1.Qxh7+! Kxh7 2.Rh3+ Qh6 3.Rxh6#. The queen sacrifice on h7 is the key: it forces the defence onto the one square where it collapses. The rook lands on the back rank, guarded by the bishop. It is the same idea Morphy used in his famous Opera Game. Tal would not even have stopped to count the material."
+  },
+  {
+    "id": "tal-036",
+    "gm": "tal",
+    "type": "style",
+    "source": null,
+    "lichessId": "Swp7y",
+    "fen": "5r1k/2Q2BR1/p2p1q1p/1p1PpP2/3nP3/7P/1r4P1/5RK1 w - - 1 30",
+    "solution": [
+      "g7h7",
+      "h8h7",
+      "f7g6",
+      "h7h8",
+      "c7h7"
+    ],
+    "themes": [
+      "attraction",
+      "discoveredCheck",
+      "doubleCheck",
+      "exposedKing",
+      "kingsideAttack",
+      "mate",
+      "mateIn3",
+      "middlegame",
+      "sacrifice"
+    ],
+    "rating": 1686,
+    "hint": "Your rook is worth less than the attack. Where can it go to force the king's hand?",
+    "explanation": "1.Rh7+! Kxh7 2.Bg6+ Kh8 3.Qh7#. The rook sacrifice on h7 is the key: it forces the defence onto the one square where it collapses. Discovered and double checks leave the defender no time to regroup. Tal would not even have stopped to count the material."
+  },
+  {
+    "id": "tal-037",
+    "gm": "tal",
+    "type": "style",
+    "source": null,
+    "lichessId": "cMbwP",
+    "fen": "r3b1k1/6b1/p5Qp/np1pq1p1/6N1/1P4P1/P3B1PP/5R1K w - - 13 34",
+    "solution": [
+      "g4h6",
+      "g8h8",
+      "f1f8",
+      "g7f8",
+      "g6g8"
+    ],
+    "themes": [
+      "exposedKing",
+      "kingsideAttack",
+      "mate",
+      "mateIn3",
+      "middlegame",
+      "sacrifice"
+    ],
+    "rating": 1688,
+    "hint": "Begin with a forcing knight check. The real blow comes afterwards.",
+    "explanation": "1.Nxh6+! Kh8 2.Rf8+! Bxf8 3.Qg8#. The rook sacrifice on f8 is the key: it forces the defence onto the one square where it collapses. Every move is a check or a direct threat, so the defender never gets a free move. Tal would not even have stopped to count the material."
+  },
+  {
+    "id": "tal-038",
+    "gm": "tal",
+    "type": "style",
+    "source": null,
+    "lichessId": "UJwG7",
+    "fen": "1k2r3/pPpbn3/8/3P1p2/2P2P2/2QBR3/3KNq2/8 b - - 4 41",
+    "solution": [
+      "f2e3",
+      "d2e3",
+      "e7d5",
+      "e3d4",
+      "d5c3"
+    ],
+    "themes": [
+      "advantage",
+      "attraction",
+      "discoveredCheck",
+      "doubleCheck",
+      "exposedKing",
+      "middlegame",
+      "sacrifice"
+    ],
+    "rating": 1689,
+    "hint": "Your queen is worth less than the attack. Where can it go to force the king's hand?",
+    "explanation": "1...Qxe3+! 2.Kxe3 Nxd5+ 3.Kd4 Nxc3. The queen sacrifice on e3 is the key: it forces the defence onto the one square where it collapses. Discovered and double checks leave the defender no time to regroup. Tal would not even have stopped to count the material."
+  },
+  {
+    "id": "tal-039",
+    "gm": "tal",
+    "type": "style",
+    "source": null,
+    "lichessId": "ZYWOr",
+    "fen": "1r2r1k1/1p3p2/pNp2PBp/P3p3/1P6/6QP/2P1nPK1/q7 w - - 1 29",
+    "solution": [
+      "g6h7",
+      "g8h7",
+      "g3g7"
+    ],
+    "themes": [
+      "attraction",
+      "discoveredCheck",
+      "doubleCheck",
+      "kingsideAttack",
+      "mate",
+      "mateIn2",
+      "middlegame",
+      "sacrifice"
+    ],
+    "rating": 1691,
+    "hint": "Your bishop is worth less than the attack. Where can it go to force the king's hand?",
+    "explanation": "1.Bh7+! Kxh7 2.Qg7#. The bishop sacrifice on h7 is the key: it forces the defence onto the one square where it collapses. Discovered and double checks leave the defender no time to regroup. Tal would not even have stopped to count the material."
+  },
+  {
+    "id": "tal-040",
+    "gm": "tal",
+    "type": "style",
+    "source": null,
+    "lichessId": "fqr6C",
+    "fen": "r6k/ppQ2p1B/2b2q1p/3p2Nr/6pP/6P1/P1P2P2/4R1K1 w - - 2 25",
+    "solution": [
+      "g5f7",
+      "h8h7",
+      "f7g5",
+      "h7g8",
+      "c7h7",
+      "g8f8",
+      "g5e6"
+    ],
+    "themes": [
+      "crushing",
+      "discoveredCheck",
+      "doubleCheck",
+      "exposedKing",
+      "kingsideAttack",
+      "middlegame",
+      "sacrifice"
+    ],
+    "rating": 1693,
+    "hint": "Start with a knight move and look for a double check one move later.",
+    "explanation": "1.Nxf7+! Kxh7 2.Ng5+ Kg8 3.Qh7+ Kf8 4.Ne6+. Discovered and double checks leave the defender no time to regroup."
+  },
+  {
+    "id": "tal-041",
+    "gm": "tal",
+    "type": "style",
+    "source": null,
+    "lichessId": "wBCTd",
+    "fen": "1q3r1k/3p1pbn/p7/4R3/Np1B1P2/1P4Q1/P1r4P/5RK1 w - - 2 30",
+    "solution": [
+      "g3g7",
+      "h8g7",
+      "e5g5",
+      "g7h6",
+      "d4g7"
+    ],
+    "themes": [
+      "attraction",
+      "discoveredCheck",
+      "doubleCheck",
+      "exposedKing",
+      "kingsideAttack",
+      "mate",
+      "mateIn3",
+      "middlegame",
+      "sacrifice"
+    ],
+    "rating": 1766,
+    "hint": "Your queen is worth less than the attack. Where can it go to force the king's hand?",
+    "explanation": "1.Qxg7+! Kxg7 2.Rg5+ Kh6 3.Bg7#. The queen sacrifice on g7 is the key: it forces the defence onto the one square where it collapses. Discovered and double checks leave the defender no time to regroup. Tal would not even have stopped to count the material."
+  },
+  {
+    "id": "tal-042",
+    "gm": "tal",
+    "type": "style",
+    "source": null,
+    "lichessId": "MNCxr",
+    "fen": "2kN3r/ppp3p1/2np4/4p1Bn/2B1P1pq/P1P5/1PP2PP1/R2Q1RK1 b - - 2 16",
+    "solution": [
+      "h4h1",
+      "g1h1",
+      "h5g3",
+      "h1g1",
+      "h8h1"
+    ],
+    "themes": [
+      "attraction",
+      "discoveredCheck",
+      "doubleCheck",
+      "kingsideAttack",
+      "mate",
+      "mateIn3",
+      "middlegame",
+      "sacrifice"
+    ],
+    "rating": 1766,
+    "hint": "Your queen is worth less than the attack. Where can it go to force the king's hand?",
+    "explanation": "1...Qh1+! 2.Kxh1 Ng3+ 3.Kg1 Rh1#. The queen sacrifice on h1 is the key: it forces the defence onto the one square where it collapses. Discovered and double checks leave the defender no time to regroup. Tal would not even have stopped to count the material."
+  },
+  {
+    "id": "tal-043",
+    "gm": "tal",
+    "type": "style",
+    "source": null,
+    "lichessId": "PdK8H",
+    "fen": "3rk3/Bb2n1p1/p3pp2/1p4n1/2p3N1/P1P1K2P/1P2B3/3R4 w - - 1 31",
+    "solution": [
+      "g4f6",
+      "g7f6",
+      "e2h5",
+      "g5f7",
+      "h5f7",
+      "e8f7",
+      "d1d8"
+    ],
+    "themes": [
+      "advantage",
+      "attackingF2F7",
+      "clearance",
+      "exposedKing",
+      "middlegame",
+      "sacrifice"
+    ],
+    "rating": 1770,
+    "hint": "Your knight is worth less than the attack. Where can it go to force the king's hand?",
+    "explanation": "1.Nxf6+! gxf6 2.Bh5+ Nf7 3.Bxf7+! Kxf7 4.Rxd8. The knight sacrifice on f6 is the key: it forces the defence onto the one square where it collapses. The attack wins decisive material. Tal would not even have stopped to count the material."
+  },
+  {
+    "id": "tal-044",
+    "gm": "tal",
+    "type": "style",
+    "source": null,
+    "lichessId": "iF3Ne",
+    "fen": "8/pp2npk1/3Q2b1/8/P2Pq3/2P1R3/1P2NK2/8 b - - 14 38",
+    "solution": [
+      "e4e3",
+      "f2e3",
+      "e7f5",
+      "e3e4",
+      "f5d6"
+    ],
+    "themes": [
+      "advantage",
+      "attraction",
+      "doubleCheck",
+      "endgame",
+      "exposedKing",
+      "fork",
+      "sacrifice"
+    ],
+    "rating": 1772,
+    "hint": "Your queen is worth less than the attack. Where can it go to force the king's hand?",
+    "explanation": "1...Qxe3+! 2.Kxe3 Nf5+ 3.Ke4 Nxd6+. The queen sacrifice on e3 is the key: it forces the defence onto the one square where it collapses. Discovered and double checks leave the defender no time to regroup. Tal would not even have stopped to count the material."
+  },
+  {
+    "id": "tal-045",
+    "gm": "tal",
+    "type": "style",
+    "source": null,
+    "lichessId": "mFo3E",
+    "fen": "5rk1/ppp3p1/3p4/3Pp2Q/2P1P1P1/1B2n1q1/PP5R/R6K b - - 3 27",
+    "solution": [
+      "g3f3",
+      "h1g1",
+      "f3f1",
+      "a1f1",
+      "f8f1"
+    ],
+    "themes": [
+      "exposedKing",
+      "kingsideAttack",
+      "mate",
+      "mateIn3",
+      "middlegame",
+      "sacrifice"
+    ],
+    "rating": 1775,
+    "hint": "Begin with a forcing queen check. The real blow comes afterwards.",
+    "explanation": "1...Qf3+! 2.Kg1 Qf1+! 3.Rxf1 Rxf1#. The queen sacrifice on f1 is the key: it forces the defence onto the one square where it collapses. Every move is a check or a direct threat, so the defender never gets a free move. Tal would not even have stopped to count the material."
+  },
+  {
+    "id": "tal-046",
+    "gm": "tal",
+    "type": "style",
+    "source": null,
+    "lichessId": "vx1bG",
+    "fen": "1r3rk1/p1p1qp2/7p/3B1bp1/Q2Pn3/2P1P1B1/P3NPPP/2KR3R b - - 0 18",
+    "solution": [
+      "b8b1",
+      "c1b1",
+      "e4c3",
+      "b1a1",
+      "c3a4"
+    ],
+    "themes": [
+      "advantage",
+      "attraction",
+      "discoveredCheck",
+      "doubleCheck",
+      "exposedKing",
+      "middlegame",
+      "queensideAttack",
+      "sacrifice"
+    ],
+    "rating": 1847,
+    "hint": "Your rook is worth less than the attack. Where can it go to force the king's hand?",
+    "explanation": "1...Rb1+! 2.Kxb1 Nxc3+ 3.Ka1 Nxa4. The rook sacrifice on b1 is the key: it forces the defence onto the one square where it collapses. Discovered and double checks leave the defender no time to regroup. Tal would not even have stopped to count the material."
+  },
+  {
+    "id": "tal-047",
+    "gm": "tal",
+    "type": "style",
+    "source": null,
+    "lichessId": "Zemc1",
+    "fen": "r4r2/p1p2pk1/3p4/1BbN4/1P1nP1P1/8/P5PP/R4RK1 b - - 0 19",
+    "solution": [
+      "d4e2",
+      "g1h1",
+      "e2g3",
+      "h2g3",
+      "f8h8"
+    ],
+    "themes": [
+      "doubleCheck",
+      "kingsideAttack",
+      "mate",
+      "mateIn3",
+      "middlegame",
+      "sacrifice"
+    ],
+    "rating": 1849,
+    "hint": "Start with a knight move and look for a double check one move later.",
+    "explanation": "1...Ne2+! 2.Kh1 Ng3+! 3.hxg3 Rh8#. The knight sacrifice on g3 is the key: it forces the defence onto the one square where it collapses. Discovered and double checks leave the defender no time to regroup. Tal would not even have stopped to count the material."
+  },
+  {
+    "id": "tal-048",
+    "gm": "tal",
+    "type": "style",
+    "source": null,
+    "lichessId": "pssCj",
+    "fen": "5r1r/1p1kbP2/p3p1q1/2p5/2PpNQ2/N2PnB1p/PP6/4R1RK b - - 3 29",
+    "solution": [
+      "g6g2",
+      "g1g2",
+      "h3g2",
+      "h1g1",
+      "h8h1"
+    ],
+    "themes": [
+      "advancedPawn",
+      "collinearMove",
+      "crushing",
+      "discoveredCheck",
+      "doubleCheck",
+      "exposedKing",
+      "kingsideAttack",
+      "middlegame",
+      "sacrifice"
+    ],
+    "rating": 1850,
+    "hint": "Your queen is worth less than the attack. Where can it go to force the king's hand?",
+    "explanation": "1...Qg2+! 2.Rxg2 hxg2+ 3.Kg1 Rh1+. The queen sacrifice on g2 is the key: it forces the defence onto the one square where it collapses. Discovered and double checks leave the defender no time to regroup. Tal would not even have stopped to count the material."
+  },
+  {
+    "id": "tal-049",
+    "gm": "tal",
+    "type": "style",
+    "source": null,
+    "lichessId": "ksUuw",
+    "fen": "r5k1/pb1nqrb1/1p4Q1/3p4/5P2/1P2P2R/PB4PP/R5K1 w - - 2 21",
+    "solution": [
+      "g6h7",
+      "g8f8",
+      "h7h8",
+      "g7h8",
+      "h3h8"
+    ],
+    "themes": [
+      "exposedKing",
+      "kingsideAttack",
+      "mate",
+      "mateIn3",
+      "middlegame",
+      "sacrifice"
+    ],
+    "rating": 1850,
+    "hint": "Begin with a forcing queen check. The real blow comes afterwards.",
+    "explanation": "1.Qh7+! Kf8 2.Qh8+! Bxh8 3.Rxh8#. The queen sacrifice on h8 is the key: it forces the defence onto the one square where it collapses. Every move is a check or a direct threat, so the defender never gets a free move. Tal would not even have stopped to count the material."
+  },
+  {
+    "id": "tal-050",
+    "gm": "tal",
+    "type": "style",
+    "source": null,
+    "lichessId": "gxfgC",
+    "fen": "1n1r3r/NQp2ppp/3k4/1B1P1q2/8/3P1p1b/PPP5/R1B3RK b - - 0 21",
+    "solution": [
+      "h3g2",
+      "g1g2",
+      "f5h3",
+      "g2h2",
+      "h3f1"
+    ],
+    "themes": [
+      "clearance",
+      "exposedKing",
+      "kingsideAttack",
+      "mate",
+      "mateIn3",
+      "middlegame",
+      "sacrifice"
+    ],
+    "rating": 1850,
+    "hint": "Your bishop is worth less than the attack. Where can it go to force the king's hand?",
+    "explanation": "1...Bg2+! 2.Rxg2 Qh3+ 3.Rh2 Qf1#. The bishop sacrifice on g2 is the key: it forces the defence onto the one square where it collapses. Every move is a check or a direct threat, so the defender never gets a free move. Tal would not even have stopped to count the material."
+  },
+  {
+    "id": "tal-051",
+    "gm": "tal",
+    "type": "style",
+    "source": null,
+    "lichessId": "RarD8",
+    "fen": "r5k1/1p4pp/p1p4r/P2pPP1b/1P3Q1q/2PBP3/5R2/R5K1 b - - 2 26",
+    "solution": [
+      "h4h1",
+      "g1h1",
+      "h5f3",
+      "h1g1",
+      "h6h1"
+    ],
+    "themes": [
+      "attraction",
+      "discoveredCheck",
+      "doubleCheck",
+      "exposedKing",
+      "kingsideAttack",
+      "mate",
+      "mateIn3",
+      "middlegame",
+      "operaMate",
+      "sacrifice"
+    ],
+    "rating": 1931,
+    "hint": "Your queen is worth less than the attack. Where can it go to force the king's hand?",
+    "explanation": "1...Qh1+! 2.Kxh1 Bf3+ 3.Kg1 Rh1#. The queen sacrifice on h1 is the key: it forces the defence onto the one square where it collapses. The rook lands on the back rank, guarded by the bishop. It is the same idea Morphy used in his famous Opera Game. Tal would not even have stopped to count the material."
+  },
+  {
+    "id": "tal-052",
+    "gm": "tal",
+    "type": "style",
+    "source": null,
+    "lichessId": "IBpXW",
+    "fen": "6rk/pp1Q1R1p/3p3B/2p1b3/2PpP3/1PqP3P/P5B1/6K1 b - - 4 25",
+    "solution": [
+      "c3e1",
+      "f7f1",
+      "g8g2",
+      "g1g2",
+      "e1g3",
+      "g2h1",
+      "g3h2"
+    ],
+    "themes": [
+      "attraction",
+      "exposedKing",
+      "kingsideAttack",
+      "mate",
+      "mateIn4",
+      "middlegame",
+      "sacrifice"
+    ],
+    "rating": 1931,
+    "hint": "Begin with a forcing queen check. The real blow comes afterwards.",
+    "explanation": "1...Qe1+! 2.Rf1 Rxg2+! 3.Kxg2 Qg3+ 4.Kh1 Qh2#. The rook sacrifice on g2 is the key: it forces the defence onto the one square where it collapses. Every move is a check or a direct threat, so the defender never gets a free move. Tal would not even have stopped to count the material."
+  },
+  {
+    "id": "tal-053",
+    "gm": "tal",
+    "type": "style",
+    "source": null,
+    "lichessId": "7tA46",
+    "fen": "1r3rk1/3q1p2/7p/2QN2p1/2Bn2n1/6BK/P4PP1/3R1R2 b - - 0 21",
+    "solution": [
+      "g4f2",
+      "h3h2",
+      "d4f3",
+      "g2f3",
+      "d7h3",
+      "h2g1",
+      "h3g3"
+    ],
+    "themes": [
+      "deflection",
+      "discoveredCheck",
+      "doubleCheck",
+      "exposedKing",
+      "mate",
+      "mateIn4",
+      "middlegame",
+      "sacrifice"
+    ],
+    "rating": 1932,
+    "hint": "Start with a knight move and look for a double check one move later.",
+    "explanation": "1...Nxf2+! 2.Kh2 Nf3+! 3.gxf3 Qh3+ 4.Kg1 Qxg3#. The knight sacrifice on f3 is the key: it forces the defence onto the one square where it collapses. Discovered and double checks leave the defender no time to regroup. Tal would not even have stopped to count the material."
+  },
+  {
+    "id": "tal-054",
+    "gm": "tal",
+    "type": "style",
+    "source": null,
+    "lichessId": "5Pv91",
+    "fen": "r5rk/pp2R1b1/3p3p/2qP4/2p5/2Pb1B1P/PPNQ3N/6RK b - - 2 24",
+    "solution": [
+      "c5g1",
+      "h1g1",
+      "g7d4",
+      "g1h1",
+      "g8g1"
+    ],
+    "themes": [
+      "attraction",
+      "discoveredCheck",
+      "doubleCheck",
+      "exposedKing",
+      "kingsideAttack",
+      "mate",
+      "mateIn3",
+      "middlegame",
+      "operaMate",
+      "sacrifice"
+    ],
+    "rating": 1933,
+    "hint": "Your queen is worth less than the attack. Where can it go to force the king's hand?",
+    "explanation": "1...Qxg1+! 2.Kxg1 Bd4+ 3.Kh1 Rg1#. The queen sacrifice on g1 is the key: it forces the defence onto the one square where it collapses. The rook lands on the back rank, guarded by the bishop. It is the same idea Morphy used in his famous Opera Game. Tal would not even have stopped to count the material."
+  },
+  {
+    "id": "tal-055",
+    "gm": "tal",
+    "type": "style",
+    "source": null,
+    "lichessId": "BbK1G",
+    "fen": "6rk/7r/pq1pPpQ1/3BbP2/1p5P/8/PPP2P2/1K4n1 w - - 2 31",
+    "solution": [
+      "g6g8",
+      "h8g8",
+      "e6e7",
+      "g8g7",
+      "e7e8q",
+      "b6b8",
+      "e8b8"
+    ],
+    "themes": [
+      "advancedPawn",
+      "crushing",
+      "discoveredAttack",
+      "discoveredCheck",
+      "exposedKing",
+      "kingsideAttack",
+      "middlegame",
+      "promotion",
+      "sacrifice"
+    ],
+    "rating": 1936,
+    "hint": "Your queen is worth less than the attack. Where can it go to force the king's hand?",
+    "explanation": "1.Qxg8+! Kxg8 2.e7+ Kg7 3.e8=Q Qb8 4.Qxb8. The queen sacrifice on g8 is the key: it forces the defence onto the one square where it collapses. The pawn crashes through and promotes, which ends the game. Tal would not even have stopped to count the material."
+  },
+  {
+    "id": "tal-056",
+    "gm": "tal",
+    "type": "style",
+    "source": null,
+    "lichessId": "vd1Cb",
+    "fen": "7r/4nkp1/2P1p3/1P1qPpPb/p2p1P2/P2Q4/2B2R2/1R4K1 b - - 9 43",
+    "solution": [
+      "d5h1",
+      "g1h1",
+      "h5f3",
+      "h1g1",
+      "h8h1"
+    ],
+    "themes": [
+      "attraction",
+      "discoveredCheck",
+      "doubleCheck",
+      "exposedKing",
+      "kingsideAttack",
+      "mate",
+      "mateIn3",
+      "middlegame",
+      "operaMate",
+      "sacrifice"
+    ],
+    "rating": 2010,
+    "hint": "Your queen is worth less than the attack. Where can it go to force the king's hand?",
+    "explanation": "1...Qh1+! 2.Kxh1 Bf3+ 3.Kg1 Rh1#. The queen sacrifice on h1 is the key: it forces the defence onto the one square where it collapses. The rook lands on the back rank, guarded by the bishop. It is the same idea Morphy used in his famous Opera Game. Tal would not even have stopped to count the material."
+  },
+  {
+    "id": "tal-057",
+    "gm": "tal",
+    "type": "style",
+    "source": null,
+    "lichessId": "aBJoU",
+    "fen": "3r1rk1/1b2q1n1/p3ppQ1/1p6/3PNn2/7R/PP3PPP/1B2R1K1 w - - 3 25",
+    "solution": [
+      "e4f6",
+      "f8f6",
+      "h3h8",
+      "g8h8",
+      "g6h7"
+    ],
+    "themes": [
+      "attraction",
+      "exposedKing",
+      "kingsideAttack",
+      "mate",
+      "mateIn3",
+      "middlegame",
+      "sacrifice"
+    ],
+    "rating": 2010,
+    "hint": "Your knight is worth less than the attack. Where can it go to force the king's hand?",
+    "explanation": "1.Nxf6+! Rxf6 2.Rh8+! Kxh8 3.Qh7#. The knight sacrifice on f6 is the key: it forces the defence onto the one square where it collapses. Every move is a check or a direct threat, so the defender never gets a free move. Tal would not even have stopped to count the material."
+  },
+  {
+    "id": "tal-058",
+    "gm": "tal",
+    "type": "style",
+    "source": null,
+    "lichessId": "z1IiL",
+    "fen": "4rrk1/2p1bppp/p1n5/3qB3/1p6/3P2R1/PPP3PP/R3Q1K1 w - - 2 18",
+    "solution": [
+      "g3g7",
+      "g8h8",
+      "g7g8",
+      "h8g8",
+      "e1g3",
+      "e7g5",
+      "g3g5"
+    ],
+    "themes": [
+      "attraction",
+      "discoveredCheck",
+      "doubleCheck",
+      "kingsideAttack",
+      "mate",
+      "mateIn4",
+      "middlegame",
+      "sacrifice"
+    ],
+    "rating": 2012,
+    "hint": "Start with a rook move and look for a double check one move later.",
+    "explanation": "1.Rxg7+! Kh8 2.Rg8+! Kxg8 3.Qg3+ Bg5 4.Qxg5#. The rook sacrifice on g8 is the key: it forces the defence onto the one square where it collapses. Discovered and double checks leave the defender no time to regroup. Tal would not even have stopped to count the material."
+  },
+  {
+    "id": "tal-059",
+    "gm": "tal",
+    "type": "style",
+    "source": null,
+    "lichessId": "5AL7m",
+    "fen": "5rk1/1p1r2p1/p3p1Pp/P3Pn2/3P1BQ1/2Pq4/1P5R/5RK1 b - - 7 30",
+    "solution": [
+      "d3f1",
+      "g1f1",
+      "f5e3",
+      "f1e2",
+      "e3g4"
+    ],
+    "themes": [
+      "attraction",
+      "crushing",
+      "exposedKing",
+      "kingsideAttack",
+      "middlegame",
+      "pin",
+      "sacrifice"
+    ],
+    "rating": 2016,
+    "hint": "Your queen is worth less than the attack. Where can it go to force the king's hand?",
+    "explanation": "1...Qxf1+! 2.Kxf1 Ne3+ 3.Ke2 Nxg4. The queen sacrifice on f1 is the key: it forces the defence onto the one square where it collapses. The attack wins decisive material. Tal would not even have stopped to count the material."
+  },
+  {
+    "id": "tal-060",
+    "gm": "tal",
+    "type": "style",
+    "source": null,
+    "lichessId": "fYUx6",
+    "fen": "b3rrk1/2p1q3/p3p1BP/1pNn2Q1/3P1n2/8/PP3PP1/2R1R1K1 w - - 1 24",
+    "solution": [
+      "g6f7",
+      "g8f7",
+      "g5g7"
+    ],
+    "themes": [
+      "attraction",
+      "discoveredCheck",
+      "doubleCheck",
+      "kingsideAttack",
+      "mate",
+      "mateIn2",
+      "middlegame",
+      "sacrifice"
+    ],
+    "rating": 2016,
+    "hint": "Your bishop is worth less than the attack. Where can it go to force the king's hand?",
+    "explanation": "1.Bf7+! Kxf7 2.Qg7#. The bishop sacrifice on f7 is the key: it forces the defence onto the one square where it collapses. Discovered and double checks leave the defender no time to regroup. Tal would not even have stopped to count the material."
   }
 ]

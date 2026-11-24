@@ -21,6 +21,8 @@ export interface Puzzle {
   rating: number
   hint: string
   explanation: string
+  /** Source puzzle id when taken from the Lichess database (CC0) */
+  lichessId?: string
   /** For real-game puzzles: what was actually played, in SAN */
   gameContinuation?: string
 }
@@ -33,5 +35,8 @@ export interface GmPack {
   style: string[]
   /** Lichess puzzle themes used to find style-matched positions */
   themeProfile: string[]
+  /** Path under public/, shown in the round crest */
+  portrait?: string
+  portraitCredit?: string
   available: boolean
 }

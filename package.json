@@ -11,7 +11,8 @@
     "verify": "tsx scripts/verify-puzzles.ts",
     "import:lichess": "tsx scripts/import-lichess.ts",
     "mine:pgn": "tsx scripts/mine-pgn.ts",
-    "typecheck:scripts": "tsc -p tsconfig.scripts.json"
+    "typecheck:scripts": "tsc -p tsconfig.scripts.json",
+    "curate": "tsx scripts/curate.ts"
   },
   "dependencies": {
     "chess.js": "^1.4.0",

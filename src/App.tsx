@@ -1,4 +1,4 @@
-import { PACKS, FREE_PER_PACK, checkoutUrl, difficultyLabel, puzzlesFor } from './data/packs'
+import { PACKS, FREE_PER_PACK, checkoutUrl, difficultyLabel, isLocked, puzzlesFor } from './data/packs'
 import { PuzzlePlayer } from './components/PuzzlePlayer'
 import { getResult } from './lib/progress'
 import { href, useRoute } from './lib/router'
@@ -19,8 +19,17 @@ export default function App() {
         {route.name === 'puzzle' && <PuzzlePage id={route.id} />}
       </main>
       <footer className="site-footer">
-        Puzzles are original compositions or positions from public game records. Not affiliated with or endorsed by
-        any player or estate.
+        <p>
+          Puzzles are original compositions or come from the{' '}
+          <a href="https://database.lichess.org/#puzzles">Lichess puzzle database</a> (CC0), with thanks to Lichess.
+          Not affiliated with or endorsed by any player or estate.
+        </p>
+        <p>
+          Portraits:{' '}
+          {PACKS.filter((p) => p.portraitCredit)
+            .map((p) => `${p.name.split(' ').pop()}: ${p.portraitCredit}`)
+            .join(' · ')}
+        </p>
       </footer>
     </>
   )
@@ -32,6 +41,15 @@ function initials(name: string) {
     .map((w) => w[0])
     .slice(0, 2)
     .join('')
+}
+
+/** Round portrait, falling back to initials when a pack has no picture yet */
+function Crest({ pack, large }: { pack: GmPack; large?: boolean }) {
+  const cls = `crest${large ? ' large' : ''}`
+  if (pack.portrait) {
+    return <img className={`${cls} portrait`} src={pack.portrait} alt={`Portrait of ${pack.name}`} title={pack.portraitCredit} />
+  }
+  return <div className={cls}>{initials(pack.name)}</div>
 }
 
 function Home() {
@@ -60,7 +78,7 @@ function PackCard({ pack }: { pack: GmPack }) {
   const count = puzzlesFor(pack.id).length
   const inner = (
     <>
-      <div className="crest">{initials(pack.name)}</div>
+      <Crest pack={pack} />
       <div>
         <h2>{pack.name}</h2>
         <p className="muted">
@@ -89,7 +107,7 @@ function PackPage({ gm }: { gm: string }) {
   return (
     <>
       <section className="gm-intro">
-        <div className="crest large">{initials(pack.name)}</div>
+        <Crest pack={pack} large />
         <div>
           <p className="eyebrow">Think like</p>
           <h1>{pack.name}</h1>
@@ -110,7 +128,7 @@ function PackPage({ gm }: { gm: string }) {
       <ol className="puzzle-list">
         {puzzles.map((p, i) => {
           const result = getResult(p.id)
-          const locked = i >= FREE_PER_PACK
+          const locked = isLocked(gm, i)
           return (
             <li key={p.id}>
               <a className={`puzzle-row${locked ? ' locked' : ''}`} href={locked ? undefined : href.puzzle(p.id)}>
@@ -128,20 +146,14 @@ function PackPage({ gm }: { gm: string }) {
         })}
       </ol>
 
-      {puzzles.length > FREE_PER_PACK && (
+      {checkout && puzzles.length > FREE_PER_PACK && (
         <div className="unlock">
           <p>
             The first {FREE_PER_PACK} puzzles are free. Unlock all {puzzles.length} to keep going.
           </p>
-          {checkout ? (
-            <a className="btn primary" href={checkout}>
-              Unlock the {pack.name.split(' ').pop()} pack
-            </a>
-          ) : (
-            <button className="btn" disabled>
-              Full pack coming soon
-            </button>
-          )}
+          <a className="btn primary" href={checkout}>
+            Unlock the {pack.name.split(' ').pop()} pack
+          </a>
         </div>
       )}
     </>
@@ -153,7 +165,7 @@ function PuzzlePage({ id }: { id: string }) {
   const pack = PACKS.find((p) => p.id === gm)
   const puzzles = puzzlesFor(gm)
   const index = puzzles.findIndex((p) => p.id === id)
-  if (!pack || index < 0 || index >= FREE_PER_PACK) return <NotFound />
+  if (!pack || index < 0 || isLocked(gm, index)) return <NotFound />
   const puzzle = puzzles[index]
   const next = puzzles[index + 1]
 
@@ -173,7 +185,7 @@ function PuzzlePage({ id }: { id: string }) {
       <PuzzlePlayer
         key={puzzle.id}
         puzzle={puzzle}
-        onNext={() => (window.location.hash = next && index + 1 < FREE_PER_PACK ? href.puzzle(next.id) : href.pack(gm))}
+        onNext={() => (window.location.hash = next && !isLocked(gm, index + 1) ? href.puzzle(next.id) : href.pack(gm))}
       />
     </>
   )

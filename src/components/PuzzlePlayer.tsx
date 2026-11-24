@@ -156,7 +156,8 @@ export function PuzzlePlayer({ puzzle, onNext }: Props) {
   if (status !== 'playing') {
     return (
       <div className="player">
-        <SolutionReplay puzzle={puzzle} orientation={orientation} />
+        {/* Solved: hold the final position until the user asks for a replay. Gave up: play it straight away. */}
+        <SolutionReplay puzzle={puzzle} orientation={orientation} autoPlay={status === 'revealed'} />
         <div className="player-panel">
           <p className={`status ${status}`}>
             {status === 'solved' ? (mistakes === 0 && hintLevel === 0 ? 'Solved cleanly!' : 'Solved!') : 'Solution'}
@@ -213,7 +214,15 @@ export function PuzzlePlayer({ puzzle, onNext }: Props) {
 }
 
 /** Animated walk through the full solution with arrows: the live version of the GIF solution. */
-function SolutionReplay({ puzzle, orientation }: { puzzle: Puzzle; orientation: 'white' | 'black' }) {
+function SolutionReplay({
+  puzzle,
+  orientation,
+  autoPlay,
+}: {
+  puzzle: Puzzle
+  orientation: 'white' | 'black'
+  autoPlay: boolean
+}) {
   const frames = useMemo(() => {
     const g = new Chess(puzzle.fen)
     const out = [{ fen: g.fen(), san: '', uci: '' }]
@@ -224,8 +233,13 @@ function SolutionReplay({ puzzle, orientation }: { puzzle: Puzzle; orientation: 
     return out
   }, [puzzle])
 
-  const [i, setI] = useState(0)
-  const [playing, setPlaying] = useState(true)
+  const [i, setI] = useState(autoPlay ? 0 : frames.length - 1)
+  const [playing, setPlaying] = useState(autoPlay)
+
+  function replay() {
+    setI(0)
+    setPlaying(true)
+  }
 
   useEffect(() => {
     if (!playing) return
@@ -259,20 +273,17 @@ function SolutionReplay({ puzzle, orientation }: { puzzle: Puzzle; orientation: 
         customLightSquareStyle={{ backgroundColor: 'var(--sq-light)' }}
       />
       <div className="replay-controls">
-        <button className="btn icon" onClick={() => { setPlaying(false); setI(0) }} aria-label="Start">⏮</button>
-        <button className="btn icon" onClick={() => { setPlaying(false); setI((x) => Math.max(0, x - 1)) }} aria-label="Back">◀</button>
-        <button
-          className="btn icon"
-          onClick={() => {
-            if (i >= frames.length - 1) setI(0)
-            setPlaying((p) => !p)
-          }}
-          aria-label={playing ? 'Pause' : 'Play'}
-        >
-          {playing ? '⏸' : '▶︎'}
-        </button>
-        <button className="btn icon" onClick={() => { setPlaying(false); setI((x) => Math.min(frames.length - 1, x + 1)) }} aria-label="Forward">▶</button>
-        <button className="btn icon" onClick={() => { setPlaying(false); setI(frames.length - 1) }} aria-label="End">⏭</button>
+        <button className="btn icon" onClick={() => { setPlaying(false); setI((x) => Math.max(0, x - 1)) }} aria-label="Previous move">◀</button>
+        {playing ? (
+          <button className="btn replay-main" onClick={() => setPlaying(false)}>
+            ⏸ Pause
+          </button>
+        ) : (
+          <button className="btn primary replay-main" onClick={replay}>
+            ↻ Replay solution
+          </button>
+        )}
+        <button className="btn icon" onClick={() => { setPlaying(false); setI((x) => Math.min(frames.length - 1, x + 1)) }} aria-label="Next move">▶</button>
       </div>
       <p className="move-list">
         {frames.slice(1).map((f, k) => {

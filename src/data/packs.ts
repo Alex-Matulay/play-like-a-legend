@@ -9,6 +9,11 @@ export function checkoutUrl(gm: string): string | undefined {
   return env[`VITE_CHECKOUT_URL_${gm.toUpperCase()}`]
 }
 
+/** The paywall only switches on once a pack can actually be bought; until then every puzzle is open. */
+export function isLocked(gm: string, index: number): boolean {
+  return !!checkoutUrl(gm) && index >= FREE_PER_PACK
+}
+
 export const PACKS: GmPack[] = [
   {
     id: 'tal',
@@ -21,6 +26,8 @@ export const PACKS: GmPack[] = [
       'Creates threats faster than the defender can count them',
     ],
     themeProfile: ['sacrifice', 'attackingF2F7', 'kingsideAttack', 'exposedKing', 'doubleCheck', 'smotheredMate'],
+    portrait: 'portraits/tal.jpg',
+    portraitCredit: 'Photo: R. Mieremet / Anefo, Nationaal Archief, CC0 (1973). Engraving effect added.',
     available: true,
   },
   {
@@ -48,6 +55,8 @@ export const PACKS: GmPack[] = [
     tagline: 'Iron Tigran',
     style: ['Prophylaxis: stops plans before they start', 'Positional exchange sacrifices', 'Near-impossible to beat'],
     themeProfile: ['defensiveMove', 'quietMove', 'intermezzo', 'equality'],
+    portrait: 'portraits/petrosian.jpg',
+    portraitCredit: 'Photo: Harry Pot / Anefo, Nationaal Archief, CC0 (1962). Engraving effect added.',
     available: false,
   },
 ]
