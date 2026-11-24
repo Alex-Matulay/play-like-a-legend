@@ -1,0 +1,401 @@
+:root {
+  --bg: #f6f1e7;
+  --surface: #fffdf8;
+  --text: #1f1a14;
+  --muted: #6e6355;
+  --border: #e3d8c5;
+  --accent: #9c3d1f;
+  --accent-text: #fffaf2;
+  --sq-light: #efe2c6;
+  --sq-dark: #b08a5b;
+  --sq-last: rgba(214, 180, 60, 0.55);
+  --sq-selected: rgba(80, 140, 200, 0.55);
+  --sq-dot: rgba(30, 30, 30, 0.28);
+  --sq-hint: rgba(240, 180, 40, 0.7);
+  --sq-good: rgba(46, 160, 90, 0.7);
+  --sq-bad: rgba(210, 60, 50, 0.7);
+  --good: #2e7d4f;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --bg: #17140f;
+    --surface: #221d16;
+    --text: #f1e9da;
+    --muted: #a99a84;
+    --border: #3a3127;
+    --accent: #e07a4f;
+    --accent-text: #1a120c;
+    --sq-light: #d9c7a3;
+    --sq-dark: #8f6a40;
+    --good: #6cc391;
+    color-scheme: dark;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+.brand {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+a {
+  color: inherit;
+}
+
+main {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 16px 48px;
+}
+
+.site-header {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 18px 16px;
+}
+
+.brand {
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+
+.brand-mark {
+  color: var(--accent);
+}
+
+.site-footer {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 24px 16px 40px;
+  color: var(--muted);
+  font-size: 0.8rem;
+  border-top: 1px solid var(--border);
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.small {
+  font-size: 0.85rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.1s ease, background 0.2s ease;
+}
+
+.btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.btn:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+
+.btn.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-text);
+}
+
+.btn.ghost {
+  background: transparent;
+}
+
+.btn.icon {
+  padding: 8px 12px;
+  min-width: 44px;
+}
+
+/* Home */
+.hero {
+  padding: 40px 0 32px;
+  max-width: 640px;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.1;
+  margin: 0 0 16px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: var(--muted);
+  margin: 0 0 24px;
+}
+
+.pack-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.pack-card {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding: 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+a.pack-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.pack-card.disabled {
+  opacity: 0.6;
+}
+
+.pack-card h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.pack-card p {
+  margin: 2px 0 0;
+}
+
+.pack-meta {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.crest {
+  flex: none;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--accent);
+  color: var(--accent-text);
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.crest.large {
+  width: 88px;
+  height: 88px;
+  font-size: 2rem;
+}
+
+/* Pack page */
+.gm-intro {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  padding: 24px 0;
+}
+
+.gm-intro h1 {
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+}
+
+.eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.style-list {
+  padding-left: 18px;
+  margin: 12px 0;
+}
+
+.puzzle-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.puzzle-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+a.puzzle-row[href]:hover {
+  border-color: var(--accent);
+}
+
+.puzzle-row.locked {
+  opacity: 0.55;
+}
+
+.num {
+  width: 28px;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.row-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.row-status {
+  font-size: 1.1rem;
+  color: var(--good);
+}
+
+.unlock {
+  margin-top: 24px;
+  padding: 20px;
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+  text-align: center;
+}
+
+/* Puzzle page */
+.crumbs {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 8px 0;
+  font-size: 0.9rem;
+}
+
+.crumbs a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.source-line {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 1.15rem;
+  margin: 4px 0 16px;
+}
+
+.player {
+  display: grid;
+  grid-template-columns: minmax(0, 560px) minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+@media (max-width: 760px) {
+  .player {
+    grid-template-columns: 1fr;
+  }
+}
+
+.board-wrap {
+  width: 100%;
+  max-width: 560px;
+}
+
+.player-panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.status {
+  font-weight: 600;
+  margin: 0 0 16px;
+}
+
+.status.solved {
+  color: var(--good);
+  font-size: 1.3rem;
+  font-family: 'Fraunces', Georgia, serif;
+}
+
+.status.revealed {
+  font-size: 1.3rem;
+  font-family: 'Fraunces', Georgia, serif;
+}
+
+.explanation {
+  margin: 0 0 16px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.replay-controls {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.move-list {
+  text-align: center;
+  font-weight: 600;
+  margin: 10px 0 0;
+}
+
+.move-list span {
+  cursor: pointer;
+  padding: 2px 3px;
+  border-radius: 4px;
+}
+
+.move-list span.current {
+  background: var(--sq-last);
+}
+
+@media (max-width: 520px) {
+  .gm-intro {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
