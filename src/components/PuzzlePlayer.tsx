@@ -41,6 +41,8 @@ function useReplay(puzzle: Puzzle) {
   const last = frames.length - 1
   const [index, setIndex] = useState(last)
   const [playing, setPlaying] = useState(false)
+  // True once the user has started or stepped through the replay; keeps the last move's note on screen after it ends
+  const [started, setStarted] = useState(false)
 
   useEffect(() => {
     if (!playing) return
@@ -56,17 +58,21 @@ function useReplay(puzzle: Puzzle) {
     frames,
     index,
     playing,
+    started,
     play: () => {
       setIndex(0)
       setPlaying(true)
+      setStarted(true)
     },
     pause: () => setPlaying(false),
     goTo: (i: number) => {
       setPlaying(false)
+      setStarted(true)
       setIndex(Math.max(0, Math.min(last, i)))
     },
     reset: () => {
       setPlaying(false)
+      setStarted(false)
       setIndex(last)
     },
   }
@@ -198,7 +204,7 @@ export function PuzzlePlayer({ puzzle, onNext }: Props) {
 
   const done = status !== 'playing'
   // After a solve, show the user's own final position until they start the replay
-  const showingReplay = done && (status === 'revealed' || replay.playing || replay.index !== replay.frames.length - 1)
+  const showingReplay = done && (status === 'revealed' || replay.started)
   const frame = replay.frames[replay.index]
 
   // ---- Board decorations --------------------------------------------------------------------------
