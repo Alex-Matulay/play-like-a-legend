@@ -415,3 +415,33 @@ a.puzzle-row[href]:hover {
 .site-footer p {
   margin: 0 0 6px;
 }
+
+.move-note {
+  margin: 0 0 16px;
+  padding: 12px 14px;
+  min-height: 4.6em;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.move-note strong {
+  font-family: 'Fraunces', Georgia, serif;
+  margin-right: 4px;
+}
+
+.move-note.board-note {
+  display: none;
+  margin: 10px 0 0;
+}
+
+@media (max-width: 760px) {
+  .move-note.board-note {
+    display: block;
+  }
+  .move-note.panel-note {
+    display: none;
+  }
+}

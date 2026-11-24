@@ -17,7 +17,12 @@
     ],
     "rating": 1300,
     "hint": "Your knight already guards g8. What happens if the queen lands there too?",
-    "explanation": "1.Qg8+! The king cannot take because the knight on h6 guards g8, so the rook must capture. That leaves the king boxed in by its own pieces, and 2.Nf7# is a smothered mate. Giving up the queen to get a mate is the bargain Tal was always looking for."
+    "explanation": "1.Qg8+! The king cannot take because the knight on h6 guards g8, so the rook must capture. That leaves the king boxed in by its own pieces, and 2.Nf7# is a smothered mate. Giving up the queen to get a mate is the bargain Tal was always looking for.",
+    "moveNotes": [
+      "Sacrifice! The queen jumps to g8 with check. The king cannot take, because the knight on h6 guards g8.",
+      "Forced: the rook must capture the queen. Now g8 is blocked by Black's own rook.",
+      "Checkmate! The knight checks from f7. The king is walled in by its own rook and pawns: a smothered mate."
+    ]
   },
   {
     "id": "tal-002",
@@ -39,7 +44,14 @@
     ],
     "rating": 1450,
     "hint": "Start with a knight check that takes g8 and g6 away from the king.",
-    "explanation": "1.Ne7+ drives the king to the corner, and the knight now covers g8 and g6. 2.Qxh7+!! Kxh7 rips the h-file open, and 3.Rh5# finishes it. The king's own g7 pawn closes the last door. This is Anastasia's mate."
+    "explanation": "1.Ne7+ drives the king to the corner, and the knight now covers g8 and g6. 2.Qxh7+!! Kxh7 rips the h-file open, and 3.Rh5# finishes it. The king's own g7 pawn closes the last door. This is Anastasia's mate.",
+    "moveNotes": [
+      "The knight checks from e7. It also takes away g8 and g6, the king's escape squares.",
+      "Forced: the king's only square is the corner, h8.",
+      "Sacrifice! The queen takes on h7 with check, ripping open the h-file.",
+      "Forced: the king has to take, since g8 is still covered by the knight.",
+      "Checkmate! The rook slides to h5. The knight covers g8 and g6, and the king's own g7 pawn blocks the last square: Anastasia's mate."
+    ]
   },
   {
     "id": "tal-003",
@@ -59,7 +71,12 @@
     ],
     "rating": 1500,
     "hint": "The b7 pawn is the only thing shielding the a6 to c8 diagonal. Can you make it move?",
-    "explanation": "1.Qxc6+! The pawn has to take, because b8, c7 and d7 are covered or occupied. Once b7 is gone, 2.Ba6# is Boden's mate, with two bishops on crossing diagonals. Tal loved sacrifices that pull a defender away from the king."
+    "explanation": "1.Qxc6+! The pawn has to take, because b8, c7 and d7 are covered or occupied. Once b7 is gone, 2.Ba6# is Boden's mate, with two bishops on crossing diagonals. Tal loved sacrifices that pull a defender away from the king.",
+    "moveNotes": [
+      "Sacrifice! The queen takes the knight on c6 with check along the c-file.",
+      "Forced: b8 and c7 are covered by the f4 bishop, so the b7 pawn must take the queen.",
+      "Checkmate! With the b7 pawn gone, the bishop strikes from a6. The two bishops on crossing diagonals seal the king in: Boden's mate."
+    ]
   },
   {
     "id": "tal-004",
@@ -79,7 +96,12 @@
     ],
     "rating": 1550,
     "hint": "The bishop on c4 already controls g8. Open the h-file at any cost.",
-    "explanation": "1.Rxh7+! The king cannot run to g8 because the c4 bishop covers it, so it must take. 2.Qh5# follows, with the queen covering g6, h6 and the whole h-file. Give up a rook to open a file next to the king. That is pure Tal."
+    "explanation": "1.Rxh7+! The king cannot run to g8 because the c4 bishop covers it, so it must take. 2.Qh5# follows, with the queen covering g6, h6 and the whole h-file. Give up a rook to open a file next to the king. That is pure Tal.",
+    "moveNotes": [
+      "Sacrifice! The rook takes on h7 with check to tear open the h-file.",
+      "Forced: g8 is covered by the c4 bishop, so the king must take the rook.",
+      "Checkmate! The queen lands on h5, controlling the whole h-file plus g6. The bishop still guards g8 and the king is trapped."
+    ]
   },
   {
     "id": "tal-005",
@@ -104,7 +126,16 @@
     ],
     "rating": 1750,
     "hint": "Start with a knight check, then look for a double check.",
-    "explanation": "1.Nf7+ Kg8 2.Nh6+ is a double check from the knight and the queen, so the king must move. The bishop on a3 covers f8, so 2...Kh8 is forced. 3.Qg8+!! Rxg8 4.Nf7# is the full smothered mate pattern known as Philidor's legacy. Four forcing moves, with the queen sacrifice saved for the moment it does the most damage."
+    "explanation": "1.Nf7+ Kg8 2.Nh6+ is a double check from the knight and the queen, so the king must move. The bishop on a3 covers f8, so 2...Kh8 is forced. 3.Qg8+!! Rxg8 4.Nf7# is the full smothered mate pattern known as Philidor's legacy. Four forcing moves, with the queen sacrifice saved for the moment it does the most damage.",
+    "moveNotes": [
+      "The knight checks from f7, forking the king and driving it out of the corner.",
+      "Forced: the king's only square is g8.",
+      "Double check! The knight jumps to h6, unmasking the queen on c4. Both pieces give check, so the king must move.",
+      "Forced: f8 is covered by the a3 bishop and f7 by the queen, so the king goes back to h8.",
+      "Sacrifice! The queen goes to g8 with check. The king cannot take, because the knight on h6 guards g8.",
+      "Forced: the rook must capture, blocking the king's last square.",
+      "Checkmate! The knight returns to f7. The king is boxed in by its own rook and pawns: Philidor's legacy, the classic smothered mate."
+    ]
   },
   {
     "id": "tal-006",

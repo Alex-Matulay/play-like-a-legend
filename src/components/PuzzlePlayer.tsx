@@ -3,13 +3,15 @@ import { Chess, type Square } from 'chess.js'
 import { Chessboard } from 'react-chessboard'
 import type { Puzzle } from '../types'
 import { saveResult } from '../lib/progress'
+import { buildMoveNotes } from '../lib/moveNotes'
 
 type Status = 'playing' | 'solved' | 'revealed'
 type Flash = { square: string; kind: 'good' | 'bad' } | null
 type Arrow = [Square, Square, string]
 
 const REPLY_DELAY_MS = 450
-const REPLAY_STEP_MS = 1100
+// Long enough to read each move's note while the piece moves
+const REPLAY_STEP_MS = 2500
 const BOARD_STYLE = { borderRadius: '6px', boxShadow: '0 10px 30px rgba(0,0,0,.25)' }
 const DARK = { backgroundColor: 'var(--sq-dark)' }
 const LIGHT = { backgroundColor: 'var(--sq-light)' }
@@ -88,6 +90,7 @@ export function PuzzlePlayer({ puzzle, onNext }: Props) {
   const [flash, setFlash] = useState<Flash>(null)
   const [message, setMessage] = useState('')
   const replay = useReplay(puzzle)
+  const notes = useMemo(() => buildMoveNotes(puzzle), [puzzle])
 
   const solverColor = useMemo(() => new Chess(puzzle.fen).turn(), [puzzle.fen])
   const orientation = solverColor === 'w' ? 'white' : 'black'
@@ -235,6 +238,20 @@ export function PuzzlePlayer({ puzzle, onNext }: Props) {
   const startMoveNo = Number(puzzle.fen.split(' ')[5] ?? 1)
   const blackFirst = puzzle.fen.split(' ')[1] === 'b'
 
+  // The note is rendered twice: beside the board on desktop, directly under it on phones (CSS picks one)
+  const moveNote = (where: string) =>
+    showingReplay && (
+      <p className={`move-note ${where}`} aria-live={where === 'panel-note' ? 'polite' : 'off'}>
+        {replay.index === 0 ? (
+          <>Starting position. {solverColor === 'w' ? 'White' : 'Black'} to move.</>
+        ) : (
+          <>
+            <strong>{replay.frames[replay.index].san}</strong> {notes[replay.index - 1]}
+          </>
+        )}
+      </p>
+    )
+
   return (
     <div className="player">
       <div className="board-wrap">
@@ -256,6 +273,7 @@ export function PuzzlePlayer({ puzzle, onNext }: Props) {
           customLightSquareStyle={LIGHT}
         />
 
+        {moveNote('board-note')}
         {done && (
           <>
             <div className="replay-controls">
@@ -295,6 +313,7 @@ export function PuzzlePlayer({ puzzle, onNext }: Props) {
       <div className="player-panel">
         {done ? (
           <>
+            {moveNote('panel-note')}
             <p className={`status ${status}`}>{status === 'solved' ? message : 'Solution'}</p>
             <p className="explanation">{puzzle.explanation}</p>
             {puzzle.gameContinuation && (

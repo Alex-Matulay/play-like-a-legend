@@ -21,6 +21,8 @@ export interface Puzzle {
   rating: number
   hint: string
   explanation: string
+  /** Optional hand-written note per solution move, shown during the replay (overrides the generated one) */
+  moveNotes?: string[]
   /** Source puzzle id when taken from the Lichess database (CC0) */
   lichessId?: string
   /** For real-game puzzles: what was actually played, in SAN */
