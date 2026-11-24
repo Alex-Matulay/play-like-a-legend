@@ -215,7 +215,13 @@ export function PuzzlePlayer({ puzzle, onNext }: Props) {
     if (selected) {
       squareStyles[selected] = { background: 'var(--sq-selected)' }
       for (const m of game.current.moves({ square: selected as Square, verbose: true })) {
-        squareStyles[m.to] = { background: 'radial-gradient(circle, var(--sq-dot) 22%, transparent 24%)' }
+        // A centre dot would be hidden under the enemy piece, so captures get a ring around the edge instead
+        const takesPiece = !!m.captured && !m.flags.includes('e')
+        squareStyles[m.to] = {
+          background: takesPiece
+            ? 'radial-gradient(circle closest-side, transparent 78%, var(--sq-capture) 81%)'
+            : 'radial-gradient(circle, var(--sq-dot) 22%, transparent 24%)',
+        }
       }
     }
     const nextMove = puzzle.solution[step]

@@ -11,6 +11,7 @@
   --sq-last: rgba(214, 180, 60, 0.55);
   --sq-selected: rgba(80, 140, 200, 0.55);
   --sq-dot: rgba(30, 30, 30, 0.28);
+  --sq-capture: rgba(20, 20, 20, 0.45);
   --sq-hint: rgba(240, 180, 40, 0.7);
   --sq-good: rgba(46, 160, 90, 0.7);
   --sq-bad: rgba(210, 60, 50, 0.7);
