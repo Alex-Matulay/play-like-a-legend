@@ -125,26 +125,34 @@ function PackPage({ gm }: { gm: string }) {
         </div>
       </section>
 
-      <ol className="puzzle-list">
+      <ol className="puzzle-grid">
         {puzzles.map((p, i) => {
           const result = getResult(p.id)
           const locked = isLocked(gm, i)
+          const level = difficultyLabel(p.rating)
+          const realGame = p.type === 'real' && p.source ? `${p.source.white} vs ${p.source.black}, ${p.source.year}` : ''
+          const state = locked ? ' locked' : result?.solved ? ' solved' : ''
           return (
             <li key={p.id}>
-              <a className={`puzzle-row${locked ? ' locked' : ''}`} href={locked ? undefined : href.puzzle(p.id)}>
-                <span className="num">{i + 1}</span>
-                <span className="row-main">
-                  <span>{p.type === 'real' && p.source ? `${p.source.white} vs ${p.source.black}, ${p.source.year}` : `In the style of ${pack.name.split(' ').pop()}`}</span>
-                  <span className="muted small">
-                    {difficultyLabel(p.rating)} · {p.rating}
-                  </span>
-                </span>
-                <span className="row-status">{locked ? '🔒' : result?.solved ? (result.clean ? '★' : '✓') : ''}</span>
+              <a
+                className={`puzzle-tile tier-${level.split(' ')[0].toLowerCase()}${state}`}
+                href={locked ? undefined : href.puzzle(p.id)}
+                title={realGame || `${level} · ${p.rating}`}
+                aria-label={`Puzzle ${i + 1}, ${level}, rating ${p.rating}${result?.solved ? ', solved' : ''}${locked ? ', locked' : ''}`}
+              >
+                <span className="tile-num">{i + 1}</span>
+                <span className="tile-meta">{p.rating}</span>
+                {realGame && <span className="tile-game">{p.source!.year}</span>}
+                <span className="tile-status">{locked ? '🔒' : result?.solved ? (result.clean ? '★' : '✓') : ''}</span>
               </a>
             </li>
           )
         })}
       </ol>
+      <p className="tier-legend muted small">
+        <span className="dot tier-club" /> Club <span className="dot tier-strong" /> Strong club{' '}
+        <span className="dot tier-expert" /> Expert · ★ solved cleanly · ✓ solved
+      </p>
 
       {checkout && puzzles.length > FREE_PER_PACK && (
         <div className="unlock">

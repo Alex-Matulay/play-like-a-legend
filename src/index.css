@@ -247,48 +247,92 @@ a.pack-card:hover {
   margin: 12px 0;
 }
 
-.puzzle-list {
+.puzzle-grid {
   list-style: none;
   padding: 0;
   margin: 0;
   display: grid;
-  gap: 8px;
+  grid-template-columns: repeat(auto-fill, minmax(72px, 1fr));
+  gap: 10px;
 }
 
-.puzzle-row {
+/* Difficulty colour, shown as the tile's top edge and in the legend */
+.tier-club {
+  --tier: #5a9e6f;
+}
+.tier-strong {
+  --tier: #d29a3a;
+}
+.tier-expert {
+  --tier: #c2553a;
+}
+
+.puzzle-tile {
+  position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 14px;
-  padding: 12px 16px;
+  justify-content: center;
+  aspect-ratio: 1;
   background: var(--surface);
   border: 1px solid var(--border);
+  border-top: 4px solid var(--tier);
   border-radius: 10px;
   text-decoration: none;
+  transition: transform 0.12s ease, border-color 0.12s ease;
 }
 
-a.puzzle-row[href]:hover {
+a.puzzle-tile[href]:hover {
+  transform: translateY(-2px);
   border-color: var(--accent);
+  border-top-color: var(--tier);
 }
 
-.puzzle-row.locked {
-  opacity: 0.55;
+.puzzle-tile.solved {
+  background: color-mix(in srgb, var(--good) 12%, var(--surface));
 }
 
-.num {
-  width: 28px;
+.puzzle-tile.locked {
+  opacity: 0.5;
+}
+
+.tile-num {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 1.5rem;
   font-weight: 700;
+  line-height: 1;
+}
+
+.tile-meta,
+.tile-game {
+  margin-top: 4px;
+  font-size: 0.75rem;
   color: var(--muted);
 }
 
-.row-main {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
+.tile-status {
+  position: absolute;
+  top: 4px;
+  right: 7px;
+  font-size: 0.85rem;
+  color: var(--good);
 }
 
-.row-status {
-  font-size: 1.1rem;
-  color: var(--good);
+.tier-legend {
+  margin: 14px 0 0;
+}
+
+.tier-legend .dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--tier);
+  margin: 0 3px 0 8px;
+}
+
+.tier-legend .dot:first-child {
+  margin-left: 0;
 }
 
 .unlock {
