@@ -1,0 +1,62 @@
+[
+  {
+    "id": "tal-001",
+    "gm": "tal",
+    "type": "style",
+    "source": null,
+    "fen": "4r2k/pp4pp/7N/q7/2Q5/8/5PPP/6K1 w - - 0 1",
+    "solution": ["c4g8", "e8g8", "h6f7"],
+    "themes": ["sacrifice", "smotheredMate", "mateIn2"],
+    "rating": 1300,
+    "hint": "Your knight already guards g8. What happens if the queen lands there too?",
+    "explanation": "1.Qg8+! The king cannot take because the knight on h6 guards g8, so the rook must capture. That leaves the king boxed in by its own pieces, and 2.Nf7# is a smothered mate. Giving up the queen to get a mate is the bargain Tal was always looking for."
+  },
+  {
+    "id": "tal-002",
+    "gm": "tal",
+    "type": "style",
+    "source": null,
+    "fen": "1q3rk1/5ppp/8/R2N4/8/3Q4/5PPP/6K1 w - - 0 1",
+    "solution": ["d5e7", "g8h8", "d3h7", "h8h7", "a5h5"],
+    "themes": ["sacrifice", "anastasiaMate", "mateIn3"],
+    "rating": 1450,
+    "hint": "Start with a knight check that takes g8 and g6 away from the king.",
+    "explanation": "1.Ne7+ drives the king to the corner, and the knight now covers g8 and g6. 2.Qxh7+!! Kxh7 rips the h-file open, and 3.Rh5# finishes it. The king's own g7 pawn closes the last door. This is Anastasia's mate."
+  },
+  {
+    "id": "tal-003",
+    "gm": "tal",
+    "type": "style",
+    "source": null,
+    "fen": "2kr4/pp1nq3/2n5/8/5B2/5Q2/4BPPP/6K1 w - - 0 1",
+    "solution": ["f3c6", "b7c6", "e2a6"],
+    "themes": ["sacrifice", "bodenMate", "mateIn2"],
+    "rating": 1500,
+    "hint": "The b7 pawn is the only thing shielding the a6 to c8 diagonal. Can you make it move?",
+    "explanation": "1.Qxc6+! The pawn has to take, because b8, c7 and d7 are covered or occupied. Once b7 is gone, 2.Ba6# is Boden's mate, with two bishops on crossing diagonals. Tal loved sacrifices that pull a defender away from the king."
+  },
+  {
+    "id": "tal-004",
+    "gm": "tal",
+    "type": "style",
+    "source": null,
+    "fen": "5r1k/ppq3pp/8/8/2B5/7R/4QPPP/6K1 w - - 0 1",
+    "solution": ["h3h7", "h8h7", "e2h5"],
+    "themes": ["sacrifice", "kingsideAttack", "mateIn2"],
+    "rating": 1550,
+    "hint": "The bishop on c4 already controls g8. Open the h-file at any cost.",
+    "explanation": "1.Rxh7+! The king cannot run to g8 because the c4 bishop covers it, so it must take. 2.Qh5# follows, with the queen covering g6, h6 and the whole h-file. Give up a rook to open a file next to the king. That is pure Tal."
+  },
+  {
+    "id": "tal-005",
+    "gm": "tal",
+    "type": "style",
+    "source": null,
+    "fen": "4r2k/pp4pp/1q6/6N1/2Q5/B7/5PPP/6K1 w - - 0 1",
+    "solution": ["g5f7", "h8g8", "f7h6", "g8h8", "c4g8", "e8g8", "h6f7"],
+    "themes": ["sacrifice", "smotheredMate", "doubleCheck", "mateIn4"],
+    "rating": 1750,
+    "hint": "Start with a knight check, then look for a double check.",
+    "explanation": "1.Nf7+ Kg8 2.Nh6+ is a double check from the knight and the queen, so the king must move. The bishop on a3 covers f8, so 2...Kh8 is forced. 3.Qg8+!! Rxg8 4.Nf7# is the full smothered mate pattern known as Philidor's legacy. Four forcing moves, with the queen sacrifice saved for the moment it does the most damage."
+  }
+]
