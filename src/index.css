@@ -502,3 +502,69 @@ a.puzzle-tile[href]:hover {
 .view-label.past {
   color: var(--accent);
 }
+
+.more-link {
+  display: inline-block;
+  margin: 2px 0 6px;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.more-link:hover {
+  text-decoration: underline;
+}
+
+a.pack-card.soon {
+  opacity: 0.85;
+}
+
+/* About page */
+.about {
+  max-width: 680px;
+}
+
+.about h2 {
+  font-size: 1.35rem;
+  margin: 28px 0 8px;
+}
+
+.about p {
+  margin: 0 0 12px;
+}
+
+.about .lede {
+  font-size: 1.15rem;
+  font-family: 'Fraunces', Georgia, serif;
+  margin: 8px 0 8px;
+}
+
+.facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  margin: 0 0 20px;
+}
+
+.facts div {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 14px;
+}
+
+.facts dt {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.facts dd {
+  margin: 2px 0 0;
+}
+
+.about-cta {
+  margin: 28px 0 8px;
+}

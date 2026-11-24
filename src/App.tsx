@@ -1,5 +1,6 @@
 import { PACKS, FREE_PER_PACK, checkoutUrl, difficultyLabel, isLocked, puzzlesFor } from './data/packs'
 import { PuzzlePlayer } from './components/PuzzlePlayer'
+import { BIOS } from './data/bios'
 import { getResult } from './lib/progress'
 import { href, useRoute } from './lib/router'
 import type { GmPack } from './types'
@@ -16,6 +17,7 @@ export default function App() {
       <main>
         {route.name === 'home' && <Home />}
         {route.name === 'pack' && <PackPage gm={route.gm} />}
+        {route.name === 'about' && <AboutPage gm={route.gm} />}
         {route.name === 'puzzle' && <PuzzlePage id={route.id} />}
       </main>
       <footer className="site-footer">
@@ -84,12 +86,18 @@ function PackCard({ pack }: { pack: GmPack }) {
         <p className="muted">
           {pack.tagline} · {pack.years}
         </p>
-        <p className="pack-meta">{pack.available ? `${count} puzzles` : 'Coming soon'}</p>
+        <p className="pack-meta">
+          {pack.available ? `${count} puzzles` : `Coming soon · Read about ${BIOS[pack.id]?.firstName ?? pack.name}`}
+        </p>
       </div>
     </>
   )
   return pack.available ? (
     <a className="pack-card" href={href.pack(pack.id)}>
+      {inner}
+    </a>
+  ) : BIOS[pack.id] ? (
+    <a className="pack-card soon" href={href.about(pack.id)}>
       {inner}
     </a>
   ) : (
@@ -111,6 +119,11 @@ function PackPage({ gm }: { gm: string }) {
         <div>
           <p className="eyebrow">Think like</p>
           <h1>{pack.name}</h1>
+          {BIOS[pack.id] && (
+            <a className="more-link" href={href.about(pack.id)}>
+              More about {BIOS[pack.id]!.firstName} →
+            </a>
+          )}
           <p className="muted">
             {pack.tagline} · {pack.years}
           </p>
@@ -196,6 +209,61 @@ function PuzzlePage({ id }: { id: string }) {
         onNext={() => (window.location.hash = next && !isLocked(gm, index + 1) ? href.puzzle(next.id) : href.pack(gm))}
       />
     </>
+  )
+}
+
+function AboutPage({ gm }: { gm: string }) {
+  const pack = PACKS.find((p) => p.id === gm)
+  const bio = BIOS[gm as GmPack['id']]
+  if (!pack || !bio) return <NotFound />
+  const count = puzzlesFor(gm).length
+
+  return (
+    <article className="about">
+      <nav className="crumbs">
+        <a href={pack.available ? href.pack(gm) : href.home()}>← {pack.available ? `${pack.name} puzzles` : 'All legends'}</a>
+      </nav>
+      <header className="gm-intro">
+        <Crest pack={pack} large />
+        <div>
+          <p className="eyebrow">{pack.tagline}</p>
+          <h1>{pack.name}</h1>
+          <p className="muted">{bio.title}</p>
+        </div>
+      </header>
+
+      <dl className="facts">
+        <div>
+          <dt>Born</dt>
+          <dd>{bio.born}</dd>
+        </div>
+        <div>
+          <dt>Died</dt>
+          <dd>{bio.died}</dd>
+        </div>
+      </dl>
+
+      <p className="lede">{bio.intro}</p>
+
+      {bio.sections.map((sec) => (
+        <section key={sec.heading}>
+          <h2>{sec.heading}</h2>
+          {sec.body.map((para, i) => (
+            <p key={i}>{para}</p>
+          ))}
+        </section>
+      ))}
+
+      <div className="about-cta">
+        {pack.available ? (
+          <a className="btn primary" href={href.pack(gm)}>
+            Solve {count} puzzles in {bio.firstName}'s style →
+          </a>
+        ) : (
+          <p className="muted">The {pack.name.split(' ').pop()} puzzle pack is coming soon.</p>
+        )}
+      </div>
+    </article>
   )
 }
 
