@@ -162,8 +162,15 @@
       "smotheredMate"
     ],
     "rating": 1201,
-    "hint": "Start with a knight move and look for a double check one move later.",
-    "explanation": "1...Nh3+! 2.Kh1 Qg1+! 3.Rxg1 Nf2#. The queen sacrifice on g1 is the key: it forces the defence onto the one square where it collapses. The king is buried behind its own pieces, and the knight delivers a smothered mate. Tal would not even have stopped to count the material."
+    "hint": "Your knight on f2 is screening your queen from the white king. What happens if it steps aside with check?",
+    "explanation": "1...Nh3+! 2.Kh1 Qg1+! 3.Rxg1 Nf2#. The knight jump uncovers the queen on b6, so White faces two checks at once and the king has only h1. Then the queen offers herself on g1, where the king cannot take because the knight on h3 guards it. The rook has to capture, and now the white king is walled in by its own rook and pawns for a classic smothered mate.",
+    "moveNotes": [
+      "Double check. The knight gives check from h3 and also opens the b6 to g1 diagonal for your queen, so White cannot block or capture.",
+      "The only legal move. The f2 square is covered by your queen and the king's other neighbours are its own pieces.",
+      "A queen sacrifice with check. The king cannot take on g1 because the knight on h3 guards that square.",
+      "Forced. Capturing with the rook is White's only legal move, and it fills g1 with a white piece.",
+      "Smothered mate. The king on h1 is boxed in by the rook on g1 and the pawns on g2 and h2, and nothing can capture the knight."
+    ]
   },
   {
     "id": "tal-007",
@@ -190,8 +197,15 @@
       "smotheredMate"
     ],
     "rating": 1202,
-    "hint": "Start with a knight move and look for a double check one move later.",
-    "explanation": "1.Nh6+! Kh8 2.Qg8+! Rxg8 3.Nf7#. The queen sacrifice on g8 is the key: it forces the defence onto the one square where it collapses. The king is buried behind its own pieces, and the knight delivers a smothered mate. Tal would not even have stopped to count the material."
+    "hint": "Your queen on b3 and your knight on f7 are lined up on the same diagonal as Black's king. How can the knight make that line count?",
+    "explanation": "1.Nh6+! Kh8 2.Qg8+! Rxg8 3.Nf7#. Moving the knight with check unmasks the queen on b3, and against a double check the only answer is a king move. With the king tucked into h8, the queen is thrown away on g8 just to lure the rook onto that square. The knight then returns to f7 and the king is suffocated by its own rook and pawns.",
+    "moveNotes": [
+      "Double check from the knight and from the queen on b3, whose diagonal to g8 is now open. Black must move the king.",
+      "The only legal move. The rook on f8 blocks one escape and the queen covers f7.",
+      "The queen goes where the king cannot take her, because the knight on h6 guards g8. Black's rook has to capture.",
+      "Forced, as it is the only legal move. The rook now sits on g8 and blocks its own king.",
+      "Smothered mate. The rook on g8 and the pawns on g7 and h7 take every square, and no black piece can reach f7."
+    ]
   },
   {
     "id": "tal-008",
@@ -218,8 +232,15 @@
       "smotheredMate"
     ],
     "rating": 1207,
-    "hint": "Start with a knight move and look for a double check one move later.",
-    "explanation": "1.Nxh6+! Kh8 2.Qg8+! Rxg8 3.Nf7#. The queen sacrifice on g8 is the key: it forces the defence onto the one square where it collapses. The king is buried behind its own pieces, and the knight delivers a smothered mate. Tal would not even have stopped to count the material."
+    "hint": "There is a pawn on h6 your knight can grab, and your queen on e6 is aiming at g8. Can you combine those two facts?",
+    "explanation": "1.Nxh6+! Kh8 2.Qg8+! Rxg8 3.Nf7#. Taking the pawn on h6 opens the queen's diagonal through f7, so Black is in double check and can only step to h8. Now g8 is guarded by the knight, which means the queen can sit there and only the rook can remove her. Once the rook is on g8, the king has no air left and the knight's return to f7 is mate. Tal loved a queen sacrifice that ends with the defender's own pieces doing the damage, and this is a clean example.",
+    "moveNotes": [
+      "The knight takes a pawn with check and uncovers the queen on e6 at the same time. Against double check the king must move.",
+      "The only legal move. The queen covers f7, and the bishop, the h7 pawn and the rook block the other squares.",
+      "A queen sacrifice the king cannot accept, since the knight on h6 covers g8. The rook is forced to take.",
+      "The only legal reply. Now the black rook stands on g8, exactly where it blocks its own king.",
+      "Mate. The rook on g8, the bishop on g7 and the pawn on h7 surround the king, and the knight on f7 cannot be captured."
+    ]
   },
   {
     "id": "tal-009",
@@ -248,8 +269,15 @@
       "sacrifice"
     ],
     "rating": 1251,
-    "hint": "Your queen is worth less than the attack. Where can it go to force the king's hand?",
-    "explanation": "1.Qg7+! Rxg7 2.hxg7+ Kg8 3.Rh8#. The queen sacrifice on g7 is the key: it forces the defence onto the one square where it collapses. The advanced pawn is the hidden hero. Once the queen is gone, it takes away the king's escape squares. Tal would not even have stopped to count the material."
+    "hint": "Your pawns on f6 and h6 both point at the same square next to Black's king. What could you put there?",
+    "explanation": "1.Qg7+! Rxg7 2.hxg7+ Kg8 3.Rh8#. The queen lands on a square defended twice by your pawns, so the king cannot take her and Black has to capture with a piece. When the h6 pawn recaptures, it gives check and also opens the h-file for the rook on h1. The king must go to g8, and the rook comes in on h8 with the g7 pawn guarding it.",
+    "moveNotes": [
+      "Check from a square the king cannot touch, because the pawns on f6 and h6 both guard g7. Your queen on g5 was also under attack from the rook on g8.",
+      "Black has two captures here, the rook or the knight on f5. The rook capture is the line shown.",
+      "Double check. The pawn checks from g7 and the rook on h1 now sees the king along the open h-file.",
+      "The only legal move. The king cannot take on g7 because the f6 pawn protects it.",
+      "Mate. The rook is guarded by the g7 pawn, which also covers f8, and the pawn on f7 blocks the last square."
+    ]
   },
   {
     "id": "tal-010",
@@ -276,8 +304,15 @@
       "sacrifice"
     ],
     "rating": 1333,
-    "hint": "Start with a knight move and look for a double check one move later.",
-    "explanation": "1.Ne7+! Kh8 2.Qg8+! Rxg8 3.Rxg8#. The queen sacrifice on g8 is the key: it forces the defence onto the one square where it collapses. Discovered and double checks leave the defender no time to regroup. Tal would not even have stopped to count the material."
+    "hint": "Your knight on g6 is standing between your queen and Black's king. Where can it go with check of its own?",
+    "explanation": "1.Ne7+! Kh8 2.Qg8+! Rxg8 3.Rxg8#. When the knight leaves g6 with check, the queen on g3 also checks down the g-file, and the king has to run to h8. The queen then drops onto g8, a square the king cannot take because the knight and the rook on g1 both guard it. After the rook takes the queen, your own rook captures on g8 and the king is trapped by its own knight on h7.",
+    "moveNotes": [
+      "Double check. The knight checks from e7 and the queen on g3 now checks along the open g-file.",
+      "The only legal move, since g7 is on the queen's file and f7 and h7 hold Black's own pieces.",
+      "The queen offers herself on g8. The knight on e7 and the rook on g1 both guard that square, so the king cannot capture.",
+      "The only legal reply. The rook from f8 takes the queen and the g-file is still open for your rook.",
+      "Mate. The rook on g8 is protected by the knight on e7, it covers g7, and the knight on h7 blocks the king's last square."
+    ]
   },
   {
     "id": "tal-011",
@@ -304,8 +339,15 @@
       "sacrifice"
     ],
     "rating": 1362,
-    "hint": "Your queen is worth less than the attack. Where can it go to force the king's hand?",
-    "explanation": "1.Qg7+! Bxg7 2.hxg7+ Kg8 3.Rh8#. The queen sacrifice on g7 is the key: it forces the defence onto the one square where it collapses. The advanced pawn is the hidden hero. Once the queen is gone, it takes away the king's escape squares. Tal would not even have stopped to count the material."
+    "hint": "Count how many of your units already touch g7. Is that square really as safe for Black as it looks?",
+    "explanation": "1.Qg7+! Bxg7 2.hxg7+ Kg8 3.Rh8#. The queen check on g7 can only be met by the bishop capture, because the pawn on h6 and the knight on f5 both protect the queen. Recapturing with the pawn brings a second check from the rook on h1, so the king has to step to g8. The rook then mates on h8, guarded by the g7 pawn, which in turn is defended by the knight on f5.",
+    "moveNotes": [
+      "Check from a square guarded by the h6 pawn and the knight on f5, so the king cannot take. Only the bishop on f8 can capture.",
+      "Forced, as it is Black's only legal move. The bishop leaves f8, which will matter later.",
+      "Double check. The pawn checks from g7 and the rook on h1 checks down the open h-file.",
+      "The only legal move. Taking the pawn on g7 is impossible because the knight on f5 protects it.",
+      "Mate. The rook is guarded by the g7 pawn, which also covers f8, and Black's own bishop blocks f7."
+    ]
   },
   {
     "id": "tal-012",
@@ -332,8 +374,15 @@
       "sacrifice"
     ],
     "rating": 1368,
-    "hint": "Start with a knight move and look for a double check one move later.",
-    "explanation": "1...Ng3+! 2.Kxh2 Nf1+ 3.Kg1 Qh2#. Discovered and double checks leave the defender no time to regroup."
+    "hint": "Your bishop on h2 is attacked by the king. Can you use that bishop as bait to pull the king onto your queen's diagonal?",
+    "explanation": "1...Ng3+! 2.Kxh2 Nf1+! 3.Kg1 Qh2#. The knight check leaves White only one move, taking your bishop, and that puts the king on h2 in line with your queen on c7. The knight then jumps to f1 with check and uncovers the queen, a double check that sends the king running. After 3.Kg1 the queen lands on h2, protected by the knight, and the rook on f8 controls the whole f-file.",
+    "moveNotes": [
+      "Check from the knight. White's only legal move is to take your bishop on h2.",
+      "Forced. Grabbing the bishop puts the king on the long diagonal of your queen on c7.",
+      "Double check. The knight checks from f1 and its departure from g3 opens the queen's diagonal to h2.",
+      "White has three king moves here, and g1 is the one shown. The king steps right next to your knight.",
+      "Mate. The queen is guarded by the knight on f1, the knight is guarded by the rook on f8, and the rook also covers f2."
+    ]
   },
   {
     "id": "tal-013",
@@ -361,8 +410,15 @@
       "sacrifice"
     ],
     "rating": 1377,
-    "hint": "Your queen is worth less than the attack. Where can it go to force the king's hand?",
-    "explanation": "1.Qg7+! Bxg7 2.hxg7+ Kg8 3.Rh8#. The queen sacrifice on g7 is the key: it forces the defence onto the one square where it collapses. The advanced pawn is the hidden hero. Once the queen is gone, it takes away the king's escape squares. Tal would not even have stopped to count the material."
+    "hint": "Black's bishop on e5 is the only piece that can reach the square in front of the king. What if you make it go there?",
+    "explanation": "1.Qg7+! Bxg7 2.hxg7+ Kg8 3.Rh8#. With the knight on f5 and the pawn on h6 both guarding g7, the queen check can only be answered by the bishop from e5. The h6 pawn takes back with check, and at the same moment the rook on h2 joins in down the h-file. The king is pushed to g8 and the rook finishes on h8. Giving up the queen to open one file is exactly the kind of trade Tal would make without a second thought.",
+    "moveNotes": [
+      "Check on a square protected by the knight on f5 and the h6 pawn. The king cannot take, so the bishop on e5 must capture.",
+      "The only legal move. The bishop leaves e5, where it had been eyeing your rook on h2.",
+      "The pawn recaptures with check, and the rook on h2 also checks along the h-file. That makes it a double check.",
+      "Forced. The g7 pawn is protected by the knight on f5, so g8 is the king's only square.",
+      "Mate. The rook on h8 is guarded by the g7 pawn, which also covers f8, and the f7 pawn blocks the remaining square."
+    ]
   },
   {
     "id": "tal-014",
@@ -391,8 +447,15 @@
       "sacrifice"
     ],
     "rating": 1408,
-    "hint": "Your queen is worth less than the attack. Where can it go to force the king's hand?",
-    "explanation": "1.Qg7+! Rxg7 2.hxg7+ Kg8 3.Rh8#. The queen sacrifice on g7 is the key: it forces the defence onto the one square where it collapses. The advanced pawn is the hidden hero. Once the queen is gone, it takes away the king's escape squares. Tal would not even have stopped to count the material."
+    "hint": "Your queen is attacked by the rook on g8, so a quiet move will not do. Is there a square where that attack backfires on Black?",
+    "explanation": "1.Qg7+! Rxg7 2.hxg7+ Kg8 3.Rh8#. The queen was under attack, so White chooses to give her up on g7, where both the f6 and h6 pawns protect her and the king cannot capture. After the rook takes, the h6 pawn recaptures with check while the rook on h1 opens fire down the h-file. The king has to go to g8, and the rook mates on h8 before Black's queen on f2 ever gets a move.",
+    "moveNotes": [
+      "Your queen was hanging to the rook on g8. Here she gives check on a square guarded by both the f6 and h6 pawns.",
+      "The only legal move. The king cannot take on g7, so the rook must.",
+      "Double check from the pawn on g7 and from the rook on h1 along the h-file.",
+      "The only legal move. The g7 pawn is protected by the f6 pawn, so the king cannot take it.",
+      "Mate. The rook is guarded by the g7 pawn, which also covers f8, and the f7 pawn blocks the last square."
+    ]
   },
   {
     "id": "tal-015",
@@ -419,8 +482,15 @@
       "sacrifice"
     ],
     "rating": 1433,
-    "hint": "Start with a knight move and look for a double check one move later.",
-    "explanation": "1...Nh3+! 2.Kh1 Qg1+! 3.Nxg1 Nf2#. The queen sacrifice on g1 is the key: it forces the defence onto the one square where it collapses. Discovered and double checks leave the defender no time to regroup. Tal would not even have stopped to count the material."
+    "hint": "White is pressing hard on your back rank, so you need checks. Which of your pieces is hiding a second attacker behind it?",
+    "explanation": "1...Nh3+! 2.Kh1 Qg1+! 3.Nxg1 Nf2#. The knight steps off f2 with check and uncovers your queen on b6, so White has to move the king. After 2.Kh1 the queen offers herself on g1, which the king cannot take because the knight on h3 guards it. White's knight must capture, and that fills the last free square around its own king. The knight's return to f2 is smothered mate.",
+    "moveNotes": [
+      "Double check. The knight checks from h3 and the queen on b6 now checks along the diagonal to g1.",
+      "White has two king moves, h1 or f1, and the line shown goes to h1.",
+      "A queen sacrifice with check. The king cannot take because the knight on h3 defends g1, so the knight on f3 must capture.",
+      "The only legal move. White's own knight now blocks g1.",
+      "Smothered mate. The king on h1 is shut in by the knight on g1, the bishop on g2 and the pawn on h2, and nothing can take your knight."
+    ]
   },
   {
     "id": "tal-016",
@@ -450,8 +520,17 @@
       "skewer"
     ],
     "rating": 1448,
-    "hint": "Your queen is worth less than the attack. Where can it go to force the king's hand?",
-    "explanation": "1.Qg7+! Rxg7 2.hxg7+ Kg8 3.Rh8+ Kf7 4.Rxd8. The queen sacrifice on g7 is the key: it forces the defence onto the one square where it collapses. The last check skewers the king and wins the piece behind it, leaving a won position. Tal would not even have stopped to count the material."
+    "hint": "Look at what stands on Black's back rank besides the king. If the king were forced off that rank, what would be left behind?",
+    "explanation": "1.Qg7+! Rxg7 2.hxg7+ Kg8 3.Rh8+! Kf7 4.Rxd8. The queen check on g7 forces the rook to take, and the pawn recapture brings a double check with the rook on h1. This time the king has f7, so Rh8 is not mate, but it drives the king off the eighth rank and leaves the queen on d8 undefended behind it. White has given a queen and taken back a rook and a queen, a net gain of a full rook.",
+    "moveNotes": [
+      "Check from a square guarded by the f6 and h6 pawns. The king cannot take, so the rook on h7 must.",
+      "The only legal move. The rook leaves h7 and opens the h-file.",
+      "Double check from the pawn on g7 and the rook on h1.",
+      "The only legal move, because the f6 pawn protects g7.",
+      "Check along the eighth rank. The rook is safe on h8 because the g7 pawn guards it, and Black's queen sits on the same rank behind the king.",
+      "The only legal move. The king has to leave the eighth rank, and that uncovers the queen on d8.",
+      "The rook takes the undefended queen. White has now won a rook and a queen in return for the queen."
+    ]
   },
   {
     "id": "tal-017",
@@ -478,8 +557,15 @@
       "sacrifice"
     ],
     "rating": 1496,
-    "hint": "Your queen is worth less than the attack. Where can it go to force the king's hand?",
-    "explanation": "1.Qg7+! Rxg7 2.hxg7+ Kxg7 3.Rh7+. The queen sacrifice on g7 is the key: it forces the defence onto the one square where it collapses. Discovered and double checks leave the defender no time to regroup. Tal would not even have stopped to count the material."
+    "hint": "Black's queen on d7 sits on the same rank as the square next to the king. How could you drag the king onto that rank?",
+    "explanation": "1.Qg7+! Rxg7 2.hxg7+ Kxg7 3.Rh7+!. The queen goes to g7 under the protection of the h6 pawn, so the rook from f7 has to take her. The pawn takes back with a double check, and the king is forced to capture on g7, which puts it on the seventh rank next to its own queen. Rh7+ is then a skewer: the king must move, and the rook on h7 takes the undefended queen on d7, so White ends up with a rook and a queen for the queen and a pawn.",
+    "moveNotes": [
+      "Check from a square guarded by the h6 pawn. The king cannot take, so the rook on f7 has to capture.",
+      "The only legal move. With the rook gone from f7, nothing stands between g7 and the queen on d7.",
+      "Double check. The pawn checks from g7 and the rook on h2 checks along the h-file.",
+      "The only legal move, and the pawn on g7 has no defender. The king is now lined up with its own queen on d7.",
+      "Check from a rook protected by the other rook on h1. Whether the king goes to f8 or g6, the queen on d7 is left hanging to the rook."
+    ]
   },
   {
     "id": "tal-018",
@@ -506,8 +592,15 @@
       "sacrifice"
     ],
     "rating": 1496,
-    "hint": "Start with a knight move and look for a double check one move later.",
-    "explanation": "1.Ng6+! Kxh7 2.Nf8+ Kh8 3.Qh7#. Discovered and double checks leave the defender no time to regroup."
+    "hint": "Your bishop on h7 is within the king's reach. Could losing it actually help by bringing the king onto a dangerous diagonal?",
+    "explanation": "1.Ng6+! Kxh7 2.Nf8+! Kh8 3.Qh7#. The knight check leaves Black just one move, taking the bishop, and that puts the king on h7 on the same diagonal as your queen on c2. When the knight jumps on to f8, it checks the king and uncovers the queen at the same time. After the king slips back to h8, the queen mates on h7, guarded by the knight. Tal often gave up a piece just to drag the king onto the line he wanted, and that is the whole trick here.",
+    "moveNotes": [
+      "Check from the knight, which the queen on c2 protects. The bishop covers g8, so Black's only move is to take it.",
+      "Forced. Capturing the bishop puts the king on the c2 to h7 diagonal.",
+      "Double check. The knight checks from f8 and the queen on c2 now sees h7 along the open diagonal.",
+      "Black has three king moves here, and h8 is the one shown.",
+      "Mate. The queen is protected by the knight on f8, she covers g8, and Black's own bishop blocks g7."
+    ]
   },
   {
     "id": "tal-019",
@@ -532,8 +625,15 @@
       "sacrifice"
     ],
     "rating": 1501,
-    "hint": "Your rook is worth less than the attack. Where can it go to force the king's hand?",
-    "explanation": "1.Rh3+! gxh3 2.Rh4+ Nh7 3.Qxh7#. The rook sacrifice on h3 is the key: it forces the defence onto the one square where it collapses. Every move is a check or a direct threat, so the defender never gets a free move. Tal would not even have stopped to count the material."
+    "hint": "One Black pawn is stopping your rook on f4 from swinging across the fourth rank. How can you get that pawn to move?",
+    "explanation": "1.Rh3+! gxh3 2.Rh4+ Nh7 3.Qxh7#. The first rook gives itself up on h3 to pull the g4 pawn off the fourth rank. With that pawn gone, the rook on f4 slides to h4 with check, and the only defence is to block with the knight. Black's queen is attacking yours on f7, but there is never time to take it. The queen captures on h7 with the rook behind it, and taking with the rook would also have been mate.",
+    "moveNotes": [
+      "A rook sacrifice with check. Black can block with the knight or take, and the capture is the line shown.",
+      "The g4 pawn takes the rook and leaves the fourth rank, which opens the road from f4 to h4.",
+      "Check down the h-file. Your queen on f7 is now unprotected against the queen on e8, but Black must deal with the check first.",
+      "The only legal move. The knight blocks on h7.",
+      "Mate. The queen takes the knight with the rook on h4 guarding her, and she covers both g8 and g7."
+    ]
   },
   {
     "id": "tal-020",
@@ -560,8 +660,17 @@
       "smotheredMate"
     ],
     "rating": 1508,
-    "hint": "Start with a knight move and look for a double check one move later.",
-    "explanation": "1...Nf2+! 2.Kg1 Nh3+ 3.Kh1 Qg1+! 4.Rxg1 Nf2#. The queen sacrifice on g1 is the key: it forces the defence onto the one square where it collapses. The king is buried behind its own pieces, and the knight delivers a smothered mate. Tal would not even have stopped to count the material."
+    "hint": "Your queen is hanging to the rook on d7, so only checks will do. Can your knight drive White's king into a corner where its own pieces smother it?",
+    "explanation": "1...Nf2+! 2.Kg1 Nh3+! 3.Kh1 Qg1+! 4.Rxg1 Nf2#. The knight check followed by a double check from knight and queen gives White no time to grab the loose queen on d4. Once the king is back on h1, the queen sacrifice on g1 forces the rook to fill the king's last square, and the knight returns to f2 for a smothered mate.",
+    "moveNotes": [
+      "Check with the knight, so White has no time to take your queen. Kg1 is White's only legal move.",
+      "The only way out of the knight check, but now the king sits on the same diagonal as your queen on d4.",
+      "A double check: the knight attacks g1 and its move uncovers the queen on d4. A double check can only be met by a king move.",
+      "Kf1 would walk into Qf2 mate, so the king goes back to the corner.",
+      "Your queen gives itself up on g1. The king cannot take because the knight on h3 guards g1, so the rook must capture.",
+      "The only legal move. Now the rook fills g1 and the king is boxed in by its own pieces.",
+      "The knight checks from f2. The king's neighbours g1, g2 and h2 are all its own pieces, and nothing can take the knight. Smothered mate."
+    ]
   },
   {
     "id": "tal-021",
@@ -584,8 +693,13 @@
       "smotheredMate"
     ],
     "rating": 1512,
-    "hint": "Your queen is worth less than the attack. Where can it go to force the king's hand?",
-    "explanation": "1...Qg1+! 2.Rxg1 Nf2#. The queen sacrifice on g1 is the key: it forces the defence onto the one square where it collapses. The king is buried behind its own pieces, and the knight delivers a smothered mate. Tal would not even have stopped to count the material."
+    "hint": "White's king on h1 is wrapped in its own pieces. What if you gave something away to fill its very last free square?",
+    "explanation": "1...Qg1+! 2.Rxg1 Nf2#. The knight on h3 guards g1, so the king cannot take the queen and the rook on f1 has to capture it. That rook now blocks g1, the pawns on g2 and h2 block the rest, and the knight jumps to f2 for a smothered mate.",
+    "moveNotes": [
+      "A queen sacrifice with check. The knight on h3 defends g1, so the king cannot capture.",
+      "White's only legal move. The rook takes, but in doing so it plugs the king's last escape square.",
+      "The knight gives check and the king has nowhere to go: g1, g2 and h2 are full of White's own pieces. Smothered mate."
+    ]
   },
   {
     "id": "tal-022",
@@ -611,8 +725,15 @@
       "sacrifice"
     ],
     "rating": 1525,
-    "hint": "Your bishop is worth less than the attack. Where can it go to force the king's hand?",
-    "explanation": "1.Bg7+! Rxg7 2.Qh6+ Rh7 3.Qf8#. The bishop sacrifice on g7 is the key: it forces the defence onto the one square where it collapses. Every move is a check or a direct threat, so the defender never gets a free move. Tal would not even have stopped to count the material."
+    "hint": "Your bishop on h6 is standing on the square your queen would love to use. How can it get out of the way with tempo?",
+    "explanation": "1.Bg7+! Rxg7 2.Qh6+ Rh7 3.Qf8#. The bishop sacrifice clears the c1 to h6 diagonal with check, so the queen can join the attack at once. After Qh6+, blocking with the rook leaves the back rank open, and Qf8 is mate because the rook on g3 still guards g7.",
+    "moveNotes": [
+      "A bishop sacrifice with check that also clears h6 for your queen. The rook on g3 supports the bishop along the g file.",
+      "Taking the bishop is best. Kh7 would allow Qh6 mate straight away.",
+      "Now the queen lands on h6 with check, using the diagonal the bishop just vacated.",
+      "Blocking with the rook. Kg8 would lose to Qxg7 mate, since the rook on g3 backs up the queen.",
+      "Mate along the back rank. The queen covers g8 and g7, the rook on g3 also hits g7, and the rook on h7 blocks its own king."
+    ]
   },
   {
     "id": "tal-023",
@@ -641,8 +762,17 @@
       "sacrifice"
     ],
     "rating": 1525,
-    "hint": "Begin with a forcing rook check. The real blow comes afterwards.",
-    "explanation": "1.Rh6+! Kg7 2.Rh7+! Kxh7 3.Bf5+ Kg7 4.Qxe7+. The rook sacrifice on h7 is the key: it forces the defence onto the one square where it collapses. The attack wins decisive material. Tal would not even have stopped to count the material."
+    "hint": "Your bishop on d7 stands between your queen and Black's queen. Can you lure the king onto a square where moving that bishop comes with check?",
+    "explanation": "1.Rh6+! Kg7 2.Rh7+! Kxh7 3.Bf5+ Kg7 4.Qxe7+. White throws a whole rook at the king just to drag it onto h7. From there, Bf5 gives check and uncovers the queen on c7 against the queen on e7 at the same moment, so Black has no time to save it. White ends up with queen and bishop against two rooks, a clearly winning material edge.",
+    "moveNotes": [
+      "Check along the h file, starting to drive the king out of its corner.",
+      "The king steps up to g7, the most natural way out of the check.",
+      "The rook offers itself on h7. If the king takes, it lands on the diagonal of your bishop.",
+      "Black grabs the rook, but now the king stands on h7, right where the bishop can check it.",
+      "A discovered attack with check. The bishop checks from f5 and uncovers your queen on c7 against the undefended black queen on e7.",
+      "Black has to deal with the check first, so the queen on e7 is left to its fate.",
+      "The queen comes off with check. White has queen and bishop against two rooks and is winning."
+    ]
   },
   {
     "id": "tal-024",
@@ -669,8 +799,15 @@
       "sacrifice"
     ],
     "rating": 1526,
-    "hint": "Your queen is worth less than the attack. Where can it go to force the king's hand?",
-    "explanation": "1...Qg2+! 2.Rxg2 fxg2+ 3.Kg1 Bxf2#. The queen sacrifice on g2 is the key: it forces the defence onto the one square where it collapses. The advanced pawn is the hidden hero. Once the queen is gone, it takes away the king's escape squares. Tal would not even have stopped to count the material."
+    "hint": "Your pawns on f3 and h3 form a cage around White's king. What could you offer that the king itself can never take?",
+    "explanation": "1...Qg2+! 2.Rxg2 fxg2+ 3.Kg1 Bxf2#. Both pawns guard g2, so the king cannot take the queen and the rook must capture. The pawn recaptures with check, and from g2 it covers f1 and h1. With White's bishop on h2 blocking its own king, Bxf2 is mate because the rook on f8 defends the bishop.",
+    "moveNotes": [
+      "A queen sacrifice with check. The pawns on f3 and h3 both protect g2, so only the rook can take.",
+      "White's only legal move, but it pulls the rook into your pawns.",
+      "The pawn captures with check and now controls both f1 and h1.",
+      "The only legal move. The king can't take the pawn because the h3 pawn guards it.",
+      "The bishop takes on f2 with check. The rook on f8 defends it, the pawn on g2 covers f1 and h1, and White's own bishop sits on h2. Mate."
+    ]
   },
   {
     "id": "tal-025",
@@ -697,8 +834,17 @@
       "smotheredMate"
     ],
     "rating": 1527,
-    "hint": "Start with a knight move and look for a double check one move later.",
-    "explanation": "1...Nc2+! 2.Kb1 Na3+ 3.Ka1 Qb1+! 4.Nxb1 Nc2#. The queen sacrifice on b1 is the key: it forces the defence onto the one square where it collapses. The king is buried behind its own pieces, and the knight delivers a smothered mate. Tal would not even have stopped to count the material."
+    "hint": "White's king hides on a1 behind its pawns. Can your knight and queen take turns checking until the king has no room at all?",
+    "explanation": "1...Nc2+ 2.Kb1 Na3+! 3.Ka1 Qb1+! 4.Nxb1 Nc2#. The knight hops away from c2 with a double check, using the queen on d3 as the second attacker. Back on a1, the king is surrounded by its own pawns, so the queen offers itself on b1 to fill the final square. Whichever piece takes, the knight returns to c2 for a smothered mate.",
+    "moveNotes": [
+      "Check with the knight, which was hanging to the rook on h1. Kb1 is White's only legal move.",
+      "The only reply. The king now stands on the queen's diagonal from d3.",
+      "Double check: the knight checks from a3 and its move uncovers the queen on d3. Only a king move can answer this.",
+      "Kc1 would allow Qc2 mate, so the king returns to the corner.",
+      "The queen checks on b1, protected by the knight on a3. White has to take it with a piece.",
+      "The knight takes the queen. Rxb1 would change nothing, since Nc2 is mate either way.",
+      "Check from c2 with the king boxed in by a2, b2 and the knight on b1. Nothing can capture the knight. Smothered mate."
+    ]
   },
   {
     "id": "tal-026",
@@ -726,8 +872,17 @@
       "sacrifice"
     ],
     "rating": 1531,
-    "hint": "Your rook is worth less than the attack. Where can it go to force the king's hand?",
-    "explanation": "1.Rh8+! Kxh8 2.Qh6+ Kg8 3.Qh7+ Kf8 4.Qh8#. The rook sacrifice on h8 is the key: it forces the defence onto the one square where it collapses. Every move is a check or a direct threat, so the defender never gets a free move. Tal would not even have stopped to count the material."
+    "hint": "The pawn on g6 is a monster in this position. Open the h file and see which squares it controls around Black's king.",
+    "explanation": "1.Rh8+! Kxh8 2.Qh6+ Kg8 3.Qh7+ Kf8 4.Qh8#. The rook sacrifice pulls the king into the corner and hands the h file to your queen. Every queen check is supported by the pawn on g6, which guards h7 and f7. The king is chased along the back rank, and Qh8 finishes with Black's own knight on g7 and bishop on e7 in the way.",
+    "moveNotes": [
+      "A rook sacrifice with check. Black's only legal reply is to take it.",
+      "Forced. The king is dragged into the corner on the open h file.",
+      "The queen swings across to h6 with check. With the knight on g7 blocking, Kg8 is the only move.",
+      "The only legal move. The king steps back to g8.",
+      "Check from h7, where the queen is protected by the pawn on g6. Kf8 is the only square left.",
+      "Forced again. The king runs toward the centre, but its own pieces block the way.",
+      "Mate. The queen covers g8 and e8 along the back rank, the g6 pawn controls f7, and Black's own bishop sits on e7."
+    ]
   },
   {
     "id": "tal-027",
@@ -753,8 +908,15 @@
       "sacrifice"
     ],
     "rating": 1536,
-    "hint": "Your queen is worth less than the attack. Where can it go to force the king's hand?",
-    "explanation": "1.Qxh7+! Kxh7 2.Rh1+ Rh6 3.Rxh6#. The queen sacrifice on h7 is the key: it forces the defence onto the one square where it collapses. Every move is a check or a direct threat, so the defender never gets a free move. Tal would not even have stopped to count the material."
+    "hint": "Black's king on h8 relies on the knight on h7. What happens if that defender disappears and the h file opens for your rook?",
+    "explanation": "1.Qxh7+! Kxh7 2.Rh1+ Rh6 3.Rxh6#. The queen gives itself up to rip open the h file. The rook from f1 slides to h1 with check, and Black can only block with the rook from g6. Taking that rook is mate, because the knight on f5 defends h6 and covers g7.",
+    "moveNotes": [
+      "The queen takes the knight with check. Black's only legal move is to capture.",
+      "Forced. The king is now on the open h file.",
+      "The rook swings to h1 with check. Black's only legal reply is to block on h6.",
+      "The only move that stops the check, but the rook on h6 can be taken.",
+      "Mate. The knight on f5 protects the rook and covers g7, the rook covers g6, and the rook on g8 blocks its own king."
+    ]
   },
   {
     "id": "tal-028",
@@ -782,8 +944,15 @@
       "sacrifice"
     ],
     "rating": 1537,
-    "hint": "Your rook is worth less than the attack. Where can it go to force the king's hand?",
-    "explanation": "1.Rxh6+! gxh6 2.g7+ Kh7 3.g8=Q#. The rook sacrifice on h6 is the key: it forces the defence onto the one square where it collapses. The pawn crashes through and promotes, which ends the game. Tal would not even have stopped to count the material."
+    "hint": "Your pawn on g6 dreams of reaching g8. Which black pawn stands in the way, and how can you remove it by force?",
+    "explanation": "1.Rxh6+! gxh6 2.g7+ Kh7 3.g8=Q#. The rook sacrifice drags the g7 pawn away, opening the path for your own g pawn. After g7+ the king has only h7, and promoting on g8 is a double check: the new queen checks from g8 and the queen on f7 checks along the seventh rank. The king has no square left.",
+    "moveNotes": [
+      "The rook takes on h6 with check. Black's only legal move is gxh6, which clears g7.",
+      "Forced. The g7 pawn has left, so your g pawn can advance.",
+      "Pawn check, protected by the queen on f7. Kh7 is Black's only move.",
+      "The only legal reply. The king now sits next to the promotion square.",
+      "Promotion with double check: the new queen on g8 and the queen on f7 both attack h7. The queen on g8 is protected, so it is mate."
+    ]
   },
   {
     "id": "tal-029",
@@ -810,8 +979,15 @@
       "sacrifice"
     ],
     "rating": 1537,
-    "hint": "Your bishop is worth less than the attack. Where can it go to force the king's hand?",
-    "explanation": "1.Bxg7+! Kxg7 2.Qh6+ Kg8 3.Qh8#. The bishop sacrifice on g7 is the key: it forces the defence onto the one square where it collapses. Discovered and double checks leave the defender no time to regroup. Tal would not even have stopped to count the material."
+    "hint": "Your queen and bishop are lined up on the h file. What if the bishop stepped off the file with a capture?",
+    "explanation": "1.Bxg7+! Kxg7 2.Qh6+ Kg8 3.Qh8#. Taking on g7 is a double check, from the bishop and from the queen on h4 behind it. With the h file open, the rook on h3 backs up every queen move along it. On h8 the queen covers g7 and h7, and Black's own rook on f8 and pawn on f7 block the remaining squares.",
+    "moveNotes": [
+      "Double check: the bishop takes on g7 and the queen on h4 now checks down the h file. Black must move the king.",
+      "Taking the bishop. Kg8 would lose at once to Qh8 mate.",
+      "The queen checks from h6, protected by the rook on h3. Kg8 is the only legal move.",
+      "Forced. The king is back on the back rank.",
+      "Mate. The rook on h3 supports the queen, which covers g7 and h7, while f8 and f7 are blocked by Black's own pieces."
+    ]
   },
   {
     "id": "tal-030",
@@ -839,8 +1015,17 @@
       "smotheredMate"
     ],
     "rating": 1540,
-    "hint": "Start with a knight move and look for a double check one move later.",
-    "explanation": "1...Nf2+! 2.Kg1 Nh3+ 3.Kh1 Qg1+! 4.Nxg1 Nf2#. The queen sacrifice on g1 is the key: it forces the defence onto the one square where it collapses. The king is buried behind its own pieces, and the knight delivers a smothered mate. Tal would not even have stopped to count the material."
+    "hint": "White's king on h1 is surrounded by its own bishop, knight and pawn. A long diagonal for your queen and a busy knight may be all you need.",
+    "explanation": "1...Nf2+ 2.Kg1 Nh3+! 3.Kh1 Qg1+! 4.Nxg1 Nf2#. This is the classic pattern known as Philidor's Legacy. The knight check sends the king to g1, right onto the queen's diagonal from b6, so Nh3 is a double check. Back on h1, the king is offered the queen on g1, and after the capture the knight lands on f2 with no exit for the king.",
+    "moveNotes": [
+      "Knight check from f2. Kg1 is White's only legal move.",
+      "Forced, and now the king is on the diagonal of your queen on b6.",
+      "Double check from the knight on h3 and the queen on b6. White can only move the king.",
+      "Kf1 would allow Qf2 mate, so the king hides in the corner again.",
+      "The queen sacrifices itself on g1. The knight on h3 guards that square, so the king cannot take.",
+      "The knight takes. Rxg1 would lead to the same finish.",
+      "The knight checks from f2. The king's squares g1, g2 and h2 are all filled by White's own pieces. Smothered mate."
+    ]
   },
   {
     "id": "tal-031",
@@ -863,8 +1048,13 @@
       "smotheredMate"
     ],
     "rating": 1605,
-    "hint": "Your queen is worth less than the attack. Where can it go to force the king's hand?",
-    "explanation": "1...Qg1+! 2.Rxg1 Nf2#. The queen sacrifice on g1 is the key: it forces the defence onto the one square where it collapses. The king is buried behind its own pieces, and the knight delivers a smothered mate. Tal would not even have stopped to count the material."
+    "hint": "Your knight on h3 already watches two squares next to White's king. How can you make the king's last free square disappear?",
+    "explanation": "1...Qg1+! 2.Rxg1 Nf2#. Dropping the queen where a rook can take it looks like madness, and that is exactly why it works. The knight on h3 defends g1, so the king cannot capture and the rook on f1 must. That rook now blocks the king's only flight square, and the knight checks from f2 for a smothered mate.",
+    "moveNotes": [
+      "The queen checks on g1. The knight on h3 protects it, so only the rook can capture.",
+      "White's only legal move. The rook now plugs the king's last free square.",
+      "The knight checks from f2. With g1, g2 and h2 all occupied by White's own pieces, it is smothered mate."
+    ]
   },
   {
     "id": "tal-032",
@@ -890,8 +1080,15 @@
       "sacrifice"
     ],
     "rating": 1605,
-    "hint": "Begin with a forcing rook check. The real blow comes afterwards.",
-    "explanation": "1.Rh1+! Nh7 2.Rxh7+! Kxh7 3.Rh1#. The rook sacrifice on h7 is the key: it forces the defence onto the one square where it collapses. Every move is a check or a direct threat, so the defender never gets a free move. Tal would not even have stopped to count the material."
+    "hint": "You have two rooks that can reach the h file. How can the first one break open Black's king position so the second one finishes it?",
+    "explanation": "1.Rh1+ Nh7 2.Rxh7+! Kxh7 3.Rh1#. The first rook check forces the knight to block on h7, where it also attacks your queen. Giving up the rook removes that knight and pulls the king onto h7. The rook from a1 then arrives on h1 with mate, since your queen on g5 covers g6, g7, g8 and h6.",
+    "moveNotes": [
+      "The rook checks on the h file. Black must block with the knight on h7 or h5.",
+      "Blocking on h7, which also attacks your queen. Nh5 would lose to Rxh5 mate.",
+      "The rook takes the knight with check, getting rid of the piece that attacked your queen. The king must capture.",
+      "Forced. The king is now exposed on the open h file.",
+      "The second rook delivers mate. Your queen on g5 covers g6, g7, g8 and h6, and the rook controls the whole h file."
+    ]
   },
   {
     "id": "tal-033",
@@ -920,8 +1117,17 @@
       "smotheredMate"
     ],
     "rating": 1607,
-    "hint": "Start with a knight move and look for a double check one move later.",
-    "explanation": "1.Nf7+! Kg8 2.Nh6+ Kh8 3.Qg8+! Rxg8 4.Nf7#. The queen sacrifice on g8 is the key: it forces the defence onto the one square where it collapses. The king is buried behind its own pieces, and the knight delivers a smothered mate. Tal would not even have stopped to count the material."
+    "hint": "Your queen on e6 is aimed at g8. Can your knight dance around the king, giving checks, until the king is buried in its own corner?",
+    "explanation": "1.Nf7+ Kg8 2.Nh6+! Kh8 3.Qg8+! Rxg8 4.Nf7#. Nh6 is a double check, from the knight and from the queen on e6, so the king must go back to h8. Then the queen sacrifice on g8 works because the knight on h6 guards that square, so only the rook can take. The rook ends up blocking its own king and the knight returns to f7 for a textbook smothered mate.",
+    "moveNotes": [
+      "The knight checks from f7, protected by your queen. Rxf7 would lose to Qc8+ and mate next move.",
+      "The king steps out to g8, onto the diagonal of your queen on e6.",
+      "Double check from the knight on h6 and the queen on e6. The king's only legal move is back to h8.",
+      "Forced. The king returns to the corner.",
+      "The queen sacrifices itself on g8. The knight on h6 guards it, so the king can't take and the rook must.",
+      "The only legal move. The rook now blocks g8, the king's last free square.",
+      "The knight checks from f7. The king is boxed in by its own rook and the pawns on g7 and h7. Smothered mate."
+    ]
   },
   {
     "id": "tal-034",
@@ -948,8 +1154,15 @@
       "sacrifice"
     ],
     "rating": 1607,
-    "hint": "Your rook is worth less than the attack. Where can it go to force the king's hand?",
-    "explanation": "1.Rxh6+! gxh6 2.g7+ Kh7 3.g8=Q#. The rook sacrifice on h6 is the key: it forces the defence onto the one square where it collapses. The pawn crashes through and promotes, which ends the game. Tal would not even have stopped to count the material."
+    "hint": "Your pawn on g6 is much closer to queening than it looks. Which black piece is standing in its way, and can you lure it aside?",
+    "explanation": "1.Rxh6+! gxh6 2.g7+! Kh7 3.g8=Q#. The rook gives itself up to drag Black's g-pawn off g7, the one square blocking White's own g-pawn. That pawn then marches with check, and on g8 it becomes a queen with a double check from both queens. The new queen is protected by the queen on f7, so the king cannot take it.",
+    "moveNotes": [
+      "The rook takes on h6 with check, and capturing with the g-pawn is Black's only legal move. That capture empties g7 for White's pawn.",
+      "Forced. Black wins a rook, but the pawn has left g7 and White's g-pawn now has a clear road.",
+      "The pawn checks the king on h8. The queen on f7 protects it, so the king cannot take, and h7 is the only legal square.",
+      "The only legal move. The king steps beside the pawn, but g8 is still covered by the queen on f7.",
+      "The pawn promotes with a double check from the new queen and the queen on f7. The new queen is defended by the old one. Checkmate."
+    ]
   },
   {
     "id": "tal-035",
@@ -976,8 +1189,15 @@
       "sacrifice"
     ],
     "rating": 1607,
-    "hint": "Your queen is worth less than the attack. Where can it go to force the king's hand?",
-    "explanation": "1.Qxh7+! Kxh7 2.Rh3+ Qh6 3.Rxh6#. The queen sacrifice on h7 is the key: it forces the defence onto the one square where it collapses. The rook lands on the back rank, guarded by the bishop. It is the same idea Morphy used in his famous Opera Game. Tal would not even have stopped to count the material."
+    "hint": "Black's king has just one minor piece for company. If that guard vanished, which of your rooks could reach the open file fastest?",
+    "explanation": "1.Qxh7+! Kxh7 2.Rh3+ Qh6 3.Rxh6#. The queen gives herself up for the bishop on h7, pulling the king onto the open h-file. The rook then swings from f3 to h3 with check, and Black's only defence is to block with the queen, which the rook takes with mate on h6 or h4. Tal would not have needed long to find this queen offer.",
+    "moveNotes": [
+      "The queen takes the bishop with check. Kxh7 is Black's only legal reply.",
+      "Forced. Black is a queen up for the moment, but the king now stands on the open h-file.",
+      "The rook switches to the h-file with check. Black has no king moves, so the queen must block on h6 or h4.",
+      "One of only two legal moves. Blocking on h4 instead loses the same way to Rxh4#.",
+      "The rook takes the queen with mate. The bishop on c1 guards it, the rook on g4 covers g6 and g7, and Black's own rook fills g8."
+    ]
   },
   {
     "id": "tal-036",
@@ -1005,8 +1225,15 @@
       "sacrifice"
     ],
     "rating": 1686,
-    "hint": "Your rook is worth less than the attack. Where can it go to force the king's hand?",
-    "explanation": "1.Rh7+! Kxh7 2.Bg6+ Kh8 3.Qh7#. The rook sacrifice on h7 is the key: it forces the defence onto the one square where it collapses. Discovered and double checks leave the defender no time to regroup. Tal would not even have stopped to count the material."
+    "hint": "Your queen on c7 and bishop on f7 share the seventh rank. How could you bring Black's king onto that same line?",
+    "explanation": "1.Rh7+! Kxh7 2.Bg6+ Kh8 3.Qh7#. White's rook on g7 was attacked twice and defended by nothing, so quiet play was not an option. Offering it on h7 drags the king onto the seventh rank, in line with the queen on c7. The bishop then steps to g6 with a double check, and wherever the king goes, Qh7 is mate with the bishop guarding the queen.",
+    "moveNotes": [
+      "The rook leaves g7 with check, and Kxh7 is Black's only legal move. The king is pulled onto the same rank as the queen on c7.",
+      "Forced. Only the bishop on f7 now stands between White's queen and the black king.",
+      "The bishop moves off the rank with a double check, from itself and from the queen on c7. Black can only answer with a king move, to g8 or h8.",
+      "Going to g8 changes nothing, since Qh7 is mate there too.",
+      "The queen lands on h7 next to the king, protected by the bishop on g6. The king cannot take her and has nowhere to go. Checkmate."
+    ]
   },
   {
     "id": "tal-037",
@@ -1031,8 +1258,15 @@
       "sacrifice"
     ],
     "rating": 1688,
-    "hint": "Begin with a forcing knight check. The real blow comes afterwards.",
-    "explanation": "1.Nxh6+! Kh8 2.Rf8+! Bxf8 3.Qg8#. The rook sacrifice on f8 is the key: it forces the defence onto the one square where it collapses. Every move is a check or a direct threat, so the defender never gets a free move. Tal would not even have stopped to count the material."
+    "hint": "Your queen is under attack, so every move should be a check. Which black piece is doing all the defending, and can you pull it away?",
+    "explanation": "1.Nxh6+! Kh8 2.Rf8+! Bxf8 3.Qg8#. White's queen on g6 is attacked by the bishop on e8, so there is no time to retreat. The knight grabs h6 with check, and then the rook sacrifice on f8 drags Black's bishop off g7, which clears the g-file. The queen drops to g8 and the knight on h6 protects her for mate.",
+    "moveNotes": [
+      "The knight takes on h6 with check. The bishop on g7 is pinned by the queen on g6 and cannot capture, so Kh8 is Black's only legal move.",
+      "The only legal move. The king tucks into the corner, right next to White's queen and knight.",
+      "The rook checks on f8. Only the bishop on g7 can take it, and Bxf8 is Black's single legal reply.",
+      "Forced. The bishop leaves g7, and the path from White's queen to g8 is suddenly open.",
+      "The queen goes to g8 with mate. The knight on h6 protects her, so the king cannot capture."
+    ]
   },
   {
     "id": "tal-038",
@@ -1058,8 +1292,15 @@
       "sacrifice"
     ],
     "rating": 1689,
-    "hint": "Your queen is worth less than the attack. Where can it go to force the king's hand?",
-    "explanation": "1...Qxe3+! 2.Kxe3 Nxd5+ 3.Kd4 Nxc3. The queen sacrifice on e3 is the key: it forces the defence onto the one square where it collapses. Discovered and double checks leave the defender no time to regroup. Tal would not even have stopped to count the material."
+    "hint": "Your rook on e8 is quietly aimed down the e-file. Which white piece would you most like to see standing on that file?",
+    "explanation": "1...Qxe3+! 2.Kxe3 Nxd5+! 3.Kd4 Nxc3. Black gives the queen for the rook on e3 to bring White's king onto the e-file. The knight then jumps to d5, uncovering the rook on e8 and giving check itself, so nothing can take it. It collects White's queen on c3 next, and even after White wins the knight back, Black is a rook against a knight ahead.",
+    "moveNotes": [
+      "The queen grabs the rook on e3 with check, offering herself to pull White's king onto the e-file.",
+      "Taking the queen is White's best try. Declining with Ke1, Kd1 or Kc2 would leave Black a full rook ahead.",
+      "The knight captures on d5 and the rook on e8 checks too. It is a double check, so the c4 pawn cannot take the knight.",
+      "The king must move, and none of its four squares saves the queen on c3 from the knight.",
+      "The knight takes the queen. White can win the knight back, but Black comes out a rook for a knight ahead."
+    ]
   },
   {
     "id": "tal-039",
@@ -1084,8 +1325,13 @@
       "sacrifice"
     ],
     "rating": 1691,
-    "hint": "Your bishop is worth less than the attack. Where can it go to force the king's hand?",
-    "explanation": "1.Bh7+! Kxh7 2.Qg7#. The bishop sacrifice on h7 is the key: it forces the defence onto the one square where it collapses. Discovered and double checks leave the defender no time to regroup. Tal would not even have stopped to count the material."
+    "hint": "Your queen on g3 is staring up the g-file with only your own bishop in the way. Can you move the bishop with real force?",
+    "explanation": "1.Bh7+! Kxh7 2.Qg7#. The bishop jumps to h7 with check and unmasks the queen on g3, so Black faces a double check and must move the king. Every king move loses at once, and taking the bishop just walks into Qg7. The pawn on f6 is the quiet hero: it guards g7, so the queen can land there for mate.",
+    "moveNotes": [
+      "The bishop checks from h7 and opens the g-file for the queen. It is a double check, so Black can only move the king.",
+      "Grabbing the bishop is as good as anything. After Kh8 or Kf8, White also mates on the next move.",
+      "The queen lands on g7, protected by the pawn on f6. The king cannot take her and has no free square. Checkmate."
+    ]
   },
   {
     "id": "tal-040",
@@ -1113,8 +1359,17 @@
       "sacrifice"
     ],
     "rating": 1693,
-    "hint": "Start with a knight move and look for a double check one move later.",
-    "explanation": "1.Nxf7+! Kxh7 2.Ng5+ Kg8 3.Qh7+ Kf8 4.Ne6+. Discovered and double checks leave the defender no time to regroup."
+    "hint": "Your queen on c7 already shares the seventh rank with the corner. Look for knight checks that keep Black's king on that line.",
+    "explanation": "1.Nxf7+! Kxh7 2.Ng5+! Kg8 3.Qh7+ Kf8 4.Ne6+! Black grabs the bishop on h7, but that puts the king on the same rank as the queen on c7, and Ng5+ becomes a discovered double check. The queen then chases the king to f8, and the knight lands on e6, guarded by the rook on e1. If the queen takes it, Rxe6 wins her for a knight, and if the king goes to e8, Nc7+ forks it with the rook on a8.",
+    "moveNotes": [
+      "The knight takes on f7 with check, protected by the queen on c7.",
+      "Taking the bishop is the most natural reply. Qxf7 would only lose the queen to Qxf7. Now the king shares the seventh rank with White's queen.",
+      "The knight jumps to g5 with check and unveils the queen on c7. Against this double check Black can only move the king, to g8, h8 or g6.",
+      "The toughest choice. On h8 or g6, Qh7 would be immediate mate.",
+      "The queen checks from h7, guarded by the knight on g5. The king's only legal move is f8.",
+      "Forced. The king heads for the centre, but the knight has one more check ready.",
+      "The knight checks from e6, protected by the rook on e1. After Qxe6, Rxe6 wins the queen, and after Ke8, Nc7+ forks the king and the rook on a8."
+    ]
   },
   {
     "id": "tal-041",
@@ -1142,8 +1397,15 @@
       "sacrifice"
     ],
     "rating": 1766,
-    "hint": "Your queen is worth less than the attack. Where can it go to force the king's hand?",
-    "explanation": "1.Qxg7+! Kxg7 2.Rg5+ Kh6 3.Bg7#. The queen sacrifice on g7 is the key: it forces the defence onto the one square where it collapses. Discovered and double checks leave the defender no time to regroup. Tal would not even have stopped to count the material."
+    "hint": "Your bishop on d4 and rook on e5 are stacked on the long diagonal. What if Black's king stood at the far end of it?",
+    "explanation": "1.Qxg7+! Kxg7 2.Rg5+ Kh6 3.Bg7#. The queen gives herself up for the bishop on g7 so that the king lands on the long diagonal, right behind the rook on e5. Any rook move would now be a discovered check from the bishop on d4, and Rg5+ adds a second check from the rook. The king has only h6, and Bg7 closes the net with the rook on g5 guarding the bishop.",
+    "moveNotes": [
+      "The queen captures on g7 with check, and Kxg7 is Black's only legal move.",
+      "Forced. The king now sits on the long diagonal, with only the rook on e5 between it and the bishop on d4.",
+      "Every rook move gives a discovered check, but on g5 the rook checks as well. Against this double check the king's only square is h6.",
+      "The only legal move. The king has stepped into a narrow pocket on the edge of the board.",
+      "The bishop slides to g7 with check, guarded by the rook on g5, which is itself protected by the pawn on f4. Checkmate."
+    ]
   },
   {
     "id": "tal-042",
@@ -1170,8 +1432,15 @@
       "sacrifice"
     ],
     "rating": 1766,
-    "hint": "Your queen is worth less than the attack. Where can it go to force the king's hand?",
-    "explanation": "1...Qh1+! 2.Kxh1 Ng3+ 3.Kg1 Rh1#. The queen sacrifice on h1 is the key: it forces the defence onto the one square where it collapses. Discovered and double checks leave the defender no time to regroup. Tal would not even have stopped to count the material."
+    "hint": "Your rook on h8 and your queen both point down the h-file. How could you force White's king to stand on that file?",
+    "explanation": "1...Qh1+! 2.Kxh1 Ng3+ 3.Kg1 Rh1#. The queen sacrifices herself on h1 to drag White's king into the corner. The knight then jumps from h5 to g3, opening the file for the rook on h8 and giving check itself. Because it is a double check, the f2 pawn cannot take the knight, and after Kg1 the rook arrives on h1 with mate, guarded by the knight.",
+    "moveNotes": [
+      "The queen checks from h1 and offers herself. Kxh1 is White's only legal move.",
+      "Forced. White's king now stands on the h-file, facing the rook on h8 with only the knight on h5 in between.",
+      "The knight checks from g3 and opens the h-file for the rook. It is a double check, so the pawn on f2 cannot capture and the king must move.",
+      "The only legal move. The king returns to g1, hemmed in by its own rook and pawns.",
+      "The rook drops to h1 with mate. The knight on g3 protects it, White's own pieces fill f1, f2 and g2, and the rook covers h2."
+    ]
   },
   {
     "id": "tal-043",
@@ -1198,8 +1467,17 @@
       "sacrifice"
     ],
     "rating": 1770,
-    "hint": "Your knight is worth less than the attack. Where can it go to force the king's hand?",
-    "explanation": "1.Nxf6+! gxf6 2.Bh5+ Nf7 3.Bxf7+! Kxf7 4.Rxd8. The knight sacrifice on f6 is the key: it forces the defence onto the one square where it collapses. The attack wins decisive material. Tal would not even have stopped to count the material."
+    "hint": "Black's rook on d8 has exactly one defender. Can you chase that defender away with checks, even if it costs material?",
+    "explanation": "1.Nxf6+! gxf6 2.Bh5+! Nf7 3.Bxf7+ Kxf7 4.Rxd8. Black's rook on d8 is protected only by the king, so White sets out to move the king with checks. The knight sacrifice on f6 gives check and also clears g4, opening the road from e2 to h5 for the bishop. After the check on h5 and the capture on f7, the king has left e8 and the rook on d8 falls, leaving White with rook and bishop against bishop and knight.",
+    "moveNotes": [
+      "The knight takes on f6 with check. Its real job is to leave g4, which opens the diagonal from e2 to h5 for the bishop.",
+      "Black accepts the knight, the most natural of three legal replies. Now the bishop has a clear path to h5.",
+      "The bishop checks from h5 and still guards the rook on d1. Black must block or move the king.",
+      "The knight from g5 blocks, keeping the king on e8 to guard the rook. Kf8 would leave the rook on d8 without its only defender straight away.",
+      "The bishop takes the blocking knight with check. Whether the king captures or steps to f8, it must leave e8.",
+      "Black wins the bishop back, but the king on f7 no longer protects the rook on d8.",
+      "The rook captures on d8 for free. White ends up with rook and bishop against Black's bishop and knight."
+    ]
   },
   {
     "id": "tal-044",
@@ -1225,8 +1503,15 @@
       "sacrifice"
     ],
     "rating": 1772,
-    "hint": "Your queen is worth less than the attack. Where can it go to force the king's hand?",
-    "explanation": "1...Qxe3+! 2.Kxe3 Nf5+ 3.Ke4 Nxd6+. The queen sacrifice on e3 is the key: it forces the defence onto the one square where it collapses. Discovered and double checks leave the defender no time to regroup. Tal would not even have stopped to count the material."
+    "hint": "Imagine White's king and queen both sitting one knight jump away from the same square. What could you give up to make that happen?",
+    "explanation": "1...Qxe3+! 2.Kxe3 Nf5+ 3.Ke4 Nxd6+. Black trades the queen for the rook on e3 to bring White's king forward. The knight then checks from f5 and hits the queen on d6 at the same time, a classic fork. It takes the queen with a double check from the knight and the bishop on g6, and Black reaches the endgame a whole piece ahead.",
+    "moveNotes": [
+      "The queen takes the rook with check, offering herself to pull White's king onto e3, a knight jump from f5.",
+      "Taking the queen looks natural. Declining with Kg2, Kf1 or Ke1 would leave Black a full rook ahead.",
+      "The knight checks from f5 and attacks the queen on d6 at the same time. White has to deal with the check first.",
+      "One of six king moves, and none of them saves the queen. Ke4 attacks the knight, but the bishop on g6 guards it.",
+      "The knight takes the queen, and the bishop on g6 gives check along the diagonal too. Black is now a clear piece up."
+    ]
   },
   {
     "id": "tal-045",
@@ -1251,8 +1536,15 @@
       "sacrifice"
     ],
     "rating": 1775,
-    "hint": "Begin with a forcing queen check. The real blow comes afterwards.",
-    "explanation": "1...Qf3+! 2.Kg1 Qf1+! 3.Rxf1 Rxf1#. The queen sacrifice on f1 is the key: it forces the defence onto the one square where it collapses. Every move is a check or a direct threat, so the defender never gets a free move. Tal would not even have stopped to count the material."
+    "hint": "White's back rank is thinner than it looks. Can your queen and the rook on f8 work together on the same file?",
+    "explanation": "1...Qf3+! 2.Kg1 Qf1+! 3.Rxf1 Rxf1#. The queen checks on f3 and then throws herself onto f1, where she is backed by the rook on f8 and the knight on e3. White must take with the rook from a1, and the rook on f8 recaptures with mate. The knight on e3 guards both f1 and g2, and White's own rook on h2 blocks the last square.",
+    "moveNotes": [
+      "The queen checks on f3, where nothing can take her. White can only block with Rg2 or step to g1.",
+      "Blocking with Rg2 would lose at once to Qxg2#, so the king steps to g1.",
+      "The queen lands on f1 with check, supported by the rook on f8 and the knight on e3. Rxf1 is White's only legal move.",
+      "Forced. The rook takes the queen, but the f-file still belongs to Black.",
+      "The rook recaptures with mate. The knight on e3 protects it and also covers g2, while White's own rook blocks h2."
+    ]
   },
   {
     "id": "tal-046",
@@ -1279,8 +1571,15 @@
       "sacrifice"
     ],
     "rating": 1847,
-    "hint": "Your rook is worth less than the attack. Where can it go to force the king's hand?",
-    "explanation": "1...Rb1+! 2.Kxb1 Nxc3+ 3.Ka1 Nxa4. The rook sacrifice on b1 is the key: it forces the defence onto the one square where it collapses. Discovered and double checks leave the defender no time to regroup. Tal would not even have stopped to count the material."
+    "hint": "Your bishop on f5 points at White's queenside, with only your own knight in the way. Where would you like the white king to stand?",
+    "explanation": "1...Rb1+! 2.Kxb1 Nxc3+ 3.Ka1 Nxa4. The rook gives itself up on b1 to pull White's king onto the diagonal of the bishop on f5. The knight then takes on c3 with a double check from itself and the bishop, so the knight on e2 never gets the chance to recapture. Next move the knight takes the queen on a4, and Black has swapped a rook for White's queen and a pawn.",
+    "moveNotes": [
+      "The rook checks on b1 and offers itself. The idea is to drag White's king onto b1, in line with the bishop on f5.",
+      "White accepts the rook. The only other legal reply was Kc2.",
+      "The knight captures on c3, unmasking the bishop on f5 and checking with itself. It is a double check, so the knight on e2 cannot capture and the king must move.",
+      "The king has three squares, and none of them protects the queen on a4, which the knight attacks.",
+      "The knight takes the queen. Black has given a rook for White's queen and a pawn."
+    ]
   },
   {
     "id": "tal-047",
@@ -1305,8 +1604,15 @@
       "sacrifice"
     ],
     "rating": 1849,
-    "hint": "Start with a knight move and look for a double check one move later.",
-    "explanation": "1...Ne2+! 2.Kh1 Ng3+! 3.hxg3 Rh8#. The knight sacrifice on g3 is the key: it forces the defence onto the one square where it collapses. Discovered and double checks leave the defender no time to regroup. Tal would not even have stopped to count the material."
+    "hint": "White's king has very little air. Can your knight give checks that pry open a file for one of your rooks?",
+    "explanation": "1...Ne2+! 2.Kh1 Ng3+! 3.hxg3 Rh8#. The knight jumps to e2 with a double check from itself and the bishop on c5, so the king has to run to the corner. Then the knight offers itself on g3, and capturing with the h-pawn is White's only option. That opens the h-file, and the rook from f8 swings to h8 for mate, with every move a check in the way Tal liked best.",
+    "moveNotes": [
+      "The knight checks from e2 and opens the bishop's diagonal from c5 to g1 at the same time. Against this double check, Kh1 is the only legal move.",
+      "Forced. The king tucks into the corner beside its h2 pawn.",
+      "The knight checks again from g3, and this time it offers itself. Taking with the h-pawn is White's only legal move.",
+      "Forced. The pawn captures, and the h-file in front of White's king is now open.",
+      "The rook slides from f8 to h8 with mate. The bishop on c5 covers g1, the pawn on g2 blocks the king, and the rook itself covers h2."
+    ]
   },
   {
     "id": "tal-048",
@@ -1334,8 +1640,15 @@
       "sacrifice"
     ],
     "rating": 1850,
-    "hint": "Your queen is worth less than the attack. Where can it go to force the king's hand?",
-    "explanation": "1...Qg2+! 2.Rxg2 hxg2+ 3.Kg1 Rh1+. The queen sacrifice on g2 is the key: it forces the defence onto the one square where it collapses. Discovered and double checks leave the defender no time to regroup. Tal would not even have stopped to count the material."
+    "hint": "Your pawn on h3 is one capture away from opening the h-file for your rook. Can you hand it something to capture?",
+    "explanation": "1...Qg2+! 2.Rxg2 hxg2+! 3.Kg1 Rh1+. The queen is given up only to make the h3 pawn capture on g2. The moment it does, the rook on h8 also sees the white king, so White is in double check and the king has to walk to g1. After Rh1+ the king's only square is f2, and then Rxe1 Kxe1 g1=Q+ leaves Black a rook against a knight with queens still on the board.",
+    "moveNotes": [
+      "A queen check that White has to capture. Either capture lets the pawn on h3 recapture on g2.",
+      "Taking with the bishop would allow hxg2 mate at once, because the rook on g1 still blocks the king. Taking with the rook at least frees g1.",
+      "Double check from the pawn and the rook on h8. Only the king can move, and it cannot take the pawn because the knight on e3 guards it.",
+      "The only legal move. The king is still on the edge, facing the open h-file.",
+      "Another check, and f2 is the king's only square. Next the rook can take on e1, and if the king recaptures, the g-pawn queens with check."
+    ]
   },
   {
     "id": "tal-049",
@@ -1360,8 +1673,15 @@
       "sacrifice"
     ],
     "rating": 1850,
-    "hint": "Begin with a forcing queen check. The real blow comes afterwards.",
-    "explanation": "1.Qh7+! Kf8 2.Qh8+! Bxh8 3.Rxh8#. The queen sacrifice on h8 is the key: it forces the defence onto the one square where it collapses. Every move is a check or a direct threat, so the defender never gets a free move. Tal would not even have stopped to count the material."
+    "hint": "Black's bishop on g7 is the king's best guard. How can you lure it away while your rook waits on the h-file?",
+    "explanation": "1.Qh7+ Kf8 2.Qh8+! Bxh8 3.Rxh8#. The first check drives the king to f8, and the second one offers the whole queen. Black must take with the bishop, and that capture helps White twice: the rook on h3 gets a clear run to h8, and the bishop on b2 now controls g7. With its own rook on f7 and queen on e7 hemming it in, the king has no way out of the rook check.",
+    "moveNotes": [
+      "The queen checks with the rook on h3 behind it, so the king cannot capture. Kf8 is the only legal reply.",
+      "The only legal move, as h8 is covered by the queen and f7 and g7 hold Black's own pieces.",
+      "A second check, protected by the rook on h3. This time the only legal reply is to take the queen with the bishop.",
+      "Forced. The bishop leaves g7, which opens the long diagonal for the bishop on b2 and clears the h-file for the rook.",
+      "Mate. The rook covers the back rank, the bishop on b2 covers g7, and Black's own rook and queen block f7 and e7."
+    ]
   },
   {
     "id": "tal-050",
@@ -1387,8 +1707,15 @@
       "sacrifice"
     ],
     "rating": 1850,
-    "hint": "Your bishop is worth less than the attack. Where can it go to force the king's hand?",
-    "explanation": "1...Bg2+! 2.Rxg2 Qh3+ 3.Rh2 Qf1#. The bishop sacrifice on g2 is the key: it forces the defence onto the one square where it collapses. Every move is a check or a direct threat, so the defender never gets a free move. Tal would not even have stopped to count the material."
+    "hint": "Your bishop is standing in your queen's way. Is there a way to move it that also forces White's hand?",
+    "explanation": "1...Bg2+! 2.Rxg2 Qh3+! 3.Rh2 Qf1#. The bishop gives itself up to clear h3 for the queen, and it also drags the rook onto g2, where the pawn on f3 attacks it. After Qh3+ the rook has to drop back to h2 to block, which leaves f1 without a guard. Qf1 is mate because the f3 pawn covers g2 and the rook on a1 is shut out by White's own bishop on c1.",
+    "moveNotes": [
+      "Check with the bishop, which also vacates h3. If the king steps to h2 instead, Qh3 is mate right away.",
+      "Taking the bishop avoids the instant mate, but the rook now sits on g2, where the f3 pawn attacks it.",
+      "The queen lands on the square the bishop just left. Kg1 would run into Qxg2 mate, so White blocks instead.",
+      "The rook blocks on h2, but that leaves f1 unguarded.",
+      "Mate. The queen covers g1, the f3 pawn covers g2, and the rook on a1 cannot help because the bishop on c1 is in the way."
+    ]
   },
   {
     "id": "tal-051",
@@ -1417,8 +1744,15 @@
       "sacrifice"
     ],
     "rating": 1931,
-    "hint": "Your queen is worth less than the attack. Where can it go to force the king's hand?",
-    "explanation": "1...Qh1+! 2.Kxh1 Bf3+ 3.Kg1 Rh1#. The queen sacrifice on h1 is the key: it forces the defence onto the one square where it collapses. The rook lands on the back rank, guarded by the bishop. It is the same idea Morphy used in his famous Opera Game. Tal would not even have stopped to count the material."
+    "hint": "Your rook on h6 and bishop on h5 share a file. What would happen if the white king had to stand on that file too?",
+    "explanation": "1...Qh1+! 2.Kxh1 Bf3+! 3.Kg1 Rh1#. The queen sacrifice drags the king into the corner, straight onto the file where the rook on h6 waits behind the bishop. Moving the bishop to f3 gives double check, so White cannot block or capture and the king has to go back to g1. The rook then lands on h1 with the bishop guarding it, and the king is completely boxed in.",
+    "moveNotes": [
+      "A queen check that can only be answered by capturing it. The point is to bring the king onto the h-file.",
+      "Forced. Now only the bishop on h5 stands between the rook on h6 and the white king.",
+      "Double check from the bishop and the rook. White's queen and rook both attack the bishop, but in a double check only the king may move.",
+      "The only legal move, since g2 is covered by the bishop and h2 by the rook.",
+      "Mate. The bishop guards the rook and covers g2, the rook's line also covers f1, and White's own rook fills f2."
+    ]
   },
   {
     "id": "tal-052",
@@ -1446,8 +1780,17 @@
       "sacrifice"
     ],
     "rating": 1931,
-    "hint": "Begin with a forcing queen check. The real blow comes afterwards.",
-    "explanation": "1...Qe1+! 2.Rf1 Rxg2+! 3.Kxg2 Qg3+ 4.Kh1 Qh2#. The rook sacrifice on g2 is the key: it forces the defence onto the one square where it collapses. Every move is a check or a direct threat, so the defender never gets a free move. Tal would not even have stopped to count the material."
+    "hint": "The bishop on g2 is the white king's main shield. Can you force a reply first and then smash that shield?",
+    "explanation": "1...Qe1+ 2.Rf1 Rxg2+! 3.Kxg2 Qg3+ 4.Kh1 Qh2#. The queen check makes the white rook leave the seventh rank just to block, and then the rook on g8 crashes through on g2. Once the king takes, the bishop on e5 does the rest: it guards the queen on g3 and again on h2, so the king can never capture it. Declining the rook with Kh1 is no better, because Qxf1 is mate.",
+    "moveNotes": [
+      "Check along the first rank. White's only legal reply is to block with the rook.",
+      "Forced. The rook gives up its post on the seventh rank to plug the gap on f1.",
+      "The rook takes the bishop with check. If the king steps to h1 instead, Qxf1 is mate.",
+      "Taking the rook lasts a move longer, but it puts the king on g2 where the queen can reach it.",
+      "The queen checks from g3, guarded by the bishop on e5, so the king cannot take it. Kh1 is the only legal move.",
+      "Forced. The king is back in the corner.",
+      "Mate. The bishop on e5 still guards the queen, which covers g1 and g2."
+    ]
   },
   {
     "id": "tal-053",
@@ -1476,8 +1819,17 @@
       "sacrifice"
     ],
     "rating": 1932,
-    "hint": "Start with a knight move and look for a double check one move later.",
-    "explanation": "1...Nxf2+! 2.Kh2 Nf3+! 3.gxf3 Qh3+ 4.Kg1 Qxg3#. The knight sacrifice on f3 is the key: it forces the defence onto the one square where it collapses. Discovered and double checks leave the defender no time to regroup. Tal would not even have stopped to count the material."
+    "hint": "Your queen on d7 is aimed at the white king, but one of your own knights is in the way. What if that knight moved with a check of its own?",
+    "explanation": "1...Nxf2+! 2.Kh2 Nf3+! 3.gxf3 Qh3+ 4.Kg1 Qxg3#. Taking on f2 opens the queen's diagonal, so White faces two checks at once and the king must slide to h2. The second knight is then thrown onto f3 to pull the g2 pawn away, because that pawn was guarding h3. With h3 free, the queen checks there and then takes the bishop on g3 for mate, protected by the knight on f2. Offering a knight with check just to open one square is very much in the Tal spirit.",
+    "moveNotes": [
+      "The knight grabs a pawn with check and uncovers the queen on d7, so this is double check. Kh2 is the only legal move.",
+      "Forced. The king has escaped the double check, but its cover is thin.",
+      "The other knight checks from f3. The king has no squares, so White must take it with the pawn.",
+      "The only legal move, and it pulls the g2 pawn away from guarding h3.",
+      "Now the queen checks on h3, protected by the knight on f2. Kg1 is the only move.",
+      "Forced. The king is back on g1, and the bishop on g3 is left without protection.",
+      "Mate. The queen takes the bishop, the knight on f2 guards it and also covers h1."
+    ]
   },
   {
     "id": "tal-054",
@@ -1506,8 +1858,15 @@
       "sacrifice"
     ],
     "rating": 1933,
-    "hint": "Your queen is worth less than the attack. Where can it go to force the king's hand?",
-    "explanation": "1...Qxg1+! 2.Kxg1 Bd4+ 3.Kh1 Rg1#. The queen sacrifice on g1 is the key: it forces the defence onto the one square where it collapses. The rook lands on the back rank, guarded by the bishop. It is the same idea Morphy used in his famous Opera Game. Tal would not even have stopped to count the material."
+    "hint": "Your rook on g8 sits behind your own bishop. How could you get the white king onto that file first?",
+    "explanation": "1...Qxg1+! 2.Kxg1 Bd4+ 3.Kh1 Rg1#. The queen captures the rook on g1 and invites the king to take back, which places it on the g-file facing the rook on g8. As soon as the bishop on g7 steps aside to d4, both pieces give check together. The king has to return to h1, and the rook drops onto g1 under the bishop's protection, while White's own knight on h2 takes away the last flight square.",
+    "moveNotes": [
+      "The queen takes the rook with check. White's only legal reply is to recapture with the king.",
+      "Forced. The king is now on the same file as the rook on g8, with only the bishop on g7 in between.",
+      "Double check from the bishop and the rook. The c3 pawn and the knight on c2 attack the bishop, but in a double check only the king can move.",
+      "The only legal move. The king is back in the corner with its own knight on h2 blocking the way out.",
+      "Mate. The bishop on d4 protects the rook, the rook covers g2, and the knight on h2 blocks the last square."
+    ]
   },
   {
     "id": "tal-055",
@@ -1537,8 +1896,17 @@
       "sacrifice"
     ],
     "rating": 1936,
-    "hint": "Your queen is worth less than the attack. Where can it go to force the king's hand?",
-    "explanation": "1.Qxg8+! Kxg8 2.e7+ Kg7 3.e8=Q Qb8 4.Qxb8. The queen sacrifice on g8 is the key: it forces the defence onto the one square where it collapses. The pawn crashes through and promotes, which ends the game. Tal would not even have stopped to count the material."
+    "hint": "Your pawn on e6 is blocking one of your own pieces and is only two steps from queening. How can you make both facts count?",
+    "explanation": "1.Qxg8+! Kxg8 2.e7+! Kg7 3.e8=Q Qb8 4.Qxb8. Giving the queen for a rook looks rash, but it brings the king to g8, right on the diagonal of the bishop on d5. The pawn push then uncovers check, so Black has no time to stop it, and a new queen appears on e8. When Black tries to challenge it, the new queen simply takes on b8, and White ends up with queen and bishop against rook, bishop and knight, plus two extra pawns.",
+    "moveNotes": [
+      "The queen takes the rook with check. The only legal reply is for the king to recapture.",
+      "Forced. The king now stands on the bishop's diagonal, with only the e6 pawn in between.",
+      "The pawn steps forward and uncovers check from the bishop on d5. Black must deal with the check, so there is no time to stop the pawn.",
+      "One of three legal replies, and none of them prevents the pawn from queening next move.",
+      "The pawn becomes a queen, and it already threatens a mating attack that starts with a check on g8.",
+      "Black offers a queen trade, but the queen on b8 has no protection and it is White's move.",
+      "White takes the queen and keeps a clear material lead: queen and bishop against rook, bishop and knight."
+    ]
   },
   {
     "id": "tal-056",
@@ -1567,8 +1935,15 @@
       "sacrifice"
     ],
     "rating": 2010,
-    "hint": "Your queen is worth less than the attack. Where can it go to force the king's hand?",
-    "explanation": "1...Qh1+! 2.Kxh1 Bf3+ 3.Kg1 Rh1#. The queen sacrifice on h1 is the key: it forces the defence onto the one square where it collapses. The rook lands on the back rank, guarded by the bishop. It is the same idea Morphy used in his famous Opera Game. Tal would not even have stopped to count the material."
+    "hint": "Only your own bishop separates your rook on h8 from the white king's side of the board. What changes if the king is forced onto the h-file?",
+    "explanation": "1...Qh1+! 2.Kxh1 Bf3+! 3.Kg1 Rh1#. The queen is offered for one reason: to put the white king on the same file as the rook on h8. The bishop then jumps to f3, opening the file and covering g2 in the same move. The queen on d3 and rook on f2 both attack the bishop, yet neither may take it because it is double check. After the king goes back to g1, the rook arrives on h1 under the bishop's protection.",
+    "moveNotes": [
+      "Check from the corner. The king has no choice but to take the queen.",
+      "Forced. The king is now on the h-file, and the bishop on h5 is the only piece between it and the rook on h8.",
+      "The bishop steps off the file, so rook and bishop check together. Capturing the bishop is illegal in a double check.",
+      "The only legal move. The king returns to g1, hemmed in by its own rook on f2.",
+      "Mate. The bishop guards the rook and covers g2, the rook covers h2, and the f2 rook boxes in its own king."
+    ]
   },
   {
     "id": "tal-057",
@@ -1594,8 +1969,15 @@
       "sacrifice"
     ],
     "rating": 2010,
-    "hint": "Your knight is worth less than the attack. Where can it go to force the king's hand?",
-    "explanation": "1.Nxf6+! Rxf6 2.Rh8+! Kxh8 3.Qh7#. The knight sacrifice on f6 is the key: it forces the defence onto the one square where it collapses. Every move is a check or a direct threat, so the defender never gets a free move. Tal would not even have stopped to count the material."
+    "hint": "Your bishop on b1 would love to support your queen near the black king, but one of your own pieces is blocking it. Can it get out of the way with force?",
+    "explanation": "1.Nxf6+! Rxf6 2.Rh8+! Kxh8 3.Qh7#. The knight capture comes with check, and its departure from e4 opens the long diagonal from b1 to h7. A direct Qh7+ would still let the king slip out to f7 or f8, so White first throws the rook onto h8 to drag the king into the corner. Now the queen lands on h7 guarded by the bishop, and recapturing on f6 with the queen instead would not have changed this finish.",
+    "moveNotes": [
+      "The knight takes a pawn with check and clears e4, so the bishop on b1 now sees h7. Black must capture the knight.",
+      "Black takes back with the rook. Taking with the queen would lose to exactly the same rook and queen finish.",
+      "The rook offers itself with check, and taking it is the only legal move.",
+      "Forced. The king is now in the corner, with its own knight on g7 beside it.",
+      "Mate. The queen is guarded by the bishop on b1 and covers g8, while the knight on g7 blocks the other square."
+    ]
   },
   {
     "id": "tal-058",
@@ -1624,8 +2006,17 @@
       "sacrifice"
     ],
     "rating": 2012,
-    "hint": "Start with a rook move and look for a double check one move later.",
-    "explanation": "1.Rxg7+! Kh8 2.Rg8+! Kxg8 3.Qg3+ Bg5 4.Qxg5#. The rook sacrifice on g8 is the key: it forces the defence onto the one square where it collapses. Discovered and double checks leave the defender no time to regroup. Tal would not even have stopped to count the material."
+    "hint": "Your bishop on e5 and rook on g3 both aim at g7. How can they team up so the king faces two attackers at once?",
+    "explanation": "1.Rxg7+! Kh8 2.Rg8+! Kxg8 3.Qg3+ Bg5 4.Qxg5#. The rook breaks in on g7 with the bishop's support, then moves on to g8 to uncover a double check. Black has to take it with the king, which brings the king back onto the open g-file. The queen swings across to g3, Black can only block with the bishop, and the queen takes it for mate because the black queen on d5 cannot reach g5 past White's bishop on e5. Tal made this kind of rook offer look routine.",
+    "moveNotes": [
+      "The rook takes the g7 pawn with check, and the bishop on e5 protects it. Kh8 is the only legal move.",
+      "Forced. The king is now on the long diagonal of the bishop on e5, with only the rook on g7 between them.",
+      "The rook moves away with check and uncovers the bishop too. In double check the king must move, and taking on g8 is its only option.",
+      "Forced. White has given up the rook, but the g-file is now open down to the king.",
+      "The queen checks along the g-file. The king has no squares and the only legal reply is to block with the bishop.",
+      "The only legal move, and the bishop on g5 has no protection.",
+      "Mate. The queen covers g7 and the bishop on e5 covers h8, and the black queen is blocked from g5 by that same bishop."
+    ]
   },
   {
     "id": "tal-059",
@@ -1651,8 +2042,15 @@
       "sacrifice"
     ],
     "rating": 2016,
-    "hint": "Your queen is worth less than the attack. Where can it go to force the king's hand?",
-    "explanation": "1...Qxf1+! 2.Kxf1 Ne3+ 3.Ke2 Nxg4. The queen sacrifice on f1 is the key: it forces the defence onto the one square where it collapses. The attack wins decisive material. Tal would not even have stopped to count the material."
+    "hint": "One knight jump could check the white king and hit another target at the same time. Can you bring the king to the right square first?",
+    "explanation": "1...Qxf1+! 2.Kxf1 Ne3+! 3.Ke2 Nxg4. Black trades the queen for a rook just to pull the king onto f1. The knight then jumps to e3, checking the king and attacking the queen on g4. The bishop on f4 cannot take the knight because the rook on f8 pins it, a pin the knight itself created by leaving f5. Whatever the king does, the queen falls, and Black ends with two rooks and a knight against a rook, a bishop and one extra pawn.",
+    "moveNotes": [
+      "The queen takes the rook with check, and recapturing is White's only legal move.",
+      "Forced. The king now stands on f1, a knight's jump from e3 and on the same file as the rook on f8.",
+      "A forking check on the king and the queen on g4. The bishop on f4 cannot capture because the rook on f8 pins it to the king.",
+      "One of four king moves, and none of them saves the queen.",
+      "The knight takes the queen. Black is well ahead in material, and the bishop on f4 is now attacked by the rook on f8 with nothing defending it."
+    ]
   },
   {
     "id": "tal-060",
@@ -1677,7 +2075,12 @@
       "sacrifice"
     ],
     "rating": 2016,
-    "hint": "Your bishop is worth less than the attack. Where can it go to force the king's hand?",
-    "explanation": "1.Bf7+! Kxf7 2.Qg7#. The bishop sacrifice on f7 is the key: it forces the defence onto the one square where it collapses. Discovered and double checks leave the defender no time to regroup. Tal would not even have stopped to count the material."
+    "hint": "Your pawn on h6 already controls a key square next to the black king. What stops your queen from using it, and can you move that obstacle with check?",
+    "explanation": "1.Bf7+! Kxf7 2.Qg7#. The bishop leaps to f7 and uncovers the queen on the g-file, so Black is in double check and must move the king. Taking the bishop walks into Qg7 mate, and stepping to h7 or h8 meets exactly the same blow. The pawn on h6 protects the queen, and Black's own rooks, queen and e6 pawn crowd the king so tightly that it has nowhere to go. Short and sharp, with a single sacrifice doing all the work.",
+    "moveNotes": [
+      "The bishop checks from f7 and uncovers the queen on g5, giving double check. Black can only move the king, and every option leads to the same mate.",
+      "Taking the bishop is the natural reply, but Kh7 and Kh8 also allow Qg7 mate.",
+      "Mate. The h6 pawn guards the queen, which covers f6, g6 and g8, while Black's own pieces fill e6, e7, e8 and f8."
+    ]
   }
 ]

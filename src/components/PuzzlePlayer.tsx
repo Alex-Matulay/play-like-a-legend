@@ -95,6 +95,9 @@ export function PuzzlePlayer({ puzzle, onNext }: Props) {
   const [lastMove, setLastMove] = useState<[string, string] | null>(null)
   const [flash, setFlash] = useState<Flash>(null)
   const [message, setMessage] = useState('')
+  // Plies played so far, and which earlier position the user is looking at (null = the live one)
+  const [played, setPlayed] = useState(0)
+  const [view, setView] = useState<number | null>(null)
   const replay = useReplay(puzzle)
   const notes = useMemo(() => buildMoveNotes(puzzle), [puzzle])
 
@@ -112,6 +115,8 @@ export function PuzzlePlayer({ puzzle, onNext }: Props) {
     setSelected(null)
     setLastMove(null)
     setFlash(null)
+    setPlayed(0)
+    setView(null)
     setMessage(`${solverColor === 'w' ? 'White' : 'Black'} to move. Find the winning line.`)
     return () => window.clearTimeout(replyTimer.current)
   }, [puzzle.fen, solverColor])
@@ -122,7 +127,7 @@ export function PuzzlePlayer({ puzzle, onNext }: Props) {
   }
 
   function tryMove(from: string, to: string): boolean {
-    if (status !== 'playing' || game.current.turn() !== solverColor) return false
+    if (status !== 'playing' || view !== null || game.current.turn() !== solverColor) return false
     const g = game.current
     const piece = g.get(from as Square)
     const isPromotion = piece?.type === 'p' && (to[1] === '8' || to[1] === '1')
@@ -148,6 +153,7 @@ export function PuzzlePlayer({ puzzle, onNext }: Props) {
 
     g.move(toMove(uci))
     setFen(g.fen())
+    setPlayed((n) => n + 1)
     setLastMove([from, to])
     setSelected(null)
     setHintLevel(0)
@@ -169,6 +175,7 @@ export function PuzzlePlayer({ puzzle, onNext }: Props) {
     replyTimer.current = window.setTimeout(() => {
       g.move(toMove(reply))
       setFen(g.fen())
+      setPlayed((n) => n + 1)
       setLastMove([reply.slice(0, 2), reply.slice(2, 4)])
       setStep(step + 2)
     }, REPLY_DELAY_MS)
@@ -176,7 +183,7 @@ export function PuzzlePlayer({ puzzle, onNext }: Props) {
   }
 
   function onSquareClick(square: Square) {
-    if (status !== 'playing') return
+    if (status !== 'playing' || view !== null) return
     const piece = game.current.get(square)
     if (selected) {
       if (selected === square) return setSelected(null)
@@ -194,8 +201,17 @@ export function PuzzlePlayer({ puzzle, onNext }: Props) {
     if (hintLevel === 0) setMessage(puzzle.hint)
   }
 
+  /** Step through the positions reached so far; never past the live position. */
+  function stepView(delta: number) {
+    const current = view ?? played
+    const next = Math.max(0, Math.min(played, current + delta))
+    setSelected(null)
+    setView(next === played ? null : next)
+  }
+
   function reveal() {
     window.clearTimeout(replyTimer.current)
+    setView(null)
     setStatus('revealed')
     setSelected(null)
     saveResult(puzzle.id, { solved: false, clean: false })
@@ -203,6 +219,25 @@ export function PuzzlePlayer({ puzzle, onNext }: Props) {
   }
 
   const done = status !== 'playing'
+  const viewing = !done && view !== null
+  const viewFrame = viewing ? replay.frames[view] : null
+
+  // Left/right arrow keys step through moves, both while solving and in the replay
+  useEffect(() => {
+    function onKey(e: KeyboardEvent) {
+      if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return
+      const target = e.target as HTMLElement | null
+      if (target && ['INPUT', 'TEXTAREA'].includes(target.tagName)) return
+      e.preventDefault()
+      const delta = e.key === 'ArrowLeft' ? -1 : 1
+      if (status === 'playing') stepViewRef.current(delta)
+      else replay.goTo(replay.index + delta)
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  })
+  const stepViewRef = useRef(stepView)
+  stepViewRef.current = stepView
   // After a solve, show the user's own final position until they start the replay
   const showingReplay = done && (status === 'revealed' || replay.started)
   const frame = replay.frames[replay.index]
@@ -211,7 +246,12 @@ export function PuzzlePlayer({ puzzle, onNext }: Props) {
   const squareStyles: Record<string, React.CSSProperties> = {}
   let arrows: Arrow[] = []
 
-  if (showingReplay) {
+  if (viewFrame) {
+    if (viewFrame.uci) {
+      squareStyles[viewFrame.uci.slice(0, 2)] = { background: 'var(--sq-last)' }
+      squareStyles[viewFrame.uci.slice(2, 4)] = { background: 'var(--sq-last)' }
+    }
+  } else if (showingReplay) {
     if (frame.uci) {
       const solverMove = replay.index % 2 === 1
       arrows = [[frame.uci.slice(0, 2) as Square, frame.uci.slice(2, 4) as Square, solverMove ? 'rgba(46,160,90,.85)' : 'rgba(200,70,60,.8)']]
@@ -264,11 +304,11 @@ export function PuzzlePlayer({ puzzle, onNext }: Props) {
         {/* One board for the whole puzzle: switching to the replay must not remount it */}
         <Chessboard
           id={`board-${puzzle.id}`}
-          position={showingReplay ? frame.fen : fen}
+          position={viewFrame ? viewFrame.fen : showingReplay ? frame.fen : fen}
           boardOrientation={orientation}
           onPieceDrop={(from, to) => tryMove(from, to)}
           onSquareClick={onSquareClick}
-          arePiecesDraggable={!done}
+          arePiecesDraggable={!done && !viewing}
           isDraggablePiece={({ piece }) => piece[0] === solverColor}
           customSquareStyles={squareStyles}
           customArrows={arrows}
@@ -280,6 +320,19 @@ export function PuzzlePlayer({ puzzle, onNext }: Props) {
         />
 
         {moveNote('board-note')}
+        {!done && played > 0 && (
+          <div className="replay-controls">
+            <button className="btn icon" onClick={() => stepView(-1)} disabled={(view ?? played) === 0} aria-label="Previous position">
+              ◀
+            </button>
+            <span className={`view-label${viewing ? ' past' : ''}`}>
+              {viewing ? (view === 0 ? 'Starting position' : `After ${replay.frames[view].san}`) : 'Current position'}
+            </span>
+            <button className="btn icon" onClick={() => stepView(1)} disabled={!viewing} aria-label="Next position">
+              ▶
+            </button>
+          </div>
+        )}
         {done && (
           <>
             <div className="replay-controls">

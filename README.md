@@ -49,6 +49,12 @@ On the last move any checkmate is accepted, as on Lichess.
 3. Candidates land in `data/candidates/`. Review them, write the hint and explanation, copy the keepers into
    `src/data/puzzles/<gm>.json`, then run `npm run verify`.
 
+## Puzzle text
+
+Every puzzle has a hand-written hint, explanation and `moveNotes` (one note per move, shown during the replay).
+Write them from `npx tsx scripts/fact-sheet.ts tal-012`, which prints the checks, legal replies and attacked pieces after every move,
+so no claim is made from reading the board by eye. Puzzles without `moveNotes` fall back to generated notes (`src/lib/moveNotes.ts`).
+
 ## Portraits
 
 `scripts/engrave-portrait.sh in.jpg <crop> out.jpg` turns a photo into the sepia engraving style

@@ -489,3 +489,16 @@ a.puzzle-tile[href]:hover {
     display: none;
   }
 }
+
+.view-label {
+  align-self: center;
+  min-width: 170px;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.view-label.past {
+  color: var(--accent);
+}
