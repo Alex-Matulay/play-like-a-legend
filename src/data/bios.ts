@@ -9,6 +9,11 @@ export interface Bio {
   sections: { heading: string; body: string[] }[]
 }
 
+/**
+ * Facts here were checked against Wikipedia (November 2026): the players' own articles plus the
+ * World Chess Championship 1921 and 1927 articles and the Opera Game article. Keep new claims to
+ * things a source states; style descriptions in "How he played" are the site's own summary.
+ */
 export const BIOS: Partial<Record<GmId, Bio>> = {
   tal: {
     firstName: 'Mikhail',
@@ -21,22 +26,22 @@ export const BIOS: Partial<Record<GmId, Bio>> = {
       {
         heading: 'The boy from Riga',
         body: [
-          'Tal grew up in Riga, the son of a doctor. He was a quick, restless child who learned chess at the local Palace of Pioneers and was soon beating adults across the city. He was born with only three fingers on his right hand, which never slowed him down at the board.',
-          'He won his first Soviet Championship in 1957, aged 20, and defended it the following year. Older masters complained that his sacrifices were unsound. Tal kept winning with them anyway.',
+          'Tal grew up in Riga and joined the chess club at the Riga Palace of Young Pioneers as a boy. He was born with ectrodactyly, a congenital deformity of his right hand, which never held him back at the board.',
+          'In 1957, aged 20, he became the youngest player to win the Soviet Championship, and he kept the title the following year. Critics called many of his sacrifices unsound. Tal kept winning with them anyway.',
         ],
       },
       {
         heading: 'Youngest world champion of his time',
         body: [
-          'In 1960 he challenged Mikhail Botvinnik, the methodical champion of the Soviet school, and beat him 12½–8½. At 23, Tal was the youngest world champion there had ever been, and the press called him the Magician from Riga.',
-          'Botvinnik won the return match a year later. Tal was already seriously ill with kidney problems that would trouble him for the rest of his life, and he played much of that rematch in poor health.',
+          'In 1960 he challenged Mikhail Botvinnik, the methodical champion of the Soviet school, and beat him 12½–8½. At 23, Tal was the youngest world champion there had ever been, a record that stood until Garry Kasparov in 1985. He earned the nickname the Magician from Riga.',
+          'Botvinnik won the return match a year later, 13–8. Tal suffered from chronic kidney problems, and doctors had advised postponing the rematch. He played anyway, and his health contributed to the defeat.',
         ],
       },
       {
         heading: 'A long second act',
         body: [
-          'He never won the title back, but he stayed one of the strongest players in the world for three decades. He won the Soviet Championship six times in all, and in 1973–74 went 95 tournament games without a loss, one of the longest unbeaten runs in top level chess.',
-          'Friends remembered him as warm, witty and generous, and he was loved by fans in a way few champions are. He kept playing almost to the end: weeks before he died in 1992 he was still competing in blitz events in Moscow, and he beat Garry Kasparov in one of those games.',
+          'He never won the title back, but he stayed one of the strongest players in the world for three decades. He won the Soviet Championship six times in all, and between October 1973 and October 1974 he played 95 games in a row without a loss (46 wins and 49 draws).',
+          'He kept playing almost to the end. On 28 May 1992, at a blitz tournament in Moscow, he beat Garry Kasparov. He died one month later.',
         ],
       },
       {
@@ -59,15 +64,15 @@ export const BIOS: Partial<Record<GmId, Bio>> = {
       {
         heading: 'A natural talent',
         body: [
-          'According to the famous story, Capablanca learned the moves at the age of four by watching his father play, and pointed out a mistake his father had made. By thirteen he had beaten the champion of Cuba in a match.',
-          'He studied at Columbia University in New York, but chess soon took over. In 1909 he crushed Frank Marshall, the leading American player, and in 1911 he won the strong San Sebastián tournament at his first attempt.',
+          'Capablanca learned the game at the age of four by watching his father play. The story goes that he pointed out an illegal move his father had made, then beat him. In November 1901, two days before his 13th birthday, he beat the Cuban champion Juan Corzo in a match.',
+          'He went to Columbia University in New York, but chess soon took over. In 1909 he beat the US champion Frank Marshall by 8 wins to 1, with 14 draws, and in 1911 he won the strong San Sebastián tournament ahead of Rubinstein, Nimzowitsch and Tarrasch.',
         ],
       },
       {
         heading: 'World champion',
         body: [
-          'In 1921 he took the world title from Emanuel Lasker in Havana without losing a single game. For years he lost so rarely that he gained a reputation as a "chess machine".',
-          'He lost the title to Alexander Alekhine in Buenos Aires in 1927 and never got a rematch. He also served as a Cuban diplomat and wrote Chess Fundamentals, still one of the most recommended books for improving players.',
+          'In 1921 he took the world title from Emanuel Lasker in his home city of Havana, with 4 wins, 10 draws and not a single loss. In serious play he went unbeaten from February 1916 to March 1924.',
+          'He lost the title to Alexander Alekhine in Buenos Aires in 1927 and, despite years of trying, never got a rematch. He joined the Cuban Foreign Office in 1913 and served his country as a diplomat. He also wrote Chess Fundamentals, which Mikhail Botvinnik regarded as the best chess book ever written.',
         ],
       },
       {
@@ -89,21 +94,21 @@ export const BIOS: Partial<Record<GmId, Bio>> = {
       {
         heading: 'A prodigy in New Orleans',
         body: [
-          'Morphy learned chess as a child in New Orleans and was beating the city\'s best players while still a boy. He was also a brilliant student and finished a law degree before he was old enough to practise.',
+          "Morphy learned chess as a child in New Orleans, and by the age of nine he was considered one of the best players in the city. He was also a brilliant student: he earned his law degree in 1857, before he was old enough to practise.",
           'In 1857 he won the First American Chess Congress in New York with ease.',
         ],
       },
       {
         heading: 'Conquering Europe',
         body: [
-          'In 1858 he sailed to Europe and beat the leading masters there, including Adolf Anderssen, widely seen as the best player in the world. He gave blindfold exhibitions against several opponents at once and became a celebrity.',
-          'In Paris he played his most famous game, the "Opera Game", during a performance at the opera house, against the Duke of Brunswick and Count Isouard in consultation. It is still used to teach rapid development.',
+          "In 1858 he sailed to Europe and beat the leading masters there. Against Adolf Anderssen, considered by many to be Europe's leading player, he won 7 games, lost 2 and drew 2. In Paris he played eight opponents at once while blindfolded, and beat them all.",
+          'Also in Paris that autumn he played his most famous game, the "Opera Game", in a box at the Salle Ventadour while an opera was on stage, against the Duke of Brunswick and Count Isouard playing together. It is still used to teach rapid development.',
         ],
       },
       {
         heading: 'Leaving the game',
         body: [
-          'Back home, Morphy largely stopped playing serious chess and tried to build a law career, which never took off. He became increasingly withdrawn in later life and died in New Orleans in 1884, aged 47.',
+          'Back home, Morphy soon withdrew from competitive chess and tried several times to set up as a lawyer, without success. He refused all invitations to return to the board, his mental health declined in his final years, and he died in New Orleans in 1884, aged 47.',
         ],
       },
       {
@@ -120,25 +125,25 @@ export const BIOS: Partial<Record<GmId, Bio>> = {
     died: '13 August 1984, Moscow',
     title: '9th World Chess Champion (1963–1969)',
     intro:
-      'Tigran Petrosian was the hardest player of his generation to beat. Where Tal attacked, Petrosian prevented: he saw his opponent\'s plans coming and quietly made them impossible.',
+      "Tigran Petrosian was the hardest player of his generation to beat. Where Tal attacked, Petrosian prevented: he saw his opponent's plans coming and quietly made them impossible.",
     sections: [
       {
         heading: 'Hard beginnings',
         body: [
-          'Petrosian was born in Tbilisi to an Armenian family and lost both his parents during the Second World War, while he was still a child. Chess became his refuge. He was deeply influenced by Aron Nimzowitsch\'s book My System and its ideas about prophylaxis.',
+          "Petrosian was born in Tbilisi to Armenian parents. He was orphaned during the Second World War and had to sweep streets to get by. Chess became his refuge. He later said that Aron Nimzowitsch's book Chess Praxis had the greatest influence on him.",
         ],
       },
       {
         heading: 'World champion',
         body: [
-          'He won the Soviet Championship four times and in 1963 took the world title from Mikhail Botvinnik. He defended it against Boris Spassky in 1966, then lost to Spassky in 1969.',
-          'He also earned a higher degree in philosophy and edited the Soviet chess newspaper 64.',
+          'He won the Soviet Championship four times, in 1959, 1961, 1969 and 1975. In 1963 he took the world title from Mikhail Botvinnik, winning 5 games, losing 2 and drawing 15. He defended it against Boris Spassky in 1966, then lost to Spassky in 1969.',
+          'He studied philosophy at Yerevan State University, completing his thesis in 1968, and edited the chess newspaper 64.',
         ],
       },
       {
         heading: 'How he played',
         body: [
-          'Petrosian\'s trademark was prophylaxis: improving his position while taking away his opponent\'s best ideas. He was famous for positional exchange sacrifices, giving a rook for a minor piece to gain lasting control. In his best years he went entire tournaments without losing a game, which earned him the nickname "Iron Tigran".',
+          "Petrosian's trademark was prophylaxis: improving his position while taking away his opponent's best ideas. He was famous for positional exchange sacrifices, giving a rook for a minor piece to gain lasting control. He could go through a whole tournament without losing a game, and his almost impenetrable defence earned him the nickname \"Iron Tigran\".",
         ],
       },
     ],
