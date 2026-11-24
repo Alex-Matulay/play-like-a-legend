@@ -53,7 +53,7 @@ On the last move any checkmate is accepted, as on Lichess.
 
 `scripts/engrave-portrait.sh in.jpg <crop> out.jpg` turns a photo into the sepia engraving style
 (needs ImageMagick). Use only public domain or CC0 photos and put the credit in `portraitCredit`.
-Tal and Petrosian are done. Capablanca and Morphy still show initials.
+All four current GMs have portraits. Morphy's faded 1859 photo needed a contrast boost before the filter.
 
 ## Selling
 

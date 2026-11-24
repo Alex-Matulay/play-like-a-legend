@@ -37,6 +37,8 @@ export const PACKS: GmPack[] = [
     tagline: 'The Chess Machine',
     style: ['Simplifies into winning endgames', 'Clear, economical piece play', 'Flawless technique'],
     themeProfile: ['endgame', 'rookEndgame', 'pawnEndgame', 'quietMove', 'zugzwang'],
+    portrait: 'portraits/capablanca.jpg',
+    portraitCredit: 'Photo: Keystone-France, c. 1930, public domain (Wikimedia Commons). Engraving effect added.',
     available: false,
   },
   {
@@ -46,6 +48,8 @@ export const PACKS: GmPack[] = [
     tagline: 'The Pride and Sorrow of Chess',
     style: ['Rapid development', 'Opens lines against an uncastled king', 'Spectacular back-rank finishes'],
     themeProfile: ['mateIn2', 'mateIn3', 'backRankMate', 'opening', 'deflection'],
+    portrait: 'portraits/morphy.jpg',
+    portraitCredit: 'Photo: unnamed photographer, 1859, public domain (Wikimedia Commons). Engraving effect added.',
     available: false,
   },
   {
