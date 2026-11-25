@@ -6,10 +6,12 @@ import { saveResult } from '../lib/progress'
 import { buildMoveNotes } from '../lib/moveNotes'
 
 type Status = 'playing' | 'solved' | 'revealed'
-type Flash = { square: string; kind: 'good' | 'bad' } | null
+type Badge = { square: string; kind: 'good' | 'bad'; id: number } | null
 type Arrow = [Square, Square, string]
 
 const REPLY_DELAY_MS = 450
+// How long a wrong move stays on the board (with its red badge) before sliding back
+const WRONG_HOLD_MS = 600
 // Long enough to read each move's note while the piece moves
 const REPLAY_STEP_MS = 2500
 const BOARD_STYLE = { borderRadius: '6px', boxShadow: '0 10px 30px rgba(0,0,0,.25)' }
@@ -93,7 +95,11 @@ export function PuzzlePlayer({ puzzle, onNext }: Props) {
   const [hintLevel, setHintLevel] = useState(0)
   const [selected, setSelected] = useState<string | null>(null)
   const [lastMove, setLastMove] = useState<[string, string] | null>(null)
-  const [flash, setFlash] = useState<Flash>(null)
+  const [badge, setBadge] = useState<Badge>(null)
+  // While a wrong move is on show: the position with it played, and the move itself
+  const [wrong, setWrong] = useState<{ fen: string; from: string; to: string } | null>(null)
+  const wrongTimer = useRef<number | undefined>(undefined)
+  const badgeId = useRef(0)
   const [message, setMessage] = useState('')
   // Plies played so far, and which earlier position the user is looking at (null = the live one)
   const [played, setPlayed] = useState(0)
@@ -114,20 +120,23 @@ export function PuzzlePlayer({ puzzle, onNext }: Props) {
     setHintLevel(0)
     setSelected(null)
     setLastMove(null)
-    setFlash(null)
+    setBadge(null)
+    setWrong(null)
     setPlayed(0)
     setView(null)
     setMessage(`${solverColor === 'w' ? 'White' : 'Black'} to move. Find the winning line.`)
-    return () => window.clearTimeout(replyTimer.current)
+    return () => {
+      window.clearTimeout(replyTimer.current)
+      window.clearTimeout(wrongTimer.current)
+    }
   }, [puzzle.fen, solverColor])
 
-  function flashSquare(square: string, kind: 'good' | 'bad') {
-    setFlash({ square, kind })
-    window.setTimeout(() => setFlash(null), 600)
+  function showBadge(square: string, kind: 'good' | 'bad') {
+    setBadge({ square, kind, id: ++badgeId.current })
   }
 
   function tryMove(from: string, to: string): boolean {
-    if (status !== 'playing' || view !== null || game.current.turn() !== solverColor) return false
+    if (status !== 'playing' || view !== null || wrong || game.current.turn() !== solverColor) return false
     const g = game.current
     const piece = g.get(from as Square)
     const isPromotion = piece?.type === 'p' && (to[1] === '8' || to[1] === '1')
@@ -145,10 +154,18 @@ export function PuzzlePlayer({ puzzle, onNext }: Props) {
     const correct = uci === expected || (isLastMove && probe.isCheckmate())
 
     if (!correct) {
+      // Like Lichess: let the move land, mark it with a red badge, then slide it back
       setMistakes((m) => m + 1)
-      flashSquare(to, 'bad')
+      setSelected(null)
+      setWrong({ fen: probe.fen(), from, to })
+      showBadge(to, 'bad')
       setMessage('Not quite. Look for something more forcing and try again.')
-      return false
+      wrongTimer.current = window.setTimeout(() => {
+        setWrong(null)
+        // Let the piece finish sliding home before the badge goes
+        window.setTimeout(() => setBadge((b) => (b?.kind === 'bad' ? null : b)), 300)
+      }, WRONG_HOLD_MS)
+      return true
     }
 
     g.move(toMove(uci))
@@ -157,7 +174,7 @@ export function PuzzlePlayer({ puzzle, onNext }: Props) {
     setLastMove([from, to])
     setSelected(null)
     setHintLevel(0)
-    flashSquare(to, 'good')
+    showBadge(to, 'good')
 
     if (isLastMove) {
       const clean = mistakes === 0 && hintLevel === 0
@@ -175,6 +192,7 @@ export function PuzzlePlayer({ puzzle, onNext }: Props) {
     replyTimer.current = window.setTimeout(() => {
       g.move(toMove(reply))
       setFen(g.fen())
+      setBadge(null)
       setPlayed((n) => n + 1)
       setLastMove([reply.slice(0, 2), reply.slice(2, 4)])
       setStep(step + 2)
@@ -183,7 +201,7 @@ export function PuzzlePlayer({ puzzle, onNext }: Props) {
   }
 
   function onSquareClick(square: Square) {
-    if (status !== 'playing' || view !== null) return
+    if (status !== 'playing' || view !== null || wrong) return
     const piece = game.current.get(square)
     if (selected) {
       if (selected === square) return setSelected(null)
@@ -242,6 +260,16 @@ export function PuzzlePlayer({ puzzle, onNext }: Props) {
   const showingReplay = done && (status === 'revealed' || replay.started)
   const frame = replay.frames[replay.index]
 
+  const shownFen = viewFrame ? viewFrame.fen : showingReplay ? frame.fen : (wrong?.fen ?? fen)
+  // Check and mate are read from whatever position is on the board right now
+  const { checkSquare, mateSquare } = useMemo(() => {
+    const c = new Chess(shownFen)
+    if (!c.inCheck()) return { checkSquare: null, mateSquare: null }
+    const k = c.board().flat().find((p) => p?.type === 'k' && p.color === c.turn())!.square
+    return { checkSquare: k, mateSquare: c.isCheckmate() ? k : null }
+  }, [shownFen])
+  const showBadges = !showingReplay && !viewing
+
   // ---- Board decorations --------------------------------------------------------------------------
   const squareStyles: Record<string, React.CSSProperties> = {}
   let arrows: Arrow[] = []
@@ -257,9 +285,10 @@ export function PuzzlePlayer({ puzzle, onNext }: Props) {
       arrows = [[frame.uci.slice(0, 2) as Square, frame.uci.slice(2, 4) as Square, solverMove ? 'rgba(46,160,90,.85)' : 'rgba(200,70,60,.8)']]
     }
   } else {
-    if (lastMove) {
-      squareStyles[lastMove[0]] = { background: 'var(--sq-last)' }
-      squareStyles[lastMove[1]] = { background: 'var(--sq-last)' }
+    const shownMove = wrong ? [wrong.from, wrong.to] : lastMove
+    if (shownMove) {
+      squareStyles[shownMove[0]] = { background: 'var(--sq-last)' }
+      squareStyles[shownMove[1]] = { background: 'var(--sq-last)' }
     }
     if (selected) {
       squareStyles[selected] = { background: 'var(--sq-selected)' }
@@ -278,7 +307,26 @@ export function PuzzlePlayer({ puzzle, onNext }: Props) {
     if (!done && hintLevel >= 2 && nextMove) {
       arrows = [[nextMove.slice(0, 2) as Square, nextMove.slice(2, 4) as Square, 'rgba(240, 180, 40, 0.85)']]
     }
-    if (flash) squareStyles[flash.square] = { background: flash.kind === 'good' ? 'var(--sq-good)' : 'var(--sq-bad)' }
+  }
+  if (checkSquare) {
+    // Red glow behind the king that grows out from the centre (same idea as Lichess's check marker)
+    squareStyles[checkSquare] = {
+      ...squareStyles[checkSquare],
+      backgroundImage: 'radial-gradient(circle, rgba(255,40,40,.95) 0%, rgba(231,20,20,.6) 32%, rgba(169,0,0,0) 72%)',
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'center',
+      backgroundSize: '100% 100%',
+      animation: 'pll-check-in .35s ease-out',
+    }
+  }
+
+  /** Absolute position of a square inside the board, for the overlay layer */
+  function squareBox(sq: string): React.CSSProperties {
+    const file = sq.charCodeAt(0) - 97
+    const rank = Number(sq[1])
+    const col = orientation === 'white' ? file : 7 - file
+    const row = orientation === 'white' ? 8 - rank : rank - 1
+    return { left: `${col * 12.5}%`, top: `${row * 12.5}%`, width: '12.5%', height: '12.5%' }
   }
 
   const startMoveNo = Number(puzzle.fen.split(' ')[5] ?? 1)
@@ -302,13 +350,14 @@ export function PuzzlePlayer({ puzzle, onNext }: Props) {
     <div className="player">
       <div className="board-wrap">
         {/* One board for the whole puzzle: switching to the replay must not remount it */}
+        <div className="board-frame">
         <Chessboard
           id={`board-${puzzle.id}`}
-          position={viewFrame ? viewFrame.fen : showingReplay ? frame.fen : fen}
+          position={shownFen}
           boardOrientation={orientation}
           onPieceDrop={(from, to) => tryMove(from, to)}
           onSquareClick={onSquareClick}
-          arePiecesDraggable={!done && !viewing}
+          arePiecesDraggable={!done && !viewing && !wrong}
           isDraggablePiece={({ piece }) => piece[0] === solverColor}
           customSquareStyles={squareStyles}
           customArrows={arrows}
@@ -318,6 +367,16 @@ export function PuzzlePlayer({ puzzle, onNext }: Props) {
           customDarkSquareStyle={DARK}
           customLightSquareStyle={LIGHT}
         />
+          {/* Move badges and the mate outline sit above the pieces and animate on their own */}
+          <div className="board-overlay" aria-hidden="true">
+            {showBadges && badge && (
+              <span key={badge.id} className={`sq-badge ${badge.kind}`} style={squareBox(badge.square)}>
+                <span>{badge.kind === 'good' ? '✓' : '✗'}</span>
+              </span>
+            )}
+            {mateSquare && <span key={`mate-${shownFen}`} className="mate-ring" style={squareBox(mateSquare)} />}
+          </div>
+        </div>
 
         {moveNote('board-note')}
         {!done && played > 0 && (
