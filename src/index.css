@@ -181,8 +181,13 @@ a.pack-card:hover {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
-.pack-card.disabled {
-  opacity: 0.6;
+/* Coming-soon packs: dim the card, but not the link to the bio inside it */
+.pack-card.disabled .dim {
+  opacity: 0.5;
+}
+
+.pack-card.disabled .more-link {
+  margin-top: 6px;
 }
 
 .pack-card h2 {
@@ -515,9 +520,6 @@ a.puzzle-tile[href]:hover {
   text-decoration: underline;
 }
 
-a.pack-card.soon {
-  opacity: 0.85;
-}
 
 /* About page */
 .about {
@@ -660,4 +662,35 @@ a.pack-card.soon {
   .mate-ring {
     animation: none;
   }
+}
+
+/* Banner above the board for positions from the GM's own games */
+.real-game {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 4px 0 16px;
+  padding: 10px 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: 10px;
+}
+
+.real-game p {
+  margin: 0;
+  flex: 1 1 240px;
+}
+
+.real-game-tag {
+  flex: none;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--accent-text);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
 }

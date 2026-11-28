@@ -3,7 +3,7 @@ import { PuzzlePlayer } from './components/PuzzlePlayer'
 import { BIOS } from './data/bios'
 import { getResult } from './lib/progress'
 import { href, useRoute } from './lib/router'
-import type { GmPack } from './types'
+import type { GameSource, GmPack } from './types'
 
 export default function App() {
   const route = useRoute()
@@ -78,30 +78,44 @@ function Home() {
 
 function PackCard({ pack }: { pack: GmPack }) {
   const count = puzzlesFor(pack.id).length
-  const inner = (
-    <>
-      <Crest pack={pack} />
-      <div>
-        <h2>{pack.name}</h2>
-        <p className="muted">
-          {pack.tagline} · {pack.years}
-        </p>
-        <p className="pack-meta">
-          {pack.available ? `${count} puzzles` : `Coming soon · Read about ${BIOS[pack.id]?.firstName ?? pack.name}`}
-        </p>
+  const bio = BIOS[pack.id]
+
+  if (pack.available) {
+    return (
+      <a className="pack-card" href={href.pack(pack.id)}>
+        <Crest pack={pack} />
+        <div>
+          <h2>{pack.name}</h2>
+          <p className="muted">
+            {pack.tagline} · {pack.years}
+          </p>
+          <p className="pack-meta">{count} puzzles</p>
+        </div>
+      </a>
+    )
+  }
+
+  // Not playable yet: the card is dimmed, but the link to the life story stays at full strength
+  return (
+    <div className="pack-card disabled">
+      <div className="dim">
+        <Crest pack={pack} />
       </div>
-    </>
-  )
-  return pack.available ? (
-    <a className="pack-card" href={href.pack(pack.id)}>
-      {inner}
-    </a>
-  ) : BIOS[pack.id] ? (
-    <a className="pack-card soon" href={href.about(pack.id)}>
-      {inner}
-    </a>
-  ) : (
-    <div className="pack-card disabled">{inner}</div>
+      <div>
+        <div className="dim">
+          <h2>{pack.name}</h2>
+          <p className="muted">
+            {pack.tagline} · {pack.years}
+          </p>
+          <p className="pack-meta">Coming soon</p>
+        </div>
+        {bio && (
+          <a className="more-link" href={href.about(pack.id)}>
+            About {bio.firstName} →
+          </a>
+        )}
+      </div>
+    </div>
   )
 }
 
@@ -198,17 +212,45 @@ function PuzzlePage({ id }: { id: string }) {
           Puzzle {index + 1} of {puzzles.length} · {difficultyLabel(puzzle.rating)} · {puzzle.rating}
         </span>
       </nav>
-      <p className="source-line">
-        {puzzle.type === 'real' && puzzle.source
-          ? `${puzzle.source.white} vs ${puzzle.source.black}, ${puzzle.source.event} ${puzzle.source.year}`
-          : `In the style of ${pack.name}`}
-      </p>
+      {puzzle.type === 'real' && puzzle.source ? (
+        <RealGameBanner source={puzzle.source} gmName={pack.name} />
+      ) : (
+        <p className="source-line">In the style of {pack.name}</p>
+      )}
       <PuzzlePlayer
         key={puzzle.id}
         puzzle={puzzle}
         onNext={() => (window.location.hash = next && !isLocked(gm, index + 1) ? href.puzzle(next.id) : href.pack(gm))}
       />
     </>
+  )
+}
+
+/** Shown above the board when the position is taken from one of the GM's own games */
+function RealGameBanner({ source, gmName }: { source: GameSource; gmName: string }) {
+  const surname = gmName.split(' ').pop()!.toLowerCase()
+  const gmIsWhite = source.white.toLowerCase().includes(surname)
+  const gmIsBlack = source.black.toLowerCase().includes(surname)
+  const opponent = gmIsWhite ? source.black : gmIsBlack ? source.white : null
+  const where = [source.event, source.year || null].filter(Boolean).join(', ')
+
+  return (
+    <div className="real-game">
+      <span className="real-game-tag">Real game</span>
+      <p>
+        This position comes from an actual game:{' '}
+        <strong>
+          {source.white} vs {source.black}
+        </strong>
+        {where && <>, {where}</>}.
+        {opponent && (
+          <>
+            {' '}
+            {gmName.split(' ').pop()} had the {gmIsWhite ? 'white' : 'black'} pieces against {opponent}.
+          </>
+        )}
+      </p>
+    </div>
   )
 }
 

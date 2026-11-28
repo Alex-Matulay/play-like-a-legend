@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Chess, type Square } from 'chess.js'
 import { Chessboard } from 'react-chessboard'
+import type { Piece, PromotionPieceOption } from 'react-chessboard/dist/chessboard/types'
 import type { Puzzle } from '../types'
 import { saveResult } from '../lib/progress'
 import { buildMoveNotes } from '../lib/moveNotes'
@@ -100,6 +101,8 @@ export function PuzzlePlayer({ puzzle, onNext }: Props) {
   const [wrong, setWrong] = useState<{ fen: string; from: string; to: string } | null>(null)
   const wrongTimer = useRef<number | undefined>(undefined)
   const badgeId = useRef(0)
+  // Tap-to-move onto the last rank: the picker is open and waiting for a choice
+  const [promo, setPromo] = useState<{ from: string; to: string } | null>(null)
   const [message, setMessage] = useState('')
   // Plies played so far, and which earlier position the user is looking at (null = the live one)
   const [played, setPlayed] = useState(0)
@@ -122,6 +125,7 @@ export function PuzzlePlayer({ puzzle, onNext }: Props) {
     setLastMove(null)
     setBadge(null)
     setWrong(null)
+    setPromo(null)
     setPlayed(0)
     setView(null)
     setMessage(`${solverColor === 'w' ? 'White' : 'Black'} to move. Find the winning line.`)
@@ -135,12 +139,20 @@ export function PuzzlePlayer({ puzzle, onNext }: Props) {
     setBadge({ square, kind, id: ++badgeId.current })
   }
 
-  function tryMove(from: string, to: string): boolean {
+  function isPromotionMove(from: string, to: string): boolean {
+    const piece = game.current.get(from as Square)
+    return piece?.type === 'p' && (to[1] === '8' || to[1] === '1')
+  }
+
+  /** Board drop handler. For a promotion, the library has already asked which piece and passes it here (e.g. "wN"). */
+  function onPieceDrop(from: string, to: string, piece: Piece): boolean {
+    return tryMove(from, to, isPromotionMove(from, to) ? piece[1].toLowerCase() : undefined)
+  }
+
+  function tryMove(from: string, to: string, promotion?: string): boolean {
     if (status !== 'playing' || view !== null || wrong || game.current.turn() !== solverColor) return false
     const g = game.current
-    const piece = g.get(from as Square)
-    const isPromotion = piece?.type === 'p' && (to[1] === '8' || to[1] === '1')
-    const uci = from + to + (isPromotion ? 'q' : '')
+    const uci = from + to + (isPromotionMove(from, to) ? (promotion ?? 'q') : '')
 
     const probe = new Chess(g.fen())
     try {
@@ -206,11 +218,26 @@ export function PuzzlePlayer({ puzzle, onNext }: Props) {
     if (selected) {
       if (selected === square) return setSelected(null)
       if (piece && piece.color === solverColor) return setSelected(square)
+      const legal = game.current.moves({ square: selected as Square, verbose: true }).some((m) => m.to === square)
+      if (legal && isPromotionMove(selected, square)) {
+        setPromo({ from: selected, to: square })
+        setSelected(null)
+        return
+      }
       tryMove(selected, square)
       setSelected(null)
       return
     }
     if (piece && piece.color === solverColor) setSelected(square)
+  }
+
+  /** Called when a piece is chosen in the promotion picker, or with no piece when it is dismissed. */
+  function onPromotionPieceSelect(piece?: PromotionPieceOption): boolean {
+    if (!promo) return !!piece // drag: let the board call onPieceDrop with the chosen piece
+    const pending = promo
+    setPromo(null)
+    if (piece) tryMove(pending.from, pending.to, piece[1].toLowerCase())
+    return false // tap: we already played it
   }
 
   function showHint() {
@@ -355,13 +382,15 @@ export function PuzzlePlayer({ puzzle, onNext }: Props) {
           id={`board-${puzzle.id}`}
           position={shownFen}
           boardOrientation={orientation}
-          onPieceDrop={(from, to) => tryMove(from, to)}
+          onPieceDrop={onPieceDrop}
           onSquareClick={onSquareClick}
           arePiecesDraggable={!done && !viewing && !wrong}
           isDraggablePiece={({ piece }) => piece[0] === solverColor}
           customSquareStyles={squareStyles}
           customArrows={arrows}
-          autoPromoteToQueen
+          onPromotionPieceSelect={onPromotionPieceSelect}
+          showPromotionDialog={!!promo}
+          promotionToSquare={(promo?.to as Square) ?? null}
           animationDuration={showingReplay ? 350 : 250}
           customBoardStyle={BOARD_STYLE}
           customDarkSquareStyle={DARK}
