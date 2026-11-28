@@ -6,7 +6,7 @@ style: Tal's sacrifices, Capablanca's endgames, Morphy's attacks, Petrosian's pr
 Users move the pieces on an interactive board. When they finish or give up, an animated replay
 walks through the full solution with arrows and an explanation.
 
-**Status:** MVP. The Tal pack has 60 puzzles: 5 original compositions plus 55 curated from the Lichess database. Every mate puzzle is machine-checked for a forced mate and a unique first move. Other packs are placeholders.
+**Status:** MVP. The Tal pack has 60 puzzles: 20 positions from Tal's own games, 35 curated from the Lichess database and 5 original compositions. Mate puzzles are machine-checked for a forced mate and a unique first move; real-game lines were engine-checked with Stockfish. Other packs are placeholders.
 
 ## Run it
 
@@ -43,7 +43,7 @@ On the last move any checkmate is accepted, as on Lichess.
    The first theme in the GM's `themeProfile` (`src/data/packs.ts`) is required. The others raise the score.
    Then `npm run curate -- --gm tal --count 55 --start 6` picks a varied set across the rating range,
    drops any mate that fails the uniqueness check, drafts hints and explanations, and appends to the pack.
-2. **Real-game puzzles**: put the GM's games in `data/pgn/<gm>.pgn`, install Stockfish, then run
+2. **Real-game puzzles**: put the GM's games in `data/pgn/` (Tal's came from pgnmentor.com), unzip Stockfish into `data/stockfish/`, then run (it takes about an hour for ~1,000 games; use `--shard 1/4` … `4/4` in parallel)
    `STOCKFISH_PATH=/path/to/stockfish npm run mine:pgn -- --pgn data/pgn/tal.pgn --player Tal --gm tal`.
    It finds moments where only one move wins and the GM found it.
 3. Candidates land in `data/candidates/`. Review them, write the hint and explanation, copy the keepers into

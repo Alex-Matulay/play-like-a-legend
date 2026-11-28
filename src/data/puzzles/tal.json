@@ -173,41 +173,6 @@
     ]
   },
   {
-    "id": "tal-007",
-    "gm": "tal",
-    "type": "style",
-    "source": null,
-    "lichessId": "AMsf4",
-    "fen": "1r3rk1/pb3Npp/1p6/2p2p2/4pq2/PQ6/1P3PPP/4RRK1 w - - 2 24",
-    "solution": [
-      "f7h6",
-      "g8h8",
-      "b3g8",
-      "f8g8",
-      "h6f7"
-    ],
-    "themes": [
-      "discoveredCheck",
-      "doubleCheck",
-      "kingsideAttack",
-      "mate",
-      "mateIn3",
-      "middlegame",
-      "sacrifice",
-      "smotheredMate"
-    ],
-    "rating": 1202,
-    "hint": "Your queen on b3 and your knight on f7 are lined up on the same diagonal as Black's king. How can the knight make that line count?",
-    "explanation": "1.Nh6+! Kh8 2.Qg8+! Rxg8 3.Nf7#. Moving the knight with check unmasks the queen on b3, and against a double check the only answer is a king move. With the king tucked into h8, the queen is thrown away on g8 just to lure the rook onto that square. The knight then returns to f7 and the king is suffocated by its own rook and pawns.",
-    "moveNotes": [
-      "Double check from the knight and from the queen on b3, whose diagonal to g8 is now open. Black must move the king.",
-      "The only legal move. The rook on f8 blocks one escape and the queen covers f7.",
-      "The queen goes where the king cannot take her, because the knight on h6 guards g8. Black's rook has to capture.",
-      "Forced, as it is the only legal move. The rook now sits on g8 and blocks its own king.",
-      "Smothered mate. The rook on g8 and the pawns on g7 and h7 take every square, and no black piece can reach f7."
-    ]
-  },
-  {
     "id": "tal-008",
     "gm": "tal",
     "type": "style",
@@ -243,43 +208,6 @@
     ]
   },
   {
-    "id": "tal-009",
-    "gm": "tal",
-    "type": "style",
-    "source": null,
-    "lichessId": "jAl35",
-    "fen": "r1bq2rk/1ppp1p2/p3pP1P/5nQ1/2PP4/8/PP3PP1/2KR1B1R w - - 1 20",
-    "solution": [
-      "g5g7",
-      "g8g7",
-      "h6g7",
-      "h8g8",
-      "h1h8"
-    ],
-    "themes": [
-      "advancedPawn",
-      "collinearMove",
-      "discoveredCheck",
-      "doubleCheck",
-      "exposedKing",
-      "kingsideAttack",
-      "mate",
-      "mateIn3",
-      "middlegame",
-      "sacrifice"
-    ],
-    "rating": 1251,
-    "hint": "Your pawns on f6 and h6 both point at the same square next to Black's king. What could you put there?",
-    "explanation": "1.Qg7+! Rxg7 2.hxg7+ Kg8 3.Rh8#. The queen lands on a square defended twice by your pawns, so the king cannot take her and Black has to capture with a piece. When the h6 pawn recaptures, it gives check and also opens the h-file for the rook on h1. The king must go to g8, and the rook comes in on h8 with the g7 pawn guarding it.",
-    "moveNotes": [
-      "Check from a square the king cannot touch, because the pawns on f6 and h6 both guard g7. Your queen on g5 was also under attack from the rook on g8.",
-      "Black has two captures here, the rook or the knight on f5. The rook capture is the line shown.",
-      "Double check. The pawn checks from g7 and the rook on h1 now sees the king along the open h-file.",
-      "The only legal move. The king cannot take on g7 because the f6 pawn protects it.",
-      "Mate. The rook is guarded by the g7 pawn, which also covers f8, and the pawn on f7 blocks the last square."
-    ]
-  },
-  {
     "id": "tal-010",
     "gm": "tal",
     "type": "style",
@@ -312,41 +240,6 @@
       "The queen offers herself on g8. The knight on e7 and the rook on g1 both guard that square, so the king cannot capture.",
       "The only legal reply. The rook from f8 takes the queen and the g-file is still open for your rook.",
       "Mate. The rook on g8 is protected by the knight on e7, it covers g7, and the knight on h7 blocks the king's last square."
-    ]
-  },
-  {
-    "id": "tal-011",
-    "gm": "tal",
-    "type": "style",
-    "source": null,
-    "lichessId": "JvWIC",
-    "fen": "r2q1b1k/3n1b2/5p1P/4pN2/pp1pP1Q1/1N1P1P2/PP6/2K4R w - - 0 31",
-    "solution": [
-      "g4g7",
-      "f8g7",
-      "h6g7",
-      "h8g8",
-      "h1h8"
-    ],
-    "themes": [
-      "advancedPawn",
-      "doubleCheck",
-      "exposedKing",
-      "kingsideAttack",
-      "mate",
-      "mateIn3",
-      "middlegame",
-      "sacrifice"
-    ],
-    "rating": 1362,
-    "hint": "Count how many of your units already touch g7. Is that square really as safe for Black as it looks?",
-    "explanation": "1.Qg7+! Bxg7 2.hxg7+ Kg8 3.Rh8#. The queen check on g7 can only be met by the bishop capture, because the pawn on h6 and the knight on f5 both protect the queen. Recapturing with the pawn brings a second check from the rook on h1, so the king has to step to g8. The rook then mates on h8, guarded by the g7 pawn, which in turn is defended by the knight on f5.",
-    "moveNotes": [
-      "Check from a square guarded by the h6 pawn and the knight on f5, so the king cannot take. Only the bishop on f8 can capture.",
-      "Forced, as it is Black's only legal move. The bishop leaves f8, which will matter later.",
-      "Double check. The pawn checks from g7 and the rook on h1 checks down the open h-file.",
-      "The only legal move. Taking the pawn on g7 is impossible because the knight on f5 protects it.",
-      "Mate. The rook is guarded by the g7 pawn, which also covers f8, and Black's own bishop blocks f7."
     ]
   },
   {
@@ -568,41 +461,6 @@
     ]
   },
   {
-    "id": "tal-018",
-    "gm": "tal",
-    "type": "style",
-    "source": null,
-    "lichessId": "yCruZ",
-    "fen": "r6k/p1pp2bB/bpn1p3/4P3/3P3N/2P1q1P1/PPQ4P/5R1K w - - 4 22",
-    "solution": [
-      "h4g6",
-      "h8h7",
-      "g6f8",
-      "h7h8",
-      "c2h7"
-    ],
-    "themes": [
-      "discoveredCheck",
-      "doubleCheck",
-      "exposedKing",
-      "kingsideAttack",
-      "mate",
-      "mateIn3",
-      "middlegame",
-      "sacrifice"
-    ],
-    "rating": 1496,
-    "hint": "Your bishop on h7 is within the king's reach. Could losing it actually help by bringing the king onto a dangerous diagonal?",
-    "explanation": "1.Ng6+! Kxh7 2.Nf8+! Kh8 3.Qh7#. The knight check leaves Black just one move, taking the bishop, and that puts the king on h7 on the same diagonal as your queen on c2. When the knight jumps on to f8, it checks the king and uncovers the queen at the same time. After the king slips back to h8, the queen mates on h7, guarded by the knight. Tal often gave up a piece just to drag the king onto the line he wanted, and that is the whole trick here.",
-    "moveNotes": [
-      "Check from the knight, which the queen on c2 protects. The bishop covers g8, so Black's only move is to take it.",
-      "Forced. Capturing the bishop puts the king on the c2 to h7 diagonal.",
-      "Double check. The knight checks from f8 and the queen on c2 now sees h7 along the open diagonal.",
-      "Black has three king moves here, and h8 is the one shown.",
-      "Mate. The queen is protected by the knight on f8, she covers g8, and Black's own bishop blocks g7."
-    ]
-  },
-  {
     "id": "tal-019",
     "gm": "tal",
     "type": "style",
@@ -702,40 +560,6 @@
     ]
   },
   {
-    "id": "tal-022",
-    "gm": "tal",
-    "type": "style",
-    "source": null,
-    "lichessId": "jzIuR",
-    "fen": "6rk/1r3p2/p1n1qp1B/3pP2P/2pP4/P1P3R1/6P1/2Q3K1 w - - 1 33",
-    "solution": [
-      "h6g7",
-      "g8g7",
-      "c1h6",
-      "g7h7",
-      "h6f8"
-    ],
-    "themes": [
-      "clearance",
-      "exposedKing",
-      "kingsideAttack",
-      "mate",
-      "mateIn3",
-      "middlegame",
-      "sacrifice"
-    ],
-    "rating": 1525,
-    "hint": "Your bishop on h6 is standing on the square your queen would love to use. How can it get out of the way with tempo?",
-    "explanation": "1.Bg7+! Rxg7 2.Qh6+ Rh7 3.Qf8#. The bishop sacrifice clears the c1 to h6 diagonal with check, so the queen can join the attack at once. After Qh6+, blocking with the rook leaves the back rank open, and Qf8 is mate because the rook on g3 still guards g7.",
-    "moveNotes": [
-      "A bishop sacrifice with check that also clears h6 for your queen. The rook on g3 supports the bishop along the g file.",
-      "Taking the bishop is best. Kh7 would allow Qh6 mate straight away.",
-      "Now the queen lands on h6 with check, using the diagonal the bishop just vacated.",
-      "Blocking with the rook. Kg8 would lose to Qxg7 mate, since the rook on g3 backs up the queen.",
-      "Mate along the back rank. The queen covers g8 and g7, the rook on g3 also hits g7, and the rook on h7 blocks its own king."
-    ]
-  },
-  {
     "id": "tal-023",
     "gm": "tal",
     "type": "style",
@@ -807,43 +631,6 @@
       "The pawn captures with check and now controls both f1 and h1.",
       "The only legal move. The king can't take the pawn because the h3 pawn guards it.",
       "The bishop takes on f2 with check. The rook on f8 defends it, the pawn on g2 covers f1 and h1, and White's own bishop sits on h2. Mate."
-    ]
-  },
-  {
-    "id": "tal-025",
-    "gm": "tal",
-    "type": "style",
-    "source": null,
-    "lichessId": "m0Cjz",
-    "fen": "7k/ppp2Qp1/7p/8/8/2Nq3P/PP4P1/K3n2R b - - 7 26",
-    "solution": [
-      "e1c2",
-      "a1b1",
-      "c2a3",
-      "b1a1",
-      "d3b1",
-      "c3b1",
-      "a3c2"
-    ],
-    "themes": [
-      "doubleCheck",
-      "endgame",
-      "mate",
-      "mateIn4",
-      "sacrifice",
-      "smotheredMate"
-    ],
-    "rating": 1527,
-    "hint": "White's king hides on a1 behind its pawns. Can your knight and queen take turns checking until the king has no room at all?",
-    "explanation": "1...Nc2+ 2.Kb1 Na3+! 3.Ka1 Qb1+! 4.Nxb1 Nc2#. The knight hops away from c2 with a double check, using the queen on d3 as the second attacker. Back on a1, the king is surrounded by its own pawns, so the queen offers itself on b1 to fill the final square. Whichever piece takes, the knight returns to c2 for a smothered mate.",
-    "moveNotes": [
-      "Check with the knight, which was hanging to the rook on h1. Kb1 is White's only legal move.",
-      "The only reply. The king now stands on the queen's diagonal from d3.",
-      "Double check: the knight checks from a3 and its move uncovers the queen on d3. Only a king move can answer this.",
-      "Kc1 would allow Qc2 mate, so the king returns to the corner.",
-      "The queen checks on b1, protected by the knight on a3. White has to take it with a piece.",
-      "The knight takes the queen. Rxb1 would change nothing, since Nc2 is mate either way.",
-      "Check from c2 with the king boxed in by a2, b2 and the knight on b1. Nothing can capture the knight. Smothered mate."
     ]
   },
   {
@@ -1028,35 +815,6 @@
     ]
   },
   {
-    "id": "tal-031",
-    "gm": "tal",
-    "type": "style",
-    "source": null,
-    "lichessId": "7bT0a",
-    "fen": "r1b2rk1/4pp1p/1qpp2p1/p7/P1B1PP2/2Q4n/1PP3PP/1RB2R1K b - - 4 16",
-    "solution": [
-      "b6g1",
-      "f1g1",
-      "h3f2"
-    ],
-    "themes": [
-      "kingsideAttack",
-      "mate",
-      "mateIn2",
-      "middlegame",
-      "sacrifice",
-      "smotheredMate"
-    ],
-    "rating": 1605,
-    "hint": "Your knight on h3 already watches two squares next to White's king. How can you make the king's last free square disappear?",
-    "explanation": "1...Qg1+! 2.Rxg1 Nf2#. Dropping the queen where a rook can take it looks like madness, and that is exactly why it works. The knight on h3 defends g1, so the king cannot capture and the rook on f1 must. That rook now blocks the king's only flight square, and the knight checks from f2 for a smothered mate.",
-    "moveNotes": [
-      "The queen checks on g1. The knight on h3 protects it, so only the rook can capture.",
-      "White's only legal move. The rook now plugs the king's last free square.",
-      "The knight checks from f2. With g1, g2 and h2 all occupied by White's own pieces, it is smothered mate."
-    ]
-  },
-  {
     "id": "tal-032",
     "gm": "tal",
     "type": "style",
@@ -1088,80 +846,6 @@
       "The rook takes the knight with check, getting rid of the piece that attacked your queen. The king must capture.",
       "Forced. The king is now exposed on the open h file.",
       "The second rook delivers mate. Your queen on g5 covers g6, g7, g8 and h6, and the rook controls the whole h file."
-    ]
-  },
-  {
-    "id": "tal-033",
-    "gm": "tal",
-    "type": "style",
-    "source": null,
-    "lichessId": "DH8a1",
-    "fen": "rn3r1k/pp4pp/2p1Q3/3p2N1/3P1P2/2P5/2q2P1P/1N3RK1 w - - 5 21",
-    "solution": [
-      "g5f7",
-      "h8g8",
-      "f7h6",
-      "g8h8",
-      "e6g8",
-      "f8g8",
-      "h6f7"
-    ],
-    "themes": [
-      "discoveredCheck",
-      "doubleCheck",
-      "kingsideAttack",
-      "mate",
-      "mateIn4",
-      "middlegame",
-      "sacrifice",
-      "smotheredMate"
-    ],
-    "rating": 1607,
-    "hint": "Your queen on e6 is aimed at g8. Can your knight dance around the king, giving checks, until the king is buried in its own corner?",
-    "explanation": "1.Nf7+ Kg8 2.Nh6+! Kh8 3.Qg8+! Rxg8 4.Nf7#. Nh6 is a double check, from the knight and from the queen on e6, so the king must go back to h8. Then the queen sacrifice on g8 works because the knight on h6 guards that square, so only the rook can take. The rook ends up blocking its own king and the knight returns to f7 for a textbook smothered mate.",
-    "moveNotes": [
-      "The knight checks from f7, protected by your queen. Rxf7 would lose to Qc8+ and mate next move.",
-      "The king steps out to g8, onto the diagonal of your queen on e6.",
-      "Double check from the knight on h6 and the queen on e6. The king's only legal move is back to h8.",
-      "Forced. The king returns to the corner.",
-      "The queen sacrifices itself on g8. The knight on h6 guards it, so the king can't take and the rook must.",
-      "The only legal move. The rook now blocks g8, the king's last free square.",
-      "The knight checks from f7. The king is boxed in by its own rook and the pawns on g7 and h7. Smothered mate."
-    ]
-  },
-  {
-    "id": "tal-034",
-    "gm": "tal",
-    "type": "style",
-    "source": null,
-    "lichessId": "AqWQY",
-    "fen": "2rq3k/3brQp1/pp2p1Pp/4P3/3p1R2/7R/P1P3P1/6K1 w - - 2 29",
-    "solution": [
-      "h3h6",
-      "g7h6",
-      "g6g7",
-      "h8h7",
-      "g7g8q"
-    ],
-    "themes": [
-      "advancedPawn",
-      "doubleCheck",
-      "kingsideAttack",
-      "mate",
-      "mateIn3",
-      "middlegame",
-      "promotion",
-      "sacrifice"
-    ],
-    "rating": 1607,
-    "hint": "Your pawn on g6 is much closer to queening than it looks. Which black piece is standing in its way, and can you lure it aside?",
-    "explanation": "1.Rxh6+! gxh6 2.g7+! Kh7 3.g8=Q#. The rook gives itself up to drag Black's g-pawn off g7, the one square blocking White's own g-pawn. That pawn then marches with check, and on g8 it becomes a queen with a double check from both queens. The new queen is protected by the queen on f7, so the king cannot take it.",
-    "moveNotes": [
-      "The rook takes on h6 with check, and capturing with the g-pawn is Black's only legal move. That capture empties g7 for White's pawn.",
-      "Forced. Black wins a rook, but the pawn has left g7 and White's g-pawn now has a clear road.",
-      "The pawn checks the king on h8. The queen on f7 protects it, so the king cannot take, and h7 is the only legal square.",
-      "The only legal move. The king steps beside the pawn, but g8 is still covered by the queen on f7.",
-      "The pawn promotes with a double check from the new queen and the queen on f7. The new queen is defended by the old one. Checkmate."
     ]
   },
   {
@@ -1269,217 +953,6 @@
     ]
   },
   {
-    "id": "tal-038",
-    "gm": "tal",
-    "type": "style",
-    "source": null,
-    "lichessId": "UJwG7",
-    "fen": "1k2r3/pPpbn3/8/3P1p2/2P2P2/2QBR3/3KNq2/8 b - - 4 41",
-    "solution": [
-      "f2e3",
-      "d2e3",
-      "e7d5",
-      "e3d4",
-      "d5c3"
-    ],
-    "themes": [
-      "advantage",
-      "attraction",
-      "discoveredCheck",
-      "doubleCheck",
-      "exposedKing",
-      "middlegame",
-      "sacrifice"
-    ],
-    "rating": 1689,
-    "hint": "Your rook on e8 is quietly aimed down the e-file. Which white piece would you most like to see standing on that file?",
-    "explanation": "1...Qxe3+! 2.Kxe3 Nxd5+! 3.Kd4 Nxc3. Black gives the queen for the rook on e3 to bring White's king onto the e-file. The knight then jumps to d5, uncovering the rook on e8 and giving check itself, so nothing can take it. It collects White's queen on c3 next, and even after White wins the knight back, Black is a rook against a knight ahead.",
-    "moveNotes": [
-      "The queen grabs the rook on e3 with check, offering herself to pull White's king onto the e-file.",
-      "Taking the queen is White's best try. Declining with Ke1, Kd1 or Kc2 would leave Black a full rook ahead.",
-      "The knight captures on d5 and the rook on e8 checks too. It is a double check, so the c4 pawn cannot take the knight.",
-      "The king must move, and none of its four squares saves the queen on c3 from the knight.",
-      "The knight takes the queen. White can win the knight back, but Black comes out a rook for a knight ahead."
-    ]
-  },
-  {
-    "id": "tal-039",
-    "gm": "tal",
-    "type": "style",
-    "source": null,
-    "lichessId": "ZYWOr",
-    "fen": "1r2r1k1/1p3p2/pNp2PBp/P3p3/1P6/6QP/2P1nPK1/q7 w - - 1 29",
-    "solution": [
-      "g6h7",
-      "g8h7",
-      "g3g7"
-    ],
-    "themes": [
-      "attraction",
-      "discoveredCheck",
-      "doubleCheck",
-      "kingsideAttack",
-      "mate",
-      "mateIn2",
-      "middlegame",
-      "sacrifice"
-    ],
-    "rating": 1691,
-    "hint": "Your queen on g3 is staring up the g-file with only your own bishop in the way. Can you move the bishop with real force?",
-    "explanation": "1.Bh7+! Kxh7 2.Qg7#. The bishop jumps to h7 with check and unmasks the queen on g3, so Black faces a double check and must move the king. Every king move loses at once, and taking the bishop just walks into Qg7. The pawn on f6 is the quiet hero: it guards g7, so the queen can land there for mate.",
-    "moveNotes": [
-      "The bishop checks from h7 and opens the g-file for the queen. It is a double check, so Black can only move the king.",
-      "Grabbing the bishop is as good as anything. After Kh8 or Kf8, White also mates on the next move.",
-      "The queen lands on g7, protected by the pawn on f6. The king cannot take her and has no free square. Checkmate."
-    ]
-  },
-  {
-    "id": "tal-040",
-    "gm": "tal",
-    "type": "style",
-    "source": null,
-    "lichessId": "fqr6C",
-    "fen": "r6k/ppQ2p1B/2b2q1p/3p2Nr/6pP/6P1/P1P2P2/4R1K1 w - - 2 25",
-    "solution": [
-      "g5f7",
-      "h8h7",
-      "f7g5",
-      "h7g8",
-      "c7h7",
-      "g8f8",
-      "g5e6"
-    ],
-    "themes": [
-      "crushing",
-      "discoveredCheck",
-      "doubleCheck",
-      "exposedKing",
-      "kingsideAttack",
-      "middlegame",
-      "sacrifice"
-    ],
-    "rating": 1693,
-    "hint": "Your queen on c7 already shares the seventh rank with the corner. Look for knight checks that keep Black's king on that line.",
-    "explanation": "1.Nxf7+! Kxh7 2.Ng5+! Kg8 3.Qh7+ Kf8 4.Ne6+! Black grabs the bishop on h7, but that puts the king on the same rank as the queen on c7, and Ng5+ becomes a discovered double check. The queen then chases the king to f8, and the knight lands on e6, guarded by the rook on e1. If the queen takes it, Rxe6 wins her for a knight, and if the king goes to e8, Nc7+ forks it with the rook on a8.",
-    "moveNotes": [
-      "The knight takes on f7 with check, protected by the queen on c7.",
-      "Taking the bishop is the most natural reply. Qxf7 would only lose the queen to Qxf7. Now the king shares the seventh rank with White's queen.",
-      "The knight jumps to g5 with check and unveils the queen on c7. Against this double check Black can only move the king, to g8, h8 or g6.",
-      "The toughest choice. On h8 or g6, Qh7 would be immediate mate.",
-      "The queen checks from h7, guarded by the knight on g5. The king's only legal move is f8.",
-      "Forced. The king heads for the centre, but the knight has one more check ready.",
-      "The knight checks from e6, protected by the rook on e1. After Qxe6, Rxe6 wins the queen, and after Ke8, Nc7+ forks the king and the rook on a8."
-    ]
-  },
-  {
-    "id": "tal-041",
-    "gm": "tal",
-    "type": "style",
-    "source": null,
-    "lichessId": "wBCTd",
-    "fen": "1q3r1k/3p1pbn/p7/4R3/Np1B1P2/1P4Q1/P1r4P/5RK1 w - - 2 30",
-    "solution": [
-      "g3g7",
-      "h8g7",
-      "e5g5",
-      "g7h6",
-      "d4g7"
-    ],
-    "themes": [
-      "attraction",
-      "discoveredCheck",
-      "doubleCheck",
-      "exposedKing",
-      "kingsideAttack",
-      "mate",
-      "mateIn3",
-      "middlegame",
-      "sacrifice"
-    ],
-    "rating": 1766,
-    "hint": "Your bishop on d4 and rook on e5 are stacked on the long diagonal. What if Black's king stood at the far end of it?",
-    "explanation": "1.Qxg7+! Kxg7 2.Rg5+ Kh6 3.Bg7#. The queen gives herself up for the bishop on g7 so that the king lands on the long diagonal, right behind the rook on e5. Any rook move would now be a discovered check from the bishop on d4, and Rg5+ adds a second check from the rook. The king has only h6, and Bg7 closes the net with the rook on g5 guarding the bishop.",
-    "moveNotes": [
-      "The queen captures on g7 with check, and Kxg7 is Black's only legal move.",
-      "Forced. The king now sits on the long diagonal, with only the rook on e5 between it and the bishop on d4.",
-      "Every rook move gives a discovered check, but on g5 the rook checks as well. Against this double check the king's only square is h6.",
-      "The only legal move. The king has stepped into a narrow pocket on the edge of the board.",
-      "The bishop slides to g7 with check, guarded by the rook on g5, which is itself protected by the pawn on f4. Checkmate."
-    ]
-  },
-  {
-    "id": "tal-042",
-    "gm": "tal",
-    "type": "style",
-    "source": null,
-    "lichessId": "MNCxr",
-    "fen": "2kN3r/ppp3p1/2np4/4p1Bn/2B1P1pq/P1P5/1PP2PP1/R2Q1RK1 b - - 2 16",
-    "solution": [
-      "h4h1",
-      "g1h1",
-      "h5g3",
-      "h1g1",
-      "h8h1"
-    ],
-    "themes": [
-      "attraction",
-      "discoveredCheck",
-      "doubleCheck",
-      "kingsideAttack",
-      "mate",
-      "mateIn3",
-      "middlegame",
-      "sacrifice"
-    ],
-    "rating": 1766,
-    "hint": "Your rook on h8 and your queen both point down the h-file. How could you force White's king to stand on that file?",
-    "explanation": "1...Qh1+! 2.Kxh1 Ng3+ 3.Kg1 Rh1#. The queen sacrifices herself on h1 to drag White's king into the corner. The knight then jumps from h5 to g3, opening the file for the rook on h8 and giving check itself. Because it is a double check, the f2 pawn cannot take the knight, and after Kg1 the rook arrives on h1 with mate, guarded by the knight.",
-    "moveNotes": [
-      "The queen checks from h1 and offers herself. Kxh1 is White's only legal move.",
-      "Forced. White's king now stands on the h-file, facing the rook on h8 with only the knight on h5 in between.",
-      "The knight checks from g3 and opens the h-file for the rook. It is a double check, so the pawn on f2 cannot capture and the king must move.",
-      "The only legal move. The king returns to g1, hemmed in by its own rook and pawns.",
-      "The rook drops to h1 with mate. The knight on g3 protects it, White's own pieces fill f1, f2 and g2, and the rook covers h2."
-    ]
-  },
-  {
-    "id": "tal-043",
-    "gm": "tal",
-    "type": "style",
-    "source": null,
-    "lichessId": "PdK8H",
-    "fen": "3rk3/Bb2n1p1/p3pp2/1p4n1/2p3N1/P1P1K2P/1P2B3/3R4 w - - 1 31",
-    "solution": [
-      "g4f6",
-      "g7f6",
-      "e2h5",
-      "g5f7",
-      "h5f7",
-      "e8f7",
-      "d1d8"
-    ],
-    "themes": [
-      "advantage",
-      "attackingF2F7",
-      "clearance",
-      "exposedKing",
-      "middlegame",
-      "sacrifice"
-    ],
-    "rating": 1770,
-    "hint": "Black's rook on d8 has exactly one defender. Can you chase that defender away with checks, even if it costs material?",
-    "explanation": "1.Nxf6+! gxf6 2.Bh5+! Nf7 3.Bxf7+ Kxf7 4.Rxd8. Black's rook on d8 is protected only by the king, so White sets out to move the king with checks. The knight sacrifice on f6 gives check and also clears g4, opening the road from e2 to h5 for the bishop. After the check on h5 and the capture on f7, the king has left e8 and the rook on d8 falls, leaving White with rook and bishop against bishop and knight.",
-    "moveNotes": [
-      "The knight takes on f6 with check. Its real job is to leave g4, which opens the diagonal from e2 to h5 for the bishop.",
-      "Black accepts the knight, the most natural of three legal replies. Now the bishop has a clear path to h5.",
-      "The bishop checks from h5 and still guards the rook on d1. Black must block or move the king.",
-      "The knight from g5 blocks, keeping the king on e8 to guard the rook. Kf8 would leave the rook on d8 without its only defender straight away.",
-      "The bishop takes the blocking knight with check. Whether the king captures or steps to f8, it must leave e8.",
-      "Black wins the bishop back, but the king on f7 no longer protects the rook on d8.",
-      "The rook captures on d8 for free. White ends up with rook and bishop against Black's bishop and knight."
-    ]
-  },
-  {
     "id": "tal-044",
     "gm": "tal",
     "type": "style",
@@ -1547,41 +1020,6 @@
     ]
   },
   {
-    "id": "tal-046",
-    "gm": "tal",
-    "type": "style",
-    "source": null,
-    "lichessId": "vx1bG",
-    "fen": "1r3rk1/p1p1qp2/7p/3B1bp1/Q2Pn3/2P1P1B1/P3NPPP/2KR3R b - - 0 18",
-    "solution": [
-      "b8b1",
-      "c1b1",
-      "e4c3",
-      "b1a1",
-      "c3a4"
-    ],
-    "themes": [
-      "advantage",
-      "attraction",
-      "discoveredCheck",
-      "doubleCheck",
-      "exposedKing",
-      "middlegame",
-      "queensideAttack",
-      "sacrifice"
-    ],
-    "rating": 1847,
-    "hint": "Your bishop on f5 points at White's queenside, with only your own knight in the way. Where would you like the white king to stand?",
-    "explanation": "1...Rb1+! 2.Kxb1 Nxc3+ 3.Ka1 Nxa4. The rook gives itself up on b1 to pull White's king onto the diagonal of the bishop on f5. The knight then takes on c3 with a double check from itself and the bishop, so the knight on e2 never gets the chance to recapture. Next move the knight takes the queen on a4, and Black has swapped a rook for White's queen and a pawn.",
-    "moveNotes": [
-      "The rook checks on b1 and offers itself. The idea is to drag White's king onto b1, in line with the bishop on f5.",
-      "White accepts the rook. The only other legal reply was Kc2.",
-      "The knight captures on c3, unmasking the bishop on f5 and checking with itself. It is a double check, so the knight on e2 cannot capture and the king must move.",
-      "The king has three squares, and none of them protects the queen on a4, which the knight attacks.",
-      "The knight takes the queen. Black has given a rook for White's queen and a pawn."
-    ]
-  },
-  {
     "id": "tal-047",
     "gm": "tal",
     "type": "style",
@@ -1612,75 +1050,6 @@
       "The knight checks again from g3, and this time it offers itself. Taking with the h-pawn is White's only legal move.",
       "Forced. The pawn captures, and the h-file in front of White's king is now open.",
       "The rook slides from f8 to h8 with mate. The bishop on c5 covers g1, the pawn on g2 blocks the king, and the rook itself covers h2."
-    ]
-  },
-  {
-    "id": "tal-048",
-    "gm": "tal",
-    "type": "style",
-    "source": null,
-    "lichessId": "pssCj",
-    "fen": "5r1r/1p1kbP2/p3p1q1/2p5/2PpNQ2/N2PnB1p/PP6/4R1RK b - - 3 29",
-    "solution": [
-      "g6g2",
-      "g1g2",
-      "h3g2",
-      "h1g1",
-      "h8h1"
-    ],
-    "themes": [
-      "advancedPawn",
-      "collinearMove",
-      "crushing",
-      "discoveredCheck",
-      "doubleCheck",
-      "exposedKing",
-      "kingsideAttack",
-      "middlegame",
-      "sacrifice"
-    ],
-    "rating": 1850,
-    "hint": "Your pawn on h3 is one capture away from opening the h-file for your rook. Can you hand it something to capture?",
-    "explanation": "1...Qg2+! 2.Rxg2 hxg2+! 3.Kg1 Rh1+. The queen is given up only to make the h3 pawn capture on g2. The moment it does, the rook on h8 also sees the white king, so White is in double check and the king has to walk to g1. After Rh1+ the king's only square is f2, and then Rxe1 Kxe1 g1=Q+ leaves Black a rook against a knight with queens still on the board.",
-    "moveNotes": [
-      "A queen check that White has to capture. Either capture lets the pawn on h3 recapture on g2.",
-      "Taking with the bishop would allow hxg2 mate at once, because the rook on g1 still blocks the king. Taking with the rook at least frees g1.",
-      "Double check from the pawn and the rook on h8. Only the king can move, and it cannot take the pawn because the knight on e3 guards it.",
-      "The only legal move. The king is still on the edge, facing the open h-file.",
-      "Another check, and f2 is the king's only square. Next the rook can take on e1, and if the king recaptures, the g-pawn queens with check."
-    ]
-  },
-  {
-    "id": "tal-049",
-    "gm": "tal",
-    "type": "style",
-    "source": null,
-    "lichessId": "ksUuw",
-    "fen": "r5k1/pb1nqrb1/1p4Q1/3p4/5P2/1P2P2R/PB4PP/R5K1 w - - 2 21",
-    "solution": [
-      "g6h7",
-      "g8f8",
-      "h7h8",
-      "g7h8",
-      "h3h8"
-    ],
-    "themes": [
-      "exposedKing",
-      "kingsideAttack",
-      "mate",
-      "mateIn3",
-      "middlegame",
-      "sacrifice"
-    ],
-    "rating": 1850,
-    "hint": "Black's bishop on g7 is the king's best guard. How can you lure it away while your rook waits on the h-file?",
-    "explanation": "1.Qh7+ Kf8 2.Qh8+! Bxh8 3.Rxh8#. The first check drives the king to f8, and the second one offers the whole queen. Black must take with the bishop, and that capture helps White twice: the rook on h3 gets a clear run to h8, and the bishop on b2 now controls g7. With its own rook on f7 and queen on e7 hemming it in, the king has no way out of the rook check.",
-    "moveNotes": [
-      "The queen checks with the rook on h3 behind it, so the king cannot capture. Kf8 is the only legal reply.",
-      "The only legal move, as h8 is covered by the queen and f7 and g7 hold Black's own pieces.",
-      "A second check, protected by the rook on h3. This time the only legal reply is to take the queen with the bishop.",
-      "Forced. The bishop leaves g7, which opens the long diagonal for the bishop on b2 and clears the h-file for the rook.",
-      "Mate. The rook covers the back rank, the bishop on b2 covers g7, and Black's own rook and queen block f7 and e7."
     ]
   },
   {
@@ -1715,43 +1084,6 @@
       "The queen lands on the square the bishop just left. Kg1 would run into Qxg2 mate, so White blocks instead.",
       "The rook blocks on h2, but that leaves f1 unguarded.",
       "Mate. The queen covers g1, the f3 pawn covers g2, and the rook on a1 cannot help because the bishop on c1 is in the way."
-    ]
-  },
-  {
-    "id": "tal-051",
-    "gm": "tal",
-    "type": "style",
-    "source": null,
-    "lichessId": "RarD8",
-    "fen": "r5k1/1p4pp/p1p4r/P2pPP1b/1P3Q1q/2PBP3/5R2/R5K1 b - - 2 26",
-    "solution": [
-      "h4h1",
-      "g1h1",
-      "h5f3",
-      "h1g1",
-      "h6h1"
-    ],
-    "themes": [
-      "attraction",
-      "discoveredCheck",
-      "doubleCheck",
-      "exposedKing",
-      "kingsideAttack",
-      "mate",
-      "mateIn3",
-      "middlegame",
-      "operaMate",
-      "sacrifice"
-    ],
-    "rating": 1931,
-    "hint": "Your rook on h6 and bishop on h5 share a file. What would happen if the white king had to stand on that file too?",
-    "explanation": "1...Qh1+! 2.Kxh1 Bf3+! 3.Kg1 Rh1#. The queen sacrifice drags the king into the corner, straight onto the file where the rook on h6 waits behind the bishop. Moving the bishop to f3 gives double check, so White cannot block or capture and the king has to go back to g1. The rook then lands on h1 with the bishop guarding it, and the king is completely boxed in.",
-    "moveNotes": [
-      "A queen check that can only be answered by capturing it. The point is to bring the king onto the h-file.",
-      "Forced. Now only the bishop on h5 stands between the rook on h6 and the white king.",
-      "Double check from the bishop and the rook. White's queen and rook both attack the bishop, but in a double check only the king may move.",
-      "The only legal move, since g2 is covered by the bishop and h2 by the rook.",
-      "Mate. The bishop guards the rook and covers g2, the rook's line also covers f1, and White's own rook fills f2."
     ]
   },
   {
@@ -1909,43 +1241,6 @@
     ]
   },
   {
-    "id": "tal-056",
-    "gm": "tal",
-    "type": "style",
-    "source": null,
-    "lichessId": "vd1Cb",
-    "fen": "7r/4nkp1/2P1p3/1P1qPpPb/p2p1P2/P2Q4/2B2R2/1R4K1 b - - 9 43",
-    "solution": [
-      "d5h1",
-      "g1h1",
-      "h5f3",
-      "h1g1",
-      "h8h1"
-    ],
-    "themes": [
-      "attraction",
-      "discoveredCheck",
-      "doubleCheck",
-      "exposedKing",
-      "kingsideAttack",
-      "mate",
-      "mateIn3",
-      "middlegame",
-      "operaMate",
-      "sacrifice"
-    ],
-    "rating": 2010,
-    "hint": "Only your own bishop separates your rook on h8 from the white king's side of the board. What changes if the king is forced onto the h-file?",
-    "explanation": "1...Qh1+! 2.Kxh1 Bf3+! 3.Kg1 Rh1#. The queen is offered for one reason: to put the white king on the same file as the rook on h8. The bishop then jumps to f3, opening the file and covering g2 in the same move. The queen on d3 and rook on f2 both attack the bishop, yet neither may take it because it is double check. After the king goes back to g1, the rook arrives on h1 under the bishop's protection.",
-    "moveNotes": [
-      "Check from the corner. The king has no choice but to take the queen.",
-      "Forced. The king is now on the h-file, and the bishop on h5 is the only piece between it and the rook on h8.",
-      "The bishop steps off the file, so rook and bishop check together. Capturing the bishop is illegal in a double check.",
-      "The only legal move. The king returns to g1, hemmed in by its own rook on f2.",
-      "Mate. The bishop guards the rook and covers g2, the rook covers h2, and the f2 rook boxes in its own king."
-    ]
-  },
-  {
     "id": "tal-057",
     "gm": "tal",
     "type": "style",
@@ -2081,6 +1376,673 @@
       "The bishop checks from f7 and uncovers the queen on g5, giving double check. Black can only move the king, and every option leads to the same mate.",
       "Taking the bishop is the natural reply, but Kh7 and Kh8 also allow Qg7 mate.",
       "Mate. The h6 pawn guards the queen, which covers f6, g6 and g8, while Black's own pieces fill e6, e7, e8 and f8."
+    ]
+  },
+  {
+    "id": "tal-061",
+    "gm": "tal",
+    "type": "real",
+    "source": {
+      "white": "Mikhail Tal",
+      "black": "Georgi Tringov",
+      "event": "Munich Olympiad",
+      "year": 1958
+    },
+    "fen": "r3kr2/1p1b1pp1/p1n1p2p/8/4q3/1N6/PPP1BKPP/R2Q1R2 w q - 2 17",
+    "solution": [
+      "d1d7",
+      "e8d7",
+      "b3c5",
+      "d7e7",
+      "c5e4"
+    ],
+    "themes": [
+      "sacrifice",
+      "advantage"
+    ],
+    "rating": 1490,
+    "hint": "Look for a way to drag the black king forward to a square where one knight jump hits it and the queen on e4 together.",
+    "explanation": "1.Qxd7+! Kxd7 2.Nc5+! Ke7 3.Nxe4. You hand over your queen for the bishop, and the king has to take, landing on d7. From c5 the knight then checks the king and attacks the queen on e4 at the same time, so Black loses the queen back. Tal found this against Tringov in 1958, and you finish with two rooks, bishop and knight against two rooks and a knight.",
+    "gameContinuation": "Qxd7+ Kxd7 Nc5+ Ke7 Nxe4 f5 Nc5",
+    "moveNotes": [
+      "Your queen takes the bishop with check. It is only protected by the king, and that is exactly the piece you want to pull onto d7.",
+      "The only legal move. Black must accept the queen, and the king now stands a knight's jump from c5.",
+      "A royal fork. The knight checks the king on d7 and also hits the queen on e4, which nothing defends.",
+      "Black has six king moves to pick from, but none of them saves the queen, because the king must get out of check first.",
+      "The queen is gone. You are a full bishop up, with the black king still stuck in the middle of the board."
+    ]
+  },
+  {
+    "id": "tal-062",
+    "gm": "tal",
+    "type": "real",
+    "source": {
+      "white": "Mikhail Tal",
+      "black": "Vladimir Ljavdansky",
+      "event": "USSR Championship",
+      "year": 1964
+    },
+    "fen": "4r1k1/4P2p/pq3pp1/1p1b1p2/7R/8/PPPQ2PP/7K w - - 0 31",
+    "solution": [
+      "d2d5",
+      "g8g7",
+      "h4h7",
+      "g7h7",
+      "d5f7",
+      "h7h6",
+      "f7e8"
+    ],
+    "themes": [
+      "sacrifice",
+      "advantage"
+    ],
+    "rating": 1735,
+    "hint": "Something black is hanging and can be taken with check. After that, ask which black piece stops your queen from landing safely next to the king.",
+    "explanation": "1.Qxd5+! Kg7 2.Rxh7+! Kxh7 3.Qf7+ Kh6 4.Qxe8. You start by grabbing the loose bishop with check. With the king on g7 it guards f7, so you give up the rook on h7 to pull it away. Now Qf7+ comes with check and hits the rook on e8, which falls next, leaving you with a queen and six pawns against a queen and five, and your pawn still standing on e7. Tal found this against Ljavdansky in 1964.",
+    "gameContinuation": "Qxd5+ Kg7 Rxh7+ Kxh7 Qf7+ Kh6 Qxe8 Qf2",
+    "moveNotes": [
+      "The bishop on d5 has no defender, so you take it and give check along the diagonal at the same time.",
+      "Black had three legal replies, including blocking on e6. The king steps to g7, where it watches the f7 square.",
+      "A rook sacrifice with check. The point is to drag the king off g7 so it can no longer guard f7.",
+      "The only legal move. The king takes the rook and now stands on h7, out of reach of f7.",
+      "Check, and the queen on f7 now also attacks the rook on e8, which nothing defends.",
+      "Black could also go to h8, but either way the rook on e8 stays attacked and nothing can defend it.",
+      "You pick up the rook. You now have a queen and six pawns against a queen and five, with your pawn on e7 deep in Black's camp."
+    ]
+  },
+  {
+    "id": "tal-063",
+    "gm": "tal",
+    "type": "real",
+    "source": {
+      "white": "Mikhail Tal",
+      "black": "Efim Geller",
+      "event": "USSR Spartakiad",
+      "year": 1964
+    },
+    "fen": "6rk/2q1bQ2/5p2/1pn1p2P/4P1bN/2Pp4/5PP1/3R2K1 w - - 5 35",
+    "solution": [
+      "h4g6",
+      "g8g6",
+      "h5g6",
+      "e7d6",
+      "g6g7",
+      "h8h7",
+      "g7g8q",
+      "h7h6",
+      "g8g7"
+    ],
+    "themes": [
+      "sacrifice",
+      "mate"
+    ],
+    "rating": 1870,
+    "hint": "A knight check that Black can only answer with a capture will turn your h-pawn into a monster on the g-file.",
+    "explanation": "1.Ng6+! Rxg6 2.hxg6 Bd6 3.g7+! Kh7 4.g8=Q+! Kh6 5.Qgg7#. The knight check forces the rook to capture, and your h-pawn takes back on g6, threatening Qh7 mate. Here Black frees the c7 queen to defend along the seventh rank, so the pawn marches on with check and promotes with a double check. Tal found this against Geller in 1964, where Geller answered 2.hxg6 with a knight move and Tal mated at once on h7; the line above shows how the attack still wins after Bd6.",
+    "gameContinuation": "Ng6+ Rxg6 hxg6 Ne6 Qh7#",
+    "moveNotes": [
+      "Check from the knight. The king cannot move, so the rook on g8 must take, and that pulls it off the back rank.",
+      "The only legal move. Black has to capture, and the knight has done its job.",
+      "Your pawn recaptures toward the king. It threatens Qh7 mate, since the pawn on g6 would protect the queen there.",
+      "With the bishop gone from e7, the black queen on c7 sees along the seventh rank and attacks your queen on f7.",
+      "The pawn pushes with check. Black has no time to take your queen, because the king must answer first.",
+      "The only legal move. The king steps to h7, right beside the pawn's promotion square.",
+      "The pawn becomes a queen with double check, from g8 and from your queen on f7. Only a king move can answer.",
+      "Forced again. Kh6 is the only square left for the king.",
+      "Mate. The new queen on g7 is protected by the queen on f7, and between them they cover every square around the king."
+    ]
+  },
+  {
+    "id": "tal-064",
+    "gm": "tal",
+    "type": "real",
+    "source": {
+      "white": "Mikhail Tal",
+      "black": "William Hartston",
+      "event": "Hastings 1973/74",
+      "year": 1973
+    },
+    "fen": "2q3k1/3rbr2/pB2p1BQ/1p2Pn1p/8/8/PPP3PP/4R2K w - - 1 26",
+    "solution": [
+      "g6f7",
+      "g8f7",
+      "h6h7",
+      "f7f8",
+      "h7h8"
+    ],
+    "themes": [
+      "advantage"
+    ],
+    "rating": 1640,
+    "hint": "Your queen is attacked, so answer with force. Look at the black queen on c8 and the empty squares between it and the h8 corner.",
+    "explanation": "1.Bxf7+! Kxf7 2.Qh7+ Kf8 3.Qh8+!. Your queen is under attack from the knight on f5, so you strike first by taking the rook with check. Two queen checks then drive the king along, and from h8 the queen lines up with the black queen on c8. The king's only move is Kf7, stepping off the back rank, and your queen then takes the queen on c8. Tal launched this attack against Hartston in 1973.",
+    "gameContinuation": "Bxf7+ Kxf7 Qh7+",
+    "moveNotes": [
+      "The bishop takes the rook on f7 with check, so the knight on f5 never gets time to capture your queen.",
+      "The only legal move. Black has to take the bishop, and the king is now exposed on f7.",
+      "Check, and your queen escapes the knight's attack. Black can choose between Ke8, Kf8 and the block on g7.",
+      "The king goes to f8, where it stands on the same rank as its own queen on c8.",
+      "A skewer. Black's only legal move is Kf7, and once the king leaves the back rank your queen takes the undefended queen on c8."
+    ]
+  },
+  {
+    "id": "tal-065",
+    "gm": "tal",
+    "type": "real",
+    "source": {
+      "white": "Mikhail Tal",
+      "black": "Bent Larsen",
+      "event": "Montreal",
+      "year": 1979
+    },
+    "fen": "r3k2r/3b1ppp/pQBBp3/1p2P3/2q5/8/PPP2nPP/2K4R w kq - 6 19",
+    "solution": [
+      "c6d7",
+      "e8d7",
+      "b6b7"
+    ],
+    "themes": [
+      "advantage"
+    ],
+    "rating": 1585,
+    "hint": "Your bishop on c6 is attacked twice. Before it goes, think about where the black king would stand if it had to capture something.",
+    "explanation": "1.Bxd7+! Kxd7 2.Qb7+!. Your bishop on c6 is under fire, so you swap it off with check, and the king must take on d7. Then the queen check on b7 attacks the rook on a8 as well. If the king goes to d8 or e8 it blocks the rook on h8 from guarding a8, so you take that rook with check, and blocking on c7 just loses the queen, because your bishop on d6 covers c7. Tal found this against Larsen in 1979, and in the game he took the rook on a8 next.",
+    "gameContinuation": "Bxd7+ Kxd7 Qb7+ Kd8 Qxa8+ Qc8 Qa7",
+    "moveNotes": [
+      "Check from the bishop. It was attacked by the queen and the bishop, so you cash it in for the bishop on d7 with tempo.",
+      "The only legal move. The king takes on d7, onto a square your queen can reach with check from b7.",
+      "A fork of the king and the rook on a8. Any king move to the back rank cuts the h8 rook off from a8, and Qc7 drops the queen to your bishop on d6."
+    ]
+  },
+  {
+    "id": "tal-066",
+    "gm": "tal",
+    "type": "real",
+    "source": {
+      "white": "Mikhail Tal",
+      "black": "Dieter Keller",
+      "event": "Zurich",
+      "year": 1959
+    },
+    "fen": "r7/2k1Pp1p/p1n2p2/P1b1r3/2p5/2P3P1/5P1P/1R1Q2K1 w - - 2 29",
+    "solution": [
+      "b1b7",
+      "c7b7",
+      "d1d7"
+    ],
+    "themes": [
+      "sacrifice",
+      "advantage"
+    ],
+    "rating": 1760,
+    "hint": "Your e7 pawn needs the support of your queen, but the black king is guarding the square she wants. Can you lure it away?",
+    "explanation": "1.Rb7+! Kxb7 2.Qd7+!. The king on c7 controls d7, so the rook check from b7 lures it away. After Kxb7 your queen arrives on d7 with check and protects the pawn on e7 and the e8 square. The king's only move is Kb8, and now the pawn can promote on e8 with check, because the king on b8 blocks the rook on a8 from covering e8. Tal found this against Keller in 1959 and in the game pushed e8=Q+ next.",
+    "gameContinuation": "Rb7+ Kxb7 Qd7+ Kb8 e8=Q+ Rxe8 Qxe8+ Kb7",
+    "moveNotes": [
+      "A rook sacrifice with check. While the king sits on c7 it covers d7, so you need to drive it off.",
+      "Black could have gone to c8, but takes the rook. Now the king on b7 no longer guards d7.",
+      "Check, and the queen now protects your e7 pawn and the e8 square. The king's only move is Kb8, which leaves the pawn free to queen with check next move."
+    ]
+  },
+  {
+    "id": "tal-067",
+    "gm": "tal",
+    "type": "real",
+    "source": {
+      "white": "Aivars Gipslis",
+      "black": "Mikhail Tal",
+      "event": "USSR Championship semi-final",
+      "year": 1955
+    },
+    "fen": "1Q6/8/8/2P2k2/8/1P2pP1p/4p2K/1r6 b - - 0 50",
+    "solution": [
+      "b1h1",
+      "h2h1",
+      "e2e1q"
+    ],
+    "themes": [
+      "sacrifice",
+      "advantage"
+    ],
+    "rating": 1665,
+    "hint": "Your e-pawn is one step from queening. Can you arrange for the new queen to arrive with check?",
+    "explanation": "1...Rh1+! 2.Kxh1 e1=Q+!. You give up the rook to drag the white king into the corner. Now the pawn queens on e1 with check along the first rank, and White's only move is Kh2. Material is a queen each, but your pawn on e3 is only two steps from queening. Tal found this against Gipslis in 1955, and in the game he kept checking with Qf2+ and won the pawn on f3.",
+    "gameContinuation": "Rh1+ Kxh1 e1=Q+ Kh2 Qf2+ Kxh3 Qxf3+ Kh2",
+    "moveNotes": [
+      "A rook sacrifice with check. You want the white king on h1, on the same rank where your pawn will promote.",
+      "White could also step to g3, but takes the rook. The king now stands on the first rank, in line with e1.",
+      "The pawn becomes a queen with check across the empty first rank. Kh2 is White's only legal move, so you keep the initiative."
+    ]
+  },
+  {
+    "id": "tal-068",
+    "gm": "tal",
+    "type": "real",
+    "source": {
+      "white": "A. Ostrauskas",
+      "black": "Mikhail Tal",
+      "event": "USSR Championship semi-final",
+      "year": 1955
+    },
+    "fen": "5r1k/6pp/p7/1pnP3q/2p1P3/2P5/PPB3KQ/4R1N1 b - - 0 32",
+    "solution": [
+      "f8f2",
+      "g2f2",
+      "h5h2"
+    ],
+    "themes": [
+      "sacrifice",
+      "advantage"
+    ],
+    "rating": 1520,
+    "hint": "The two queens stare at each other on the h-file, and only the white king protects White's queen. How can you distract it?",
+    "explanation": "1...Rf2+! 2.Kxf2 Qxh2+!. White's queen on h2 is protected only by the king on g2. Your rook check on f2 pulls the king away, and once it takes, the queen on h2 has no defender left. You capture it with check, giving up a rook to win a queen. Tal found this against Ostrauskas in 1955.",
+    "gameContinuation": "Rf2+ Kxf2 Qxh2+ Kf3 Qxc2 Re3 Qh2 Ne2",
+    "moveNotes": [
+      "A rook check that targets the defender. The king on g2 is the only piece guarding the queen on h2.",
+      "White also had Kg3 and Kh1, but takes the rook. On f2 the king no longer protects h2.",
+      "Your queen takes the queen with check. You have traded a rook for a queen, and the white king has to move again."
+    ]
+  },
+  {
+    "id": "tal-069",
+    "gm": "tal",
+    "type": "real",
+    "source": {
+      "white": "Mikhail Tal",
+      "black": "Mukitsashvili",
+      "event": "Gori",
+      "year": 1968
+    },
+    "fen": "6k1/4nqp1/p7/1b6/1P2P3/1Q3PP1/7R/7K w - - 9 45",
+    "solution": [
+      "h2h8",
+      "g8h8",
+      "b3f7"
+    ],
+    "themes": [
+      "sacrifice",
+      "advantage"
+    ],
+    "rating": 1340,
+    "hint": "Both queens attack each other, but Black's is protected by the king. What if that king were busy elsewhere?",
+    "explanation": "1.Rh8+! Kxh8 2.Qxf7. The queens face each other on the diagonal, and the black queen on f7 is defended only by the king on g8. Your rook check on h8 forces the king to take, and now the queen on f7 is unprotected. You capture it, ending with a queen and four pawns against a knight, a bishop and two pawns. Tal found Rh8+ against Mukitsashvili in 1968.",
+    "gameContinuation": "Rh8+",
+    "moveNotes": [
+      "A rook sacrifice with check. The king on g8 is the only defender of the queen on f7, so you pull it into the corner.",
+      "The only legal move. The king takes on h8 and no longer protects f7.",
+      "You win the queen. Your queen now also attacks the knight on e7, and Black has only minor pieces left."
+    ]
+  },
+  {
+    "id": "tal-070",
+    "gm": "tal",
+    "type": "real",
+    "source": {
+      "white": "Mikhail Tal",
+      "black": "Samuel Reshevsky",
+      "event": "Herceg Novi blitz tournament",
+      "year": 1970
+    },
+    "fen": "r3kb1r/3p1pp1/p7/1p1pPnBp/4N3/6P1/PPP2P1P/R3R1K1 w kq - 0 18",
+    "solution": [
+      "e4d6",
+      "f8d6",
+      "e5d6"
+    ],
+    "themes": [
+      "sacrifice",
+      "advantage"
+    ],
+    "rating": 1710,
+    "hint": "Your knight is attacked by a pawn. Instead of retreating, look for a check that opens the e-file for your rook.",
+    "explanation": "1.Nd6+! Bxd6 2.exd6+!. Your knight was attacked by the pawn on d5, so it jumps in with check. After the bishop takes, your e5 pawn recaptures and uncovers a check from the rook on e1. Material is level, but every reply is awkward: a knight block on e7 or e3 can be captured, and after Kf8 your bishop can check from e7. Tal found this against Reshevsky in 1970, and after Kf8 in the game he went on with Re5 and Be7+.",
+    "gameContinuation": "Nd6+ Bxd6 exd6+ Kf8 Re5 Nd4 Be7+ Kg8",
+    "moveNotes": [
+      "Check from the knight, which was attacked by the d5 pawn anyway. Black must capture it, with the bishop or the knight.",
+      "Black takes with the bishop. Now your pawn on e5 can recapture and clear the e-file.",
+      "A discovered check from the rook on e1. Black can block with the knight on e7 or e3, where it can be taken, or step to f8."
+    ]
+  },
+  {
+    "id": "tal-071",
+    "gm": "tal",
+    "type": "real",
+    "source": {
+      "white": "Mikhail Tal",
+      "black": "Vladimir Akopian",
+      "event": "Barcelona",
+      "year": 1992
+    },
+    "fen": "2r4k/5p1p/2bQP3/5pr1/1PpR1P2/2q5/P4K1P/4R3 w - - 0 32",
+    "solution": [
+      "d6e5",
+      "g5g7",
+      "d4d8",
+      "c8d8",
+      "e5c3"
+    ],
+    "themes": [
+      "sacrifice",
+      "advantage"
+    ],
+    "rating": 1690,
+    "hint": "Look for a check that puts your queen behind your own rook, with both aimed at the black queen.",
+    "explanation": "1.Qe5+! Rg7 2.Rd8+! Rxd8 3.Qxc3. The queen check lines it up behind the rook on d4, on the same diagonal as the black queen on c3. The rook then steps off that line with check, so Black has no time to save the queen. Tal found this against Akopian in 1992, and you finish with queen and rook against two rooks and a bishop.",
+    "gameContinuation": "Qe5+ Rg7 Rd8+ Rxd8 Qxc3 f6 e7 Ra8",
+    "moveNotes": [
+      "A check on the long diagonal that also lines your queen up behind the rook on d4, pointing straight at c3.",
+      "Black blocks with the rook. Stepping the king to g8 or pushing the f-pawn were the other ways out of check.",
+      "The rook leaves the diagonal with check, unmasking your queen's attack on c3. Black must answer the check first.",
+      "Taking the rook is one option. Blocking with the bishop on e8 is the other, and neither saves the queen.",
+      "Your queen takes the queen on c3. You gave a rook and won a queen, leaving you clearly ahead."
+    ]
+  },
+  {
+    "id": "tal-072",
+    "gm": "tal",
+    "type": "real",
+    "source": {
+      "white": "Jon Kristinsson",
+      "black": "Mikhail Tal",
+      "event": "Reykjavik",
+      "year": 1964
+    },
+    "fen": "b5r1/4kp2/3p4/PP2p2p/2PbB3/7P/8/4Q1RK b - - 0 36",
+    "solution": [
+      "g8g1",
+      "e1g1",
+      "a8e4",
+      "h1h2",
+      "d4g1"
+    ],
+    "themes": [
+      "advantage"
+    ],
+    "rating": 1530,
+    "hint": "Your two bishops both point at the white king's corner, so think about which white piece is holding that corner together.",
+    "explanation": "1...Rxg1+! 2.Qxg1 Bxe4+! 3.Kh2 Bxg1+. The rook trade drags the white queen to g1, right on the diagonal of your bishop on d4. Then the other bishop takes on e4 with check and chases the king away from the queen it was guarding. Tal found this against Kristinsson in 1964, and once the king takes on g1 you are left a full bishop ahead.",
+    "gameContinuation": "Rxg1+ Qxg1 Bxe4+",
+    "moveNotes": [
+      "Your rook takes on g1 with check. The bishop on d4 guards it, so the king cannot recapture.",
+      "White takes back with the queen, but now it stands on the same diagonal as your bishop on d4.",
+      "The light square bishop captures on e4 with check down the long diagonal toward h1.",
+      "The king steps to h2. Blocking with the queen on g2 was the only other choice, and that loses the queen for a bishop.",
+      "The bishop from d4 takes the queen with check. After the king recaptures, you have an extra bishop with four pawns each."
+    ]
+  },
+  {
+    "id": "tal-073",
+    "gm": "tal",
+    "type": "real",
+    "source": {
+      "white": "Gedeon Barcza",
+      "black": "Mikhail Tal",
+      "event": "Tallinn",
+      "year": 1971
+    },
+    "fen": "3r4/pp3pkp/6p1/8/4P1P1/4Qb2/P1q2P1P/2R2KR1 b - - 1 23",
+    "solution": [
+      "d8d1",
+      "c1d1",
+      "c2d1",
+      "e3e1",
+      "d1d3",
+      "e1e2",
+      "d3e2"
+    ],
+    "themes": [
+      "sacrifice",
+      "mate"
+    ],
+    "rating": 1770,
+    "hint": "Your queen on c2 is attacked by the rook on c1, so find a check that pulls that rook away.",
+    "explanation": "1...Rd1+! 2.Rxd1 Qxd1+ 3.Qe1 Qd3+! 4.Qe2 Qxe2#. The rook check lures the white rook off c1, so your queen is free and can capture on d1. A second queen check forces White's queen to block on e2, where your bishop on f3 helps finish the job. Tal found this against Barcza in 1971, and the line ends in mate.",
+    "gameContinuation": "Rd1+",
+    "moveNotes": [
+      "A rook check on the back rank. It offers your rook to draw the white rook away from its attack on your queen.",
+      "White takes the rook, but now the rook on c1 no longer bothers your queen.",
+      "Your queen captures on d1 with check. Blocking on e1 is White's only legal move.",
+      "The queen interposes on e1 because the king has no square to run to.",
+      "Another check, this time from d3 along the diagonal to f1. Again White has only one legal reply.",
+      "The queen blocks on e2. It looks solid, but your bishop on f3 also hits that square.",
+      "Your queen takes on e2, protected by the bishop. The bishop covers g2, the queen covers e1, and the king is boxed in by its own rook and pawn. Checkmate."
+    ]
+  },
+  {
+    "id": "tal-074",
+    "gm": "tal",
+    "type": "real",
+    "source": {
+      "white": "Mikhail Tal",
+      "black": "Harry Golombek",
+      "event": "Munich Olympiad",
+      "year": 1958
+    },
+    "fen": "2qr4/5Q2/2pkpP2/p1p2p2/Pn1P3r/8/1P4PP/3R3K w - - 1 35",
+    "solution": [
+      "f7e7",
+      "d6d5",
+      "e7c5",
+      "d5e4",
+      "c5e5"
+    ],
+    "themes": [
+      "mate",
+      "mateIn3"
+    ],
+    "rating": 1610,
+    "hint": "The black king is out in the middle of the board, so keep it moving with checks and see where it ends up.",
+    "explanation": "1.Qe7+! Kd5 2.Qxc5+! Ke4 3.Qe5#. Each queen check leaves the king exactly one legal square, and it walks forward into a mating net. On e4 the d4 pawn guards your queen, the rook on d1 covers d3 and the g2 pawn covers f3. Tal found this king hunt against Golombek in 1958 at the Munich Olympiad.",
+    "gameContinuation": "Qe7+",
+    "moveNotes": [
+      "A queen check from e7, backed by the f6 pawn so the king cannot take. The king has only one square, d5.",
+      "The king steps up to d5, its only legal move.",
+      "Your queen grabs the c5 pawn with check. The d4 pawn protects it, and again the king has just one square.",
+      "The king is forced forward to e4, deeper into your half of the board.",
+      "The queen lands on e5, guarded by the d4 pawn. Your rook covers d3 and the g2 pawn covers f3, so this is mate."
+    ]
+  },
+  {
+    "id": "tal-075",
+    "gm": "tal",
+    "type": "real",
+    "source": {
+      "white": "Mikhail Tal",
+      "black": "David Bronstein",
+      "event": "Tbilisi",
+      "year": 1982
+    },
+    "fen": "2b2k2/2p2r2/p2pR1p1/1p3PQ1/3q4/1P6/2P3PP/5K2 w - - 0 31",
+    "solution": [
+      "g5d8",
+      "f8g7",
+      "e6g6",
+      "g7h7",
+      "d8g8"
+    ],
+    "themes": [
+      "mate",
+      "mateIn3"
+    ],
+    "rating": 1480,
+    "hint": "Start with a check that pushes the king toward the g6 pawn, where your rook and f5 pawn are ready to pounce.",
+    "explanation": "1.Qd8+! Kg7 2.Rxg6+! Kh7 3.Qg8#. The queen check forces the king to g7, next to the weak pawn on g6. Your rook takes that pawn with check, protected by the f5 pawn, and the king is driven into the corner. Tal began this attack with the queen check against Bronstein in 1982, and every Black move in the line is the only legal one.",
+    "gameContinuation": "Qd8+",
+    "moveNotes": [
+      "A queen check on the back rank. The king's only legal square is g7.",
+      "The king goes to g7, the only move available.",
+      "Your rook takes on g6 with check. The f5 pawn guards it, so the king cannot capture and must go to h7.",
+      "The king retreats to h7, again its only legal move.",
+      "The queen lands on g8, protected by the rook on g6. The king has no square left, so it is mate."
+    ]
+  },
+  {
+    "id": "tal-076",
+    "gm": "tal",
+    "type": "real",
+    "source": {
+      "white": "Mikhail Tal",
+      "black": "Stefan Mohr",
+      "event": "Bundesliga 1989/90",
+      "year": 1990
+    },
+    "fen": "7k/pq2R1bp/6p1/4p3/2r5/B6P/PPP3b1/2KR4 w - - 0 31",
+    "solution": [
+      "d1d8",
+      "g7f8",
+      "d8f8"
+    ],
+    "themes": [
+      "mate",
+      "mateIn2"
+    ],
+    "rating": 1270,
+    "hint": "The black king is stuck on the back rank, and your rook on e7 already controls its seventh rank escape.",
+    "explanation": "1.Rd8+! Bf8 2.Rxf8#. The rook check on the back rank can only be blocked by the bishop. Your rook simply takes it, and the king is trapped because the rook on e7 covers g7 and its own pawn sits on h7. Tal found this quick finish against Mohr in 1990 in the Bundesliga.",
+    "gameContinuation": "Rd8+",
+    "moveNotes": [
+      "A check along the eighth rank. Your other rook on e7 already takes away the g7 square.",
+      "The bishop drops back to f8. It is the only legal way to stop the check.",
+      "The rook takes the bishop with check. The rook on e7 covers g7 and h7 is blocked by Black's own pawn, so it is mate."
+    ]
+  },
+  {
+    "id": "tal-077",
+    "gm": "tal",
+    "type": "real",
+    "source": {
+      "white": "Anatoly Bannik",
+      "black": "Mikhail Tal",
+      "event": "USSR Championship",
+      "year": 1957
+    },
+    "fen": "1r1r2k1/1p3p2/p1p2bp1/7p/2Pn3P/2B1q1P1/PP1RPQB1/2R3K1 b - - 1 27",
+    "solution": [
+      "d4e2",
+      "d2e2",
+      "e3c1",
+      "e2e1",
+      "f6c3",
+      "e1c1",
+      "c3d4"
+    ],
+    "themes": [
+      "sacrifice",
+      "advantage"
+    ],
+    "rating": 1890,
+    "hint": "Your queen is under attack, so look for a capture with check that gives you time, and notice how loosely the white rooks are guarded.",
+    "explanation": "1...Nxe2+! 2.Rxe2 Qxc1+ 3.Re1 Bxc3! 4.Rxc1 Bd4!. The knight check pulls the rook away from d2, which leaves the rook on c1 undefended. Your queen takes it, and after Bxc3 the queen trade on c1 sets up a pin: the bishop on d4 hits the white queen, which cannot move off the diagonal to g1. Tal played this whole line against Bannik in 1957, and the queen is lost for a bishop, leaving you an exchange and a pawn up.",
+    "gameContinuation": "Nxe2+ Rxe2 Qxc1+ Re1 Bxc3 Rxc1 Bd4 Rc2",
+    "moveNotes": [
+      "Your queen on e3 is attacked, so you need force. The knight takes on e2 with check and also eyes the rook on c1.",
+      "White takes the knight with the d2 rook. Moving the king was the other option.",
+      "Your queen grabs the rook on c1 with check. With the d2 rook gone, nothing defended it.",
+      "White blocks on e1. It is one of six legal replies, and now the rook on e1 attacks your queen.",
+      "Your bishop takes on c3, removing a defender and collecting a piece. Your queen is still attacked, but you have planned for that.",
+      "The rook takes your queen. Taking your bishop with the b-pawn was the alternative.",
+      "The bishop lands on d4, guarded by the rook on d8. It pins the white queen to the king on g1, so it falls for a bishop."
+    ]
+  },
+  {
+    "id": "tal-078",
+    "gm": "tal",
+    "type": "real",
+    "source": {
+      "white": "Mikhail Tal",
+      "black": "Mikhail Botvinnik",
+      "event": "World Championship match",
+      "year": 1961
+    },
+    "fen": "6k1/P5p1/4ppp1/qB1n4/3Q4/1p5P/5PP1/6K1 w - - 0 45",
+    "solution": [
+      "d4a4",
+      "a5a4",
+      "b5a4",
+      "d5b6",
+      "a4b3"
+    ],
+    "themes": [
+      "sacrifice",
+      "advantage"
+    ],
+    "rating": 1980,
+    "hint": "Your bishop on b5 is hanging to the black queen, but a quiet move can turn that problem into a strength.",
+    "explanation": "1.Qa4! Qxa4 2.Bxa4 Nb6 3.Bxb3. Instead of running from the attack, the queen offers a trade on a4, where the bishop protects it. Once the queens are gone, the a7 pawn is a constant promotion threat that ties the knight to b6. Tal found this against Botvinnik in their 1961 World Championship match, and you end up taking Black's b-pawn while the knight is stuck guarding a8.",
+    "gameContinuation": "Qa4",
+    "moveNotes": [
+      "A quiet queen move. It protects your bishop on b5, attacks the black queen and the b3 pawn, and offers a trade.",
+      "Black takes the queen. Black had many legal moves, but the b3 pawn was already under attack.",
+      "The bishop recaptures, and now your a7 pawn threatens to promote right away.",
+      "The knight jumps to b6 to cover a8, and it also attacks your bishop on a4.",
+      "The bishop escapes by taking the b3 pawn, Black's passed pawn. It now eyes e6, and the knight must stay near a8."
+    ]
+  },
+  {
+    "id": "tal-079",
+    "gm": "tal",
+    "type": "real",
+    "source": {
+      "white": "Mikhail Tal",
+      "black": "Tigran Petrosian",
+      "event": "USSR Championship",
+      "year": 1957
+    },
+    "fen": "6Bk/3b3P/4p3/4P3/pP1P1K2/8/5P1P/8 w - - 0 45",
+    "solution": [
+      "d4d5",
+      "a4a3",
+      "d5e6",
+      "a3a2",
+      "e6d7"
+    ],
+    "themes": [
+      "advantage"
+    ],
+    "rating": 1840,
+    "hint": "Black's bishop on d7 is the only guard of an important pawn, so hit that pawn and start a race you can win.",
+    "explanation": "1.d5! a3 2.dxe6! a2 3.exd7. The pawn push attacks e6 together with your bishop on g8, and the bishop on d7 cannot hold it. Your pawn then captures twice in a row while Black races the a-pawn. Tal played this line against Petrosian in 1957, and after taking the bishop you have a bishop and six pawns, one of them on d7, against a lone a-pawn.",
+    "gameContinuation": "d5 a3 dxe6 a2 exd7 a1=Q d8=Q Qc1+",
+    "moveNotes": [
+      "A pawn push that attacks e6 a second time, joining your bishop on g8. Black's bishop on d7 is the only defender.",
+      "Black runs with the a-pawn instead of taking on d5, hoping to queen first.",
+      "Your pawn takes on e6 and now attacks the bishop on d7. The bishop on g8 protects your pawn.",
+      "Black pushes on to a2, one square from queening.",
+      "The pawn captures the bishop and reaches d7, one step from promotion. You are a bishop and five pawns ahead, and your bishop on g8 already watches a2."
+    ]
+  },
+  {
+    "id": "tal-080",
+    "gm": "tal",
+    "type": "real",
+    "source": {
+      "white": "Mikhail Tal",
+      "black": "Viktor Korchnoi",
+      "event": "Reykjavik",
+      "year": 1987
+    },
+    "fen": "8/2p2R2/4r1p1/2n4q/4P2k/1P4p1/P4Q2/6K1 w - - 0 43",
+    "solution": [
+      "f7f4",
+      "h4g5",
+      "f2g3",
+      "g5h6",
+      "f4h4"
+    ],
+    "themes": [
+      "advantage"
+    ],
+    "rating": 1820,
+    "hint": "The black king and queen sit close together near the h-file, so use checks to put them on the same line.",
+    "explanation": "1.Rf4+! Kg5 2.Qxg3+ Kh6 3.Rh4!. The rook check and the queen capture on g3 push the king back to h6, right behind its own queen on h5. Then the rook swings to h4 and pins the queen to the king. Tal played this line against Korchnoi in 1987 in Reykjavik, and the pinned queen is lost for your rook, leaving your queen against a rook and knight.",
+    "gameContinuation": "Rf4+ Kg5 Qxg3+ Kh6 Rh4 Rxe4 Rxh5+ Kxh5",
+    "moveNotes": [
+      "Your queen on f2 is attacked by the g3 pawn. The rook check gains time and protects the queen.",
+      "The king steps to g5. Blocking with the queen on g4 or running to h3 were the other legal choices.",
+      "Your queen removes the troublesome g3 pawn with check. Black can only move the king to h6 or block with the queen on g4.",
+      "The king retreats to h6, lining itself up with its own queen on h5.",
+      "The rook slides to h4, protected by your queen. It pins the black queen to the king, so Black must give up the queen for the rook."
     ]
   }
 ]

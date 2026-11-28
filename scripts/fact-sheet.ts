@@ -17,9 +17,9 @@ import { uciToMove } from './lib/chess-utils'
 
 const { values, positionals } = parseArgs({
   allowPositionals: true,
-  options: { gm: { type: 'string', default: 'tal' }, from: { type: 'string' }, to: { type: 'string' } },
+  options: { gm: { type: 'string', default: 'tal' }, from: { type: 'string' }, to: { type: 'string' }, file: { type: 'string' } },
 })
-const all = JSON.parse(readFileSync(`src/data/puzzles/${values.gm}.json`, 'utf8')) as Puzzle[]
+const all = JSON.parse(readFileSync(values.file ?? `src/data/puzzles/${values.gm}.json`, 'utf8')) as Puzzle[]
 const wanted = positionals.length
   ? all.filter((p) => positionals.includes(p.id))
   : all.filter((p) => {

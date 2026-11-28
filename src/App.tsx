@@ -232,7 +232,8 @@ function RealGameBanner({ source, gmName }: { source: GameSource; gmName: string
   const gmIsWhite = source.white.toLowerCase().includes(surname)
   const gmIsBlack = source.black.toLowerCase().includes(surname)
   const opponent = gmIsWhite ? source.black : gmIsBlack ? source.white : null
-  const where = [source.event, source.year || null].filter(Boolean).join(', ')
+  // Some event names already carry the year ("Hastings 1973/74"); don't repeat it
+  const where = /\b\d{4}\b/.test(source.event) ? source.event : [source.event, source.year || null].filter(Boolean).join(', ')
 
   return (
     <div className="real-game">
